@@ -1,0 +1,1528 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @angular/common
+20 silly mapToRegistry name @angular/common
+21 silly mapToRegistry scope (from package name) @angular
+22 verbose mapToRegistry no registry URL found in name for scope @angular
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: '@angular/common',
+25 silly mapToRegistry   scope: '@angular',
+25 silly mapToRegistry   escapedName: '@angular%2fcommon',
+25 silly mapToRegistry   name: '@angular/common',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcommon
+27 silly fetchNamedPackageData @angular/compiler
+28 silly mapToRegistry name @angular/compiler
+29 silly mapToRegistry scope (from package name) @angular
+30 verbose mapToRegistry no registry URL found in name for scope @angular
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry data Result {
+33 silly mapToRegistry   raw: '@angular/compiler',
+33 silly mapToRegistry   scope: '@angular',
+33 silly mapToRegistry   escapedName: '@angular%2fcompiler',
+33 silly mapToRegistry   name: '@angular/compiler',
+33 silly mapToRegistry   rawSpec: '',
+33 silly mapToRegistry   spec: 'latest',
+33 silly mapToRegistry   type: 'tag' }
+34 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcompiler
+35 silly fetchNamedPackageData @angular/core
+36 silly mapToRegistry name @angular/core
+37 silly mapToRegistry scope (from package name) @angular
+38 verbose mapToRegistry no registry URL found in name for scope @angular
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: '@angular/core',
+41 silly mapToRegistry   scope: '@angular',
+41 silly mapToRegistry   escapedName: '@angular%2fcore',
+41 silly mapToRegistry   name: '@angular/core',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcore
+43 silly fetchNamedPackageData @angular/forms
+44 silly mapToRegistry name @angular/forms
+45 silly mapToRegistry scope (from package name) @angular
+46 verbose mapToRegistry no registry URL found in name for scope @angular
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: '@angular/forms',
+49 silly mapToRegistry   scope: '@angular',
+49 silly mapToRegistry   escapedName: '@angular%2fforms',
+49 silly mapToRegistry   name: '@angular/forms',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fforms
+51 silly fetchNamedPackageData @angular/http
+52 silly mapToRegistry name @angular/http
+53 silly mapToRegistry scope (from package name) @angular
+54 verbose mapToRegistry no registry URL found in name for scope @angular
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry data Result {
+57 silly mapToRegistry   raw: '@angular/http',
+57 silly mapToRegistry   scope: '@angular',
+57 silly mapToRegistry   escapedName: '@angular%2fhttp',
+57 silly mapToRegistry   name: '@angular/http',
+57 silly mapToRegistry   rawSpec: '',
+57 silly mapToRegistry   spec: 'latest',
+57 silly mapToRegistry   type: 'tag' }
+58 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fhttp
+59 silly fetchNamedPackageData @angular/platform-browser
+60 silly mapToRegistry name @angular/platform-browser
+61 silly mapToRegistry scope (from package name) @angular
+62 verbose mapToRegistry no registry URL found in name for scope @angular
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: '@angular/platform-browser',
+65 silly mapToRegistry   scope: '@angular',
+65 silly mapToRegistry   escapedName: '@angular%2fplatform-browser',
+65 silly mapToRegistry   name: '@angular/platform-browser',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser
+67 silly fetchNamedPackageData @angular/platform-browser-dynamic
+68 silly mapToRegistry name @angular/platform-browser-dynamic
+69 silly mapToRegistry scope (from package name) @angular
+70 verbose mapToRegistry no registry URL found in name for scope @angular
+71 silly mapToRegistry using default registry
+72 silly mapToRegistry registry https://registry.npmjs.org/
+73 silly mapToRegistry data Result {
+73 silly mapToRegistry   raw: '@angular/platform-browser-dynamic',
+73 silly mapToRegistry   scope: '@angular',
+73 silly mapToRegistry   escapedName: '@angular%2fplatform-browser-dynamic',
+73 silly mapToRegistry   name: '@angular/platform-browser-dynamic',
+73 silly mapToRegistry   rawSpec: '',
+73 silly mapToRegistry   spec: 'latest',
+73 silly mapToRegistry   type: 'tag' }
+74 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+75 silly fetchNamedPackageData @angular/router
+76 silly mapToRegistry name @angular/router
+77 silly mapToRegistry scope (from package name) @angular
+78 verbose mapToRegistry no registry URL found in name for scope @angular
+79 silly mapToRegistry using default registry
+80 silly mapToRegistry registry https://registry.npmjs.org/
+81 silly mapToRegistry data Result {
+81 silly mapToRegistry   raw: '@angular/router',
+81 silly mapToRegistry   scope: '@angular',
+81 silly mapToRegistry   escapedName: '@angular%2frouter',
+81 silly mapToRegistry   name: '@angular/router',
+81 silly mapToRegistry   rawSpec: '',
+81 silly mapToRegistry   spec: 'latest',
+81 silly mapToRegistry   type: 'tag' }
+82 silly mapToRegistry uri https://registry.npmjs.org/@angular%2frouter
+83 silly fetchNamedPackageData core-js
+84 silly mapToRegistry name core-js
+85 silly mapToRegistry using default registry
+86 silly mapToRegistry registry https://registry.npmjs.org/
+87 silly mapToRegistry data Result {
+87 silly mapToRegistry   raw: 'core-js',
+87 silly mapToRegistry   scope: null,
+87 silly mapToRegistry   escapedName: 'core-js',
+87 silly mapToRegistry   name: 'core-js',
+87 silly mapToRegistry   rawSpec: '',
+87 silly mapToRegistry   spec: 'latest',
+87 silly mapToRegistry   type: 'tag' }
+88 silly mapToRegistry uri https://registry.npmjs.org/core-js
+89 silly fetchNamedPackageData reflect-metadata
+90 silly mapToRegistry name reflect-metadata
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry data Result {
+93 silly mapToRegistry   raw: 'reflect-metadata',
+93 silly mapToRegistry   scope: null,
+93 silly mapToRegistry   escapedName: 'reflect-metadata',
+93 silly mapToRegistry   name: 'reflect-metadata',
+93 silly mapToRegistry   rawSpec: '',
+93 silly mapToRegistry   spec: 'latest',
+93 silly mapToRegistry   type: 'tag' }
+94 silly mapToRegistry uri https://registry.npmjs.org/reflect-metadata
+95 silly fetchNamedPackageData rxjs
+96 silly mapToRegistry name rxjs
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry https://registry.npmjs.org/
+99 silly mapToRegistry data Result {
+99 silly mapToRegistry   raw: 'rxjs',
+99 silly mapToRegistry   scope: null,
+99 silly mapToRegistry   escapedName: 'rxjs',
+99 silly mapToRegistry   name: 'rxjs',
+99 silly mapToRegistry   rawSpec: '',
+99 silly mapToRegistry   spec: 'latest',
+99 silly mapToRegistry   type: 'tag' }
+100 silly mapToRegistry uri https://registry.npmjs.org/rxjs
+101 silly fetchNamedPackageData systemjs
+102 silly mapToRegistry name systemjs
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry https://registry.npmjs.org/
+105 silly mapToRegistry data Result {
+105 silly mapToRegistry   raw: 'systemjs',
+105 silly mapToRegistry   scope: null,
+105 silly mapToRegistry   escapedName: 'systemjs',
+105 silly mapToRegistry   name: 'systemjs',
+105 silly mapToRegistry   rawSpec: '',
+105 silly mapToRegistry   spec: 'latest',
+105 silly mapToRegistry   type: 'tag' }
+106 silly mapToRegistry uri https://registry.npmjs.org/systemjs
+107 silly fetchNamedPackageData zone.js
+108 silly mapToRegistry name zone.js
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry https://registry.npmjs.org/
+111 silly mapToRegistry data Result {
+111 silly mapToRegistry   raw: 'zone.js',
+111 silly mapToRegistry   scope: null,
+111 silly mapToRegistry   escapedName: 'zone.js',
+111 silly mapToRegistry   name: 'zone.js',
+111 silly mapToRegistry   rawSpec: '',
+111 silly mapToRegistry   spec: 'latest',
+111 silly mapToRegistry   type: 'tag' }
+112 silly mapToRegistry uri https://registry.npmjs.org/zone.js
+113 silly fetchNamedPackageData bootstrap
+114 silly mapToRegistry name bootstrap
+115 silly mapToRegistry using default registry
+116 silly mapToRegistry registry https://registry.npmjs.org/
+117 silly mapToRegistry data Result {
+117 silly mapToRegistry   raw: 'bootstrap',
+117 silly mapToRegistry   scope: null,
+117 silly mapToRegistry   escapedName: 'bootstrap',
+117 silly mapToRegistry   name: 'bootstrap',
+117 silly mapToRegistry   rawSpec: '',
+117 silly mapToRegistry   spec: 'latest',
+117 silly mapToRegistry   type: 'tag' }
+118 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+119 verbose request uri https://registry.npmjs.org/@angular%2fcommon
+120 verbose request no auth needed
+121 info attempt registry request try #1 at 1:54:56 PM
+122 verbose request id 9be084eac8e0929e
+123 verbose etag W/"58b7c7c2-10a55"
+124 verbose lastModified Thu, 02 Mar 2017 07:20:34 GMT
+125 http request GET https://registry.npmjs.org/@angular%2fcommon
+126 verbose request uri https://registry.npmjs.org/@angular%2fcompiler
+127 verbose request no auth needed
+128 info attempt registry request try #1 at 1:54:56 PM
+129 verbose etag W/"58b7c7c7-10acb"
+130 verbose lastModified Thu, 02 Mar 2017 07:20:39 GMT
+131 http request GET https://registry.npmjs.org/@angular%2fcompiler
+132 verbose request uri https://registry.npmjs.org/@angular%2fcore
+133 verbose request no auth needed
+134 info attempt registry request try #1 at 1:54:56 PM
+135 verbose etag W/"58bae2c0-1071f"
+136 verbose lastModified Sat, 04 Mar 2017 15:52:32 GMT
+137 http request GET https://registry.npmjs.org/@angular%2fcore
+138 verbose request uri https://registry.npmjs.org/@angular%2fforms
+139 verbose request no auth needed
+140 info attempt registry request try #1 at 1:54:56 PM
+141 verbose etag W/"58b7c7ce-eab2"
+142 verbose lastModified Thu, 02 Mar 2017 07:20:46 GMT
+143 http request GET https://registry.npmjs.org/@angular%2fforms
+144 verbose request uri https://registry.npmjs.org/@angular%2fhttp
+145 verbose request no auth needed
+146 info attempt registry request try #1 at 1:54:56 PM
+147 verbose etag W/"58b7c7cf-10ef1"
+148 verbose lastModified Thu, 02 Mar 2017 07:20:47 GMT
+149 http request GET https://registry.npmjs.org/@angular%2fhttp
+150 verbose request uri https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+151 verbose request no auth needed
+152 info attempt registry request try #1 at 1:54:56 PM
+153 verbose etag W/"58b7c7d7-14663"
+154 verbose lastModified Thu, 02 Mar 2017 07:20:55 GMT
+155 http request GET https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+156 verbose request uri https://registry.npmjs.org/@angular%2fplatform-browser
+157 verbose request no auth needed
+158 info attempt registry request try #1 at 1:54:56 PM
+159 verbose etag W/"58b7c7d4-12602"
+160 verbose lastModified Thu, 02 Mar 2017 07:20:52 GMT
+161 http request GET https://registry.npmjs.org/@angular%2fplatform-browser
+162 verbose request uri https://registry.npmjs.org/@angular%2frouter
+163 verbose request no auth needed
+164 info attempt registry request try #1 at 1:54:56 PM
+165 verbose etag W/"58b7c7e0-18ff7"
+166 verbose lastModified Thu, 02 Mar 2017 07:21:04 GMT
+167 http request GET https://registry.npmjs.org/@angular%2frouter
+168 verbose request uri https://registry.npmjs.org/reflect-metadata
+169 verbose request no auth needed
+170 info attempt registry request try #1 at 1:54:56 PM
+171 verbose etag W/"58ac914b-707b"
+172 verbose lastModified Tue, 21 Feb 2017 19:13:15 GMT
+173 http request GET https://registry.npmjs.org/reflect-metadata
+174 verbose request uri https://registry.npmjs.org/rxjs
+175 verbose request no auth needed
+176 info attempt registry request try #1 at 1:54:56 PM
+177 verbose etag W/"58bbb4be-217a2"
+178 verbose lastModified Sun, 05 Mar 2017 06:48:30 GMT
+179 http request GET https://registry.npmjs.org/rxjs
+180 verbose request uri https://registry.npmjs.org/zone.js
+181 verbose request no auth needed
+182 info attempt registry request try #1 at 1:54:56 PM
+183 verbose etag W/"58b29d70-1c253"
+184 verbose lastModified Sun, 26 Feb 2017 09:18:40 GMT
+185 http request GET https://registry.npmjs.org/zone.js
+186 verbose request uri https://registry.npmjs.org/core-js
+187 verbose request no auth needed
+188 info attempt registry request try #1 at 1:54:56 PM
+189 verbose etag W/"58bcfc03-388d1"
+190 verbose lastModified Mon, 06 Mar 2017 06:04:51 GMT
+191 http request GET https://registry.npmjs.org/core-js
+192 verbose request uri https://registry.npmjs.org/systemjs
+193 verbose request no auth needed
+194 info attempt registry request try #1 at 1:54:56 PM
+195 verbose etag W/"58a86c33-33b0e"
+196 verbose lastModified Sat, 18 Feb 2017 15:45:55 GMT
+197 http request GET https://registry.npmjs.org/systemjs
+198 verbose request uri https://registry.npmjs.org/bootstrap
+199 verbose request no auth needed
+200 info attempt registry request try #1 at 1:54:56 PM
+201 verbose etag W/"58bae3ef-c60a"
+202 verbose lastModified Sat, 04 Mar 2017 15:57:35 GMT
+203 http request GET https://registry.npmjs.org/bootstrap
+204 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+205 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+206 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+207 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+208 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+209 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+210 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+211 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+212 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+213 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+214 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+215 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+216 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+217 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+218 info attempt registry request try #2 at 1:55:27 PM
+219 verbose etag W/"58b7c7c7-10acb"
+220 verbose lastModified Thu, 02 Mar 2017 07:20:39 GMT
+221 http request GET https://registry.npmjs.org/@angular%2fcompiler
+222 info attempt registry request try #2 at 1:55:27 PM
+223 verbose etag W/"58b7c7d4-12602"
+224 verbose lastModified Thu, 02 Mar 2017 07:20:52 GMT
+225 http request GET https://registry.npmjs.org/@angular%2fplatform-browser
+226 info attempt registry request try #2 at 1:55:27 PM
+227 verbose etag W/"58b7c7ce-eab2"
+228 verbose lastModified Thu, 02 Mar 2017 07:20:46 GMT
+229 http request GET https://registry.npmjs.org/@angular%2fforms
+230 info attempt registry request try #2 at 1:55:27 PM
+231 verbose etag W/"58b7c7d7-14663"
+232 verbose lastModified Thu, 02 Mar 2017 07:20:55 GMT
+233 http request GET https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+234 info attempt registry request try #2 at 1:55:27 PM
+235 verbose etag W/"58b7c7c2-10a55"
+236 verbose lastModified Thu, 02 Mar 2017 07:20:34 GMT
+237 http request GET https://registry.npmjs.org/@angular%2fcommon
+238 info attempt registry request try #2 at 1:55:27 PM
+239 verbose etag W/"58b7c7cf-10ef1"
+240 verbose lastModified Thu, 02 Mar 2017 07:20:47 GMT
+241 http request GET https://registry.npmjs.org/@angular%2fhttp
+242 info attempt registry request try #2 at 1:55:27 PM
+243 verbose etag W/"58bae2c0-1071f"
+244 verbose lastModified Sat, 04 Mar 2017 15:52:32 GMT
+245 http request GET https://registry.npmjs.org/@angular%2fcore
+246 info attempt registry request try #2 at 1:55:27 PM
+247 verbose etag W/"58b7c7e0-18ff7"
+248 verbose lastModified Thu, 02 Mar 2017 07:21:04 GMT
+249 http request GET https://registry.npmjs.org/@angular%2frouter
+250 info attempt registry request try #2 at 1:55:27 PM
+251 verbose etag W/"58a86c33-33b0e"
+252 verbose lastModified Sat, 18 Feb 2017 15:45:55 GMT
+253 http request GET https://registry.npmjs.org/systemjs
+254 info attempt registry request try #2 at 1:55:27 PM
+255 verbose etag W/"58bae3ef-c60a"
+256 verbose lastModified Sat, 04 Mar 2017 15:57:35 GMT
+257 http request GET https://registry.npmjs.org/bootstrap
+258 info attempt registry request try #2 at 1:55:27 PM
+259 verbose etag W/"58ac914b-707b"
+260 verbose lastModified Tue, 21 Feb 2017 19:13:15 GMT
+261 http request GET https://registry.npmjs.org/reflect-metadata
+262 info attempt registry request try #2 at 1:55:27 PM
+263 verbose etag W/"58b29d70-1c253"
+264 verbose lastModified Sun, 26 Feb 2017 09:18:40 GMT
+265 http request GET https://registry.npmjs.org/zone.js
+266 info attempt registry request try #2 at 1:55:27 PM
+267 verbose etag W/"58bcfc03-388d1"
+268 verbose lastModified Mon, 06 Mar 2017 06:04:51 GMT
+269 http request GET https://registry.npmjs.org/core-js
+270 info attempt registry request try #2 at 1:55:27 PM
+271 verbose etag W/"58bbb4be-217a2"
+272 verbose lastModified Sun, 05 Mar 2017 06:48:30 GMT
+273 http request GET https://registry.npmjs.org/rxjs
+274 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+275 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+276 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+277 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+278 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+279 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+280 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+281 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+282 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+283 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+284 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+285 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+286 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+287 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+288 info attempt registry request try #3 at 1:56:48 PM
+289 verbose etag W/"58bae3ef-c60a"
+290 verbose lastModified Sat, 04 Mar 2017 15:57:35 GMT
+291 http request GET https://registry.npmjs.org/bootstrap
+292 info attempt registry request try #3 at 1:56:48 PM
+293 verbose etag W/"58bcfc03-388d1"
+294 verbose lastModified Mon, 06 Mar 2017 06:04:51 GMT
+295 http request GET https://registry.npmjs.org/core-js
+296 info attempt registry request try #3 at 1:56:48 PM
+297 verbose etag W/"58b7c7e0-18ff7"
+298 verbose lastModified Thu, 02 Mar 2017 07:21:04 GMT
+299 http request GET https://registry.npmjs.org/@angular%2frouter
+300 info attempt registry request try #3 at 1:56:48 PM
+301 verbose etag W/"58b7c7ce-eab2"
+302 verbose lastModified Thu, 02 Mar 2017 07:20:46 GMT
+303 http request GET https://registry.npmjs.org/@angular%2fforms
+304 info attempt registry request try #3 at 1:56:48 PM
+305 verbose etag W/"58b7c7cf-10ef1"
+306 verbose lastModified Thu, 02 Mar 2017 07:20:47 GMT
+307 http request GET https://registry.npmjs.org/@angular%2fhttp
+308 info attempt registry request try #3 at 1:56:48 PM
+309 verbose etag W/"58b29d70-1c253"
+310 verbose lastModified Sun, 26 Feb 2017 09:18:40 GMT
+311 http request GET https://registry.npmjs.org/zone.js
+312 info attempt registry request try #3 at 1:56:48 PM
+313 verbose etag W/"58bae2c0-1071f"
+314 verbose lastModified Sat, 04 Mar 2017 15:52:32 GMT
+315 http request GET https://registry.npmjs.org/@angular%2fcore
+316 info attempt registry request try #3 at 1:56:48 PM
+317 verbose etag W/"58b7c7d7-14663"
+318 verbose lastModified Thu, 02 Mar 2017 07:20:55 GMT
+319 http request GET https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+320 info attempt registry request try #3 at 1:56:48 PM
+321 verbose etag W/"58b7c7c7-10acb"
+322 verbose lastModified Thu, 02 Mar 2017 07:20:39 GMT
+323 http request GET https://registry.npmjs.org/@angular%2fcompiler
+324 info attempt registry request try #3 at 1:56:48 PM
+325 verbose etag W/"58bbb4be-217a2"
+326 verbose lastModified Sun, 05 Mar 2017 06:48:30 GMT
+327 http request GET https://registry.npmjs.org/rxjs
+328 info attempt registry request try #3 at 1:56:48 PM
+329 verbose etag W/"58a86c33-33b0e"
+330 verbose lastModified Sat, 18 Feb 2017 15:45:55 GMT
+331 http request GET https://registry.npmjs.org/systemjs
+332 info attempt registry request try #3 at 1:56:48 PM
+333 verbose etag W/"58b7c7d4-12602"
+334 verbose lastModified Thu, 02 Mar 2017 07:20:52 GMT
+335 http request GET https://registry.npmjs.org/@angular%2fplatform-browser
+336 info attempt registry request try #3 at 1:56:48 PM
+337 verbose etag W/"58b7c7c2-10a55"
+338 verbose lastModified Thu, 02 Mar 2017 07:20:34 GMT
+339 http request GET https://registry.npmjs.org/@angular%2fcommon
+340 info attempt registry request try #3 at 1:56:48 PM
+341 verbose etag W/"58ac914b-707b"
+342 verbose lastModified Tue, 21 Feb 2017 19:13:15 GMT
+343 http request GET https://registry.npmjs.org/reflect-metadata
+344 silly get cb [ 304, undefined ]
+345 verbose etag https://registry.npmjs.org/@angular%2fforms from cache
+346 verbose get saving @angular/forms to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fforms\.cache.json
+347 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+348 silly get cb [ 304, undefined ]
+349 verbose etag https://registry.npmjs.org/zone.js from cache
+350 verbose get saving zone.js to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\zone.js\.cache.json
+351 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+352 silly get cb [ 304, undefined ]
+353 verbose etag https://registry.npmjs.org/@angular%2fcompiler from cache
+354 verbose get saving @angular/compiler to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fcompiler\.cache.json
+355 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+356 silly get cb [ 304, undefined ]
+357 verbose etag https://registry.npmjs.org/@angular%2fhttp from cache
+358 verbose get saving @angular/http to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fhttp\.cache.json
+359 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+360 silly get cb [ 304, undefined ]
+361 verbose etag https://registry.npmjs.org/rxjs from cache
+362 verbose get saving rxjs to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\rxjs\.cache.json
+363 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+364 silly get cb [ 304, undefined ]
+365 verbose etag https://registry.npmjs.org/core-js from cache
+366 verbose get saving core-js to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\core-js\.cache.json
+367 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+368 silly get cb [ 304, undefined ]
+369 verbose etag https://registry.npmjs.org/@angular%2fcommon from cache
+370 verbose get saving @angular/common to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fcommon\.cache.json
+371 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+372 silly get cb [ 304, undefined ]
+373 verbose etag https://registry.npmjs.org/@angular%2frouter from cache
+374 verbose get saving @angular/router to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252frouter\.cache.json
+375 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+376 silly get cb [ 304, undefined ]
+377 verbose etag https://registry.npmjs.org/@angular%2fplatform-browser-dynamic from cache
+378 verbose get saving @angular/platform-browser-dynamic to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fplatform-browser-dynamic\.cache.json
+379 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+380 silly get cb [ 304, undefined ]
+381 verbose etag https://registry.npmjs.org/systemjs from cache
+382 verbose get saving systemjs to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\systemjs\.cache.json
+383 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+384 silly get cb [ 304, undefined ]
+385 verbose etag https://registry.npmjs.org/@angular%2fplatform-browser from cache
+386 verbose get saving @angular/platform-browser to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fplatform-browser\.cache.json
+387 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+388 silly get cb [ 304, undefined ]
+389 verbose etag https://registry.npmjs.org/@angular%2fcore from cache
+390 verbose get saving @angular/core to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\_40angular_252fcore\.cache.json
+391 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+392 silly get cb [ 304, undefined ]
+393 verbose etag https://registry.npmjs.org/bootstrap from cache
+394 verbose get saving bootstrap to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\bootstrap\.cache.json
+395 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+396 silly get cb [ 304, undefined ]
+397 verbose etag https://registry.npmjs.org/reflect-metadata from cache
+398 verbose get saving reflect-metadata to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\reflect-metadata\.cache.json
+399 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+400 silly resolveWithNewModule @angular/http@2.0.0 checking installable status
+401 silly cache add args [ '@angular/http@2.0.0', null ]
+402 verbose cache add spec @angular/http@2.0.0
+403 silly cache add parsed spec Result {
+403 silly cache add   raw: '@angular/http@2.0.0',
+403 silly cache add   scope: '@angular',
+403 silly cache add   escapedName: '@angular%2fhttp',
+403 silly cache add   name: '@angular/http',
+403 silly cache add   rawSpec: '2.0.0',
+403 silly cache add   spec: '2.0.0',
+403 silly cache add   type: 'version' }
+404 silly addNamed @angular/http@2.0.0
+405 verbose addNamed "2.0.0" is a plain semver version for @angular/http
+406 silly mapToRegistry name @angular/http
+407 silly mapToRegistry scope (from package name) @angular
+408 verbose mapToRegistry no registry URL found in name for scope @angular
+409 silly mapToRegistry using default registry
+410 silly mapToRegistry registry https://registry.npmjs.org/
+411 silly mapToRegistry data Result {
+411 silly mapToRegistry   raw: '@angular/http',
+411 silly mapToRegistry   scope: '@angular',
+411 silly mapToRegistry   escapedName: '@angular%2fhttp',
+411 silly mapToRegistry   name: '@angular/http',
+411 silly mapToRegistry   rawSpec: '',
+411 silly mapToRegistry   spec: 'latest',
+411 silly mapToRegistry   type: 'tag' }
+412 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fhttp
+413 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fhttp not in flight; fetching
+414 silly resolveWithNewModule @angular/compiler@2.0.0 checking installable status
+415 silly cache add args [ '@angular/compiler@2.0.0', null ]
+416 verbose cache add spec @angular/compiler@2.0.0
+417 silly cache add parsed spec Result {
+417 silly cache add   raw: '@angular/compiler@2.0.0',
+417 silly cache add   scope: '@angular',
+417 silly cache add   escapedName: '@angular%2fcompiler',
+417 silly cache add   name: '@angular/compiler',
+417 silly cache add   rawSpec: '2.0.0',
+417 silly cache add   spec: '2.0.0',
+417 silly cache add   type: 'version' }
+418 silly addNamed @angular/compiler@2.0.0
+419 verbose addNamed "2.0.0" is a plain semver version for @angular/compiler
+420 silly mapToRegistry name @angular/compiler
+421 silly mapToRegistry scope (from package name) @angular
+422 verbose mapToRegistry no registry URL found in name for scope @angular
+423 silly mapToRegistry using default registry
+424 silly mapToRegistry registry https://registry.npmjs.org/
+425 silly mapToRegistry data Result {
+425 silly mapToRegistry   raw: '@angular/compiler',
+425 silly mapToRegistry   scope: '@angular',
+425 silly mapToRegistry   escapedName: '@angular%2fcompiler',
+425 silly mapToRegistry   name: '@angular/compiler',
+425 silly mapToRegistry   rawSpec: '',
+425 silly mapToRegistry   spec: 'latest',
+425 silly mapToRegistry   type: 'tag' }
+426 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcompiler
+427 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fcompiler not in flight; fetching
+428 silly resolveWithNewModule zone.js@0.6.26 checking installable status
+429 silly cache add args [ 'zone.js@^0.6.23', null ]
+430 verbose cache add spec zone.js@^0.6.23
+431 silly cache add parsed spec Result {
+431 silly cache add   raw: 'zone.js@^0.6.23',
+431 silly cache add   scope: null,
+431 silly cache add   escapedName: 'zone.js',
+431 silly cache add   name: 'zone.js',
+431 silly cache add   rawSpec: '^0.6.23',
+431 silly cache add   spec: '>=0.6.23 <0.7.0',
+431 silly cache add   type: 'range' }
+432 silly addNamed zone.js@>=0.6.23 <0.7.0
+433 verbose addNamed ">=0.6.23 <0.7.0" is a valid semver range for zone.js
+434 silly addNameRange { name: 'zone.js', range: '>=0.6.23 <0.7.0', hasData: false }
+435 silly mapToRegistry name zone.js
+436 silly mapToRegistry using default registry
+437 silly mapToRegistry registry https://registry.npmjs.org/
+438 silly mapToRegistry data Result {
+438 silly mapToRegistry   raw: 'zone.js',
+438 silly mapToRegistry   scope: null,
+438 silly mapToRegistry   escapedName: 'zone.js',
+438 silly mapToRegistry   name: 'zone.js',
+438 silly mapToRegistry   rawSpec: '',
+438 silly mapToRegistry   spec: 'latest',
+438 silly mapToRegistry   type: 'tag' }
+439 silly mapToRegistry uri https://registry.npmjs.org/zone.js
+440 verbose addNameRange registry:https://registry.npmjs.org/zone.js not in flight; fetching
+441 silly resolveWithNewModule @angular/forms@2.0.0 checking installable status
+442 silly cache add args [ '@angular/forms@2.0.0', null ]
+443 verbose cache add spec @angular/forms@2.0.0
+444 silly cache add parsed spec Result {
+444 silly cache add   raw: '@angular/forms@2.0.0',
+444 silly cache add   scope: '@angular',
+444 silly cache add   escapedName: '@angular%2fforms',
+444 silly cache add   name: '@angular/forms',
+444 silly cache add   rawSpec: '2.0.0',
+444 silly cache add   spec: '2.0.0',
+444 silly cache add   type: 'version' }
+445 silly addNamed @angular/forms@2.0.0
+446 verbose addNamed "2.0.0" is a plain semver version for @angular/forms
+447 silly mapToRegistry name @angular/forms
+448 silly mapToRegistry scope (from package name) @angular
+449 verbose mapToRegistry no registry URL found in name for scope @angular
+450 silly mapToRegistry using default registry
+451 silly mapToRegistry registry https://registry.npmjs.org/
+452 silly mapToRegistry data Result {
+452 silly mapToRegistry   raw: '@angular/forms',
+452 silly mapToRegistry   scope: '@angular',
+452 silly mapToRegistry   escapedName: '@angular%2fforms',
+452 silly mapToRegistry   name: '@angular/forms',
+452 silly mapToRegistry   rawSpec: '',
+452 silly mapToRegistry   spec: 'latest',
+452 silly mapToRegistry   type: 'tag' }
+453 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fforms
+454 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fforms not in flight; fetching
+455 silly resolveWithNewModule @angular/common@2.0.0 checking installable status
+456 silly cache add args [ '@angular/common@2.0.0', null ]
+457 verbose cache add spec @angular/common@2.0.0
+458 silly cache add parsed spec Result {
+458 silly cache add   raw: '@angular/common@2.0.0',
+458 silly cache add   scope: '@angular',
+458 silly cache add   escapedName: '@angular%2fcommon',
+458 silly cache add   name: '@angular/common',
+458 silly cache add   rawSpec: '2.0.0',
+458 silly cache add   spec: '2.0.0',
+458 silly cache add   type: 'version' }
+459 silly addNamed @angular/common@2.0.0
+460 verbose addNamed "2.0.0" is a plain semver version for @angular/common
+461 silly mapToRegistry name @angular/common
+462 silly mapToRegistry scope (from package name) @angular
+463 verbose mapToRegistry no registry URL found in name for scope @angular
+464 silly mapToRegistry using default registry
+465 silly mapToRegistry registry https://registry.npmjs.org/
+466 silly mapToRegistry data Result {
+466 silly mapToRegistry   raw: '@angular/common',
+466 silly mapToRegistry   scope: '@angular',
+466 silly mapToRegistry   escapedName: '@angular%2fcommon',
+466 silly mapToRegistry   name: '@angular/common',
+466 silly mapToRegistry   rawSpec: '',
+466 silly mapToRegistry   spec: 'latest',
+466 silly mapToRegistry   type: 'tag' }
+467 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcommon
+468 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fcommon not in flight; fetching
+469 silly resolveWithNewModule rxjs@5.0.0-beta.12 checking installable status
+470 silly cache add args [ 'rxjs@5.0.0-beta.12', null ]
+471 verbose cache add spec rxjs@5.0.0-beta.12
+472 silly cache add parsed spec Result {
+472 silly cache add   raw: 'rxjs@5.0.0-beta.12',
+472 silly cache add   scope: null,
+472 silly cache add   escapedName: 'rxjs',
+472 silly cache add   name: 'rxjs',
+472 silly cache add   rawSpec: '5.0.0-beta.12',
+472 silly cache add   spec: '5.0.0-beta.12',
+472 silly cache add   type: 'version' }
+473 silly addNamed rxjs@5.0.0-beta.12
+474 verbose addNamed "5.0.0-beta.12" is a plain semver version for rxjs
+475 silly mapToRegistry name rxjs
+476 silly mapToRegistry using default registry
+477 silly mapToRegistry registry https://registry.npmjs.org/
+478 silly mapToRegistry data Result {
+478 silly mapToRegistry   raw: 'rxjs',
+478 silly mapToRegistry   scope: null,
+478 silly mapToRegistry   escapedName: 'rxjs',
+478 silly mapToRegistry   name: 'rxjs',
+478 silly mapToRegistry   rawSpec: '',
+478 silly mapToRegistry   spec: 'latest',
+478 silly mapToRegistry   type: 'tag' }
+479 silly mapToRegistry uri https://registry.npmjs.org/rxjs
+480 verbose addNameVersion registry:https://registry.npmjs.org/rxjs not in flight; fetching
+481 silly resolveWithNewModule core-js@2.4.1 checking installable status
+482 silly cache add args [ 'core-js@^2.4.1', null ]
+483 verbose cache add spec core-js@^2.4.1
+484 silly cache add parsed spec Result {
+484 silly cache add   raw: 'core-js@^2.4.1',
+484 silly cache add   scope: null,
+484 silly cache add   escapedName: 'core-js',
+484 silly cache add   name: 'core-js',
+484 silly cache add   rawSpec: '^2.4.1',
+484 silly cache add   spec: '>=2.4.1 <3.0.0',
+484 silly cache add   type: 'range' }
+485 silly addNamed core-js@>=2.4.1 <3.0.0
+486 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for core-js
+487 silly addNameRange { name: 'core-js', range: '>=2.4.1 <3.0.0', hasData: false }
+488 silly mapToRegistry name core-js
+489 silly mapToRegistry using default registry
+490 silly mapToRegistry registry https://registry.npmjs.org/
+491 silly mapToRegistry data Result {
+491 silly mapToRegistry   raw: 'core-js',
+491 silly mapToRegistry   scope: null,
+491 silly mapToRegistry   escapedName: 'core-js',
+491 silly mapToRegistry   name: 'core-js',
+491 silly mapToRegistry   rawSpec: '',
+491 silly mapToRegistry   spec: 'latest',
+491 silly mapToRegistry   type: 'tag' }
+492 silly mapToRegistry uri https://registry.npmjs.org/core-js
+493 verbose addNameRange registry:https://registry.npmjs.org/core-js not in flight; fetching
+494 silly resolveWithNewModule @angular/router@3.0.0 checking installable status
+495 silly cache add args [ '@angular/router@3.0.0', null ]
+496 verbose cache add spec @angular/router@3.0.0
+497 silly cache add parsed spec Result {
+497 silly cache add   raw: '@angular/router@3.0.0',
+497 silly cache add   scope: '@angular',
+497 silly cache add   escapedName: '@angular%2frouter',
+497 silly cache add   name: '@angular/router',
+497 silly cache add   rawSpec: '3.0.0',
+497 silly cache add   spec: '3.0.0',
+497 silly cache add   type: 'version' }
+498 silly addNamed @angular/router@3.0.0
+499 verbose addNamed "3.0.0" is a plain semver version for @angular/router
+500 silly mapToRegistry name @angular/router
+501 silly mapToRegistry scope (from package name) @angular
+502 verbose mapToRegistry no registry URL found in name for scope @angular
+503 silly mapToRegistry using default registry
+504 silly mapToRegistry registry https://registry.npmjs.org/
+505 silly mapToRegistry data Result {
+505 silly mapToRegistry   raw: '@angular/router',
+505 silly mapToRegistry   scope: '@angular',
+505 silly mapToRegistry   escapedName: '@angular%2frouter',
+505 silly mapToRegistry   name: '@angular/router',
+505 silly mapToRegistry   rawSpec: '',
+505 silly mapToRegistry   spec: 'latest',
+505 silly mapToRegistry   type: 'tag' }
+506 silly mapToRegistry uri https://registry.npmjs.org/@angular%2frouter
+507 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2frouter not in flight; fetching
+508 silly resolveWithNewModule @angular/platform-browser@2.0.0 checking installable status
+509 silly cache add args [ '@angular/platform-browser@2.0.0', null ]
+510 verbose cache add spec @angular/platform-browser@2.0.0
+511 silly cache add parsed spec Result {
+511 silly cache add   raw: '@angular/platform-browser@2.0.0',
+511 silly cache add   scope: '@angular',
+511 silly cache add   escapedName: '@angular%2fplatform-browser',
+511 silly cache add   name: '@angular/platform-browser',
+511 silly cache add   rawSpec: '2.0.0',
+511 silly cache add   spec: '2.0.0',
+511 silly cache add   type: 'version' }
+512 silly addNamed @angular/platform-browser@2.0.0
+513 verbose addNamed "2.0.0" is a plain semver version for @angular/platform-browser
+514 silly mapToRegistry name @angular/platform-browser
+515 silly mapToRegistry scope (from package name) @angular
+516 verbose mapToRegistry no registry URL found in name for scope @angular
+517 silly mapToRegistry using default registry
+518 silly mapToRegistry registry https://registry.npmjs.org/
+519 silly mapToRegistry data Result {
+519 silly mapToRegistry   raw: '@angular/platform-browser',
+519 silly mapToRegistry   scope: '@angular',
+519 silly mapToRegistry   escapedName: '@angular%2fplatform-browser',
+519 silly mapToRegistry   name: '@angular/platform-browser',
+519 silly mapToRegistry   rawSpec: '',
+519 silly mapToRegistry   spec: 'latest',
+519 silly mapToRegistry   type: 'tag' }
+520 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser
+521 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fplatform-browser not in flight; fetching
+522 silly resolveWithNewModule @angular/platform-browser-dynamic@2.0.0 checking installable status
+523 silly cache add args [ '@angular/platform-browser-dynamic@2.0.0', null ]
+524 verbose cache add spec @angular/platform-browser-dynamic@2.0.0
+525 silly cache add parsed spec Result {
+525 silly cache add   raw: '@angular/platform-browser-dynamic@2.0.0',
+525 silly cache add   scope: '@angular',
+525 silly cache add   escapedName: '@angular%2fplatform-browser-dynamic',
+525 silly cache add   name: '@angular/platform-browser-dynamic',
+525 silly cache add   rawSpec: '2.0.0',
+525 silly cache add   spec: '2.0.0',
+525 silly cache add   type: 'version' }
+526 silly addNamed @angular/platform-browser-dynamic@2.0.0
+527 verbose addNamed "2.0.0" is a plain semver version for @angular/platform-browser-dynamic
+528 silly mapToRegistry name @angular/platform-browser-dynamic
+529 silly mapToRegistry scope (from package name) @angular
+530 verbose mapToRegistry no registry URL found in name for scope @angular
+531 silly mapToRegistry using default registry
+532 silly mapToRegistry registry https://registry.npmjs.org/
+533 silly mapToRegistry data Result {
+533 silly mapToRegistry   raw: '@angular/platform-browser-dynamic',
+533 silly mapToRegistry   scope: '@angular',
+533 silly mapToRegistry   escapedName: '@angular%2fplatform-browser-dynamic',
+533 silly mapToRegistry   name: '@angular/platform-browser-dynamic',
+533 silly mapToRegistry   rawSpec: '',
+533 silly mapToRegistry   spec: 'latest',
+533 silly mapToRegistry   type: 'tag' }
+534 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+535 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fplatform-browser-dynamic not in flight; fetching
+536 silly resolveWithNewModule @angular/core@2.0.0 checking installable status
+537 silly cache add args [ '@angular/core@2.0.0', null ]
+538 verbose cache add spec @angular/core@2.0.0
+539 silly cache add parsed spec Result {
+539 silly cache add   raw: '@angular/core@2.0.0',
+539 silly cache add   scope: '@angular',
+539 silly cache add   escapedName: '@angular%2fcore',
+539 silly cache add   name: '@angular/core',
+539 silly cache add   rawSpec: '2.0.0',
+539 silly cache add   spec: '2.0.0',
+539 silly cache add   type: 'version' }
+540 silly addNamed @angular/core@2.0.0
+541 verbose addNamed "2.0.0" is a plain semver version for @angular/core
+542 silly mapToRegistry name @angular/core
+543 silly mapToRegistry scope (from package name) @angular
+544 verbose mapToRegistry no registry URL found in name for scope @angular
+545 silly mapToRegistry using default registry
+546 silly mapToRegistry registry https://registry.npmjs.org/
+547 silly mapToRegistry data Result {
+547 silly mapToRegistry   raw: '@angular/core',
+547 silly mapToRegistry   scope: '@angular',
+547 silly mapToRegistry   escapedName: '@angular%2fcore',
+547 silly mapToRegistry   name: '@angular/core',
+547 silly mapToRegistry   rawSpec: '',
+547 silly mapToRegistry   spec: 'latest',
+547 silly mapToRegistry   type: 'tag' }
+548 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcore
+549 verbose addNameVersion registry:https://registry.npmjs.org/@angular%2fcore not in flight; fetching
+550 silly resolveWithNewModule bootstrap@3.3.7 checking installable status
+551 silly cache add args [ 'bootstrap@^3.3.6', null ]
+552 verbose cache add spec bootstrap@^3.3.6
+553 silly cache add parsed spec Result {
+553 silly cache add   raw: 'bootstrap@^3.3.6',
+553 silly cache add   scope: null,
+553 silly cache add   escapedName: 'bootstrap',
+553 silly cache add   name: 'bootstrap',
+553 silly cache add   rawSpec: '^3.3.6',
+553 silly cache add   spec: '>=3.3.6 <4.0.0',
+553 silly cache add   type: 'range' }
+554 silly addNamed bootstrap@>=3.3.6 <4.0.0
+555 verbose addNamed ">=3.3.6 <4.0.0" is a valid semver range for bootstrap
+556 silly addNameRange { name: 'bootstrap', range: '>=3.3.6 <4.0.0', hasData: false }
+557 silly mapToRegistry name bootstrap
+558 silly mapToRegistry using default registry
+559 silly mapToRegistry registry https://registry.npmjs.org/
+560 silly mapToRegistry data Result {
+560 silly mapToRegistry   raw: 'bootstrap',
+560 silly mapToRegistry   scope: null,
+560 silly mapToRegistry   escapedName: 'bootstrap',
+560 silly mapToRegistry   name: 'bootstrap',
+560 silly mapToRegistry   rawSpec: '',
+560 silly mapToRegistry   spec: 'latest',
+560 silly mapToRegistry   type: 'tag' }
+561 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+562 verbose addNameRange registry:https://registry.npmjs.org/bootstrap not in flight; fetching
+563 silly resolveWithNewModule systemjs@0.19.27 checking installable status
+564 silly cache add args [ 'systemjs@0.19.27', null ]
+565 verbose cache add spec systemjs@0.19.27
+566 silly cache add parsed spec Result {
+566 silly cache add   raw: 'systemjs@0.19.27',
+566 silly cache add   scope: null,
+566 silly cache add   escapedName: 'systemjs',
+566 silly cache add   name: 'systemjs',
+566 silly cache add   rawSpec: '0.19.27',
+566 silly cache add   spec: '0.19.27',
+566 silly cache add   type: 'version' }
+567 silly addNamed systemjs@0.19.27
+568 verbose addNamed "0.19.27" is a plain semver version for systemjs
+569 silly mapToRegistry name systemjs
+570 silly mapToRegistry using default registry
+571 silly mapToRegistry registry https://registry.npmjs.org/
+572 silly mapToRegistry data Result {
+572 silly mapToRegistry   raw: 'systemjs',
+572 silly mapToRegistry   scope: null,
+572 silly mapToRegistry   escapedName: 'systemjs',
+572 silly mapToRegistry   name: 'systemjs',
+572 silly mapToRegistry   rawSpec: '',
+572 silly mapToRegistry   spec: 'latest',
+572 silly mapToRegistry   type: 'tag' }
+573 silly mapToRegistry uri https://registry.npmjs.org/systemjs
+574 verbose addNameVersion registry:https://registry.npmjs.org/systemjs not in flight; fetching
+575 silly resolveWithNewModule reflect-metadata@0.1.10 checking installable status
+576 silly cache add args [ 'reflect-metadata@^0.1.3', null ]
+577 verbose cache add spec reflect-metadata@^0.1.3
+578 silly cache add parsed spec Result {
+578 silly cache add   raw: 'reflect-metadata@^0.1.3',
+578 silly cache add   scope: null,
+578 silly cache add   escapedName: 'reflect-metadata',
+578 silly cache add   name: 'reflect-metadata',
+578 silly cache add   rawSpec: '^0.1.3',
+578 silly cache add   spec: '>=0.1.3 <0.2.0',
+578 silly cache add   type: 'range' }
+579 silly addNamed reflect-metadata@>=0.1.3 <0.2.0
+580 verbose addNamed ">=0.1.3 <0.2.0" is a valid semver range for reflect-metadata
+581 silly addNameRange { name: 'reflect-metadata',
+581 silly addNameRange   range: '>=0.1.3 <0.2.0',
+581 silly addNameRange   hasData: false }
+582 silly mapToRegistry name reflect-metadata
+583 silly mapToRegistry using default registry
+584 silly mapToRegistry registry https://registry.npmjs.org/
+585 silly mapToRegistry data Result {
+585 silly mapToRegistry   raw: 'reflect-metadata',
+585 silly mapToRegistry   scope: null,
+585 silly mapToRegistry   escapedName: 'reflect-metadata',
+585 silly mapToRegistry   name: 'reflect-metadata',
+585 silly mapToRegistry   rawSpec: '',
+585 silly mapToRegistry   spec: 'latest',
+585 silly mapToRegistry   type: 'tag' }
+586 silly mapToRegistry uri https://registry.npmjs.org/reflect-metadata
+587 verbose addNameRange registry:https://registry.npmjs.org/reflect-metadata not in flight; fetching
+588 verbose get https://registry.npmjs.org/@angular%2fhttp not expired, no request
+589 verbose get https://registry.npmjs.org/@angular%2fcompiler not expired, no request
+590 verbose get https://registry.npmjs.org/@angular%2fforms not expired, no request
+591 verbose get https://registry.npmjs.org/zone.js not expired, no request
+592 silly addNameRange number 2 { name: 'zone.js', range: '>=0.6.23 <0.7.0', hasData: true }
+593 silly addNameRange versions [ 'zone.js',
+593 silly addNameRange   [ '0.1.0',
+593 silly addNameRange     '0.1.1',
+593 silly addNameRange     '0.2.0',
+593 silly addNameRange     '0.2.1',
+593 silly addNameRange     '0.2.3',
+593 silly addNameRange     '0.2.2',
+593 silly addNameRange     '0.2.4',
+593 silly addNameRange     '0.3.0',
+593 silly addNameRange     '0.4.0',
+593 silly addNameRange     '0.4.1',
+593 silly addNameRange     '0.4.2',
+593 silly addNameRange     '0.4.3',
+593 silly addNameRange     '0.4.4',
+593 silly addNameRange     '0.5.0',
+593 silly addNameRange     '0.5.1',
+593 silly addNameRange     '0.5.2',
+593 silly addNameRange     '0.5.3',
+593 silly addNameRange     '0.5.4',
+593 silly addNameRange     '0.5.5',
+593 silly addNameRange     '0.5.6',
+593 silly addNameRange     '0.5.7',
+593 silly addNameRange     '0.5.8',
+593 silly addNameRange     '0.5.9',
+593 silly addNameRange     '0.5.10',
+593 silly addNameRange     '0.5.11',
+593 silly addNameRange     '0.5.12',
+593 silly addNameRange     '0.5.13',
+593 silly addNameRange     '0.5.14',
+593 silly addNameRange     '0.5.15',
+593 silly addNameRange     '0.6.0',
+593 silly addNameRange     '0.6.1',
+593 silly addNameRange     '0.6.2',
+593 silly addNameRange     '0.6.3',
+593 silly addNameRange     '0.6.4',
+593 silly addNameRange     '0.6.5',
+593 silly addNameRange     '0.6.6',
+593 silly addNameRange     '0.6.8',
+593 silly addNameRange     '0.6.9',
+593 silly addNameRange     '0.6.10',
+593 silly addNameRange     '0.6.11',
+593 silly addNameRange     '0.6.12',
+593 silly addNameRange     '0.6.13',
+593 silly addNameRange     '0.6.14',
+593 silly addNameRange     '0.6.15',
+593 silly addNameRange     '0.6.16',
+593 silly addNameRange     '0.6.17',
+593 silly addNameRange     '0.6.18',
+593 silly addNameRange     '0.6.19',
+593 silly addNameRange     '0.6.20',
+593 silly addNameRange     '0.6.21',
+593 silly addNameRange     '0.6.22',
+593 silly addNameRange     '0.6.23',
+593 silly addNameRange     '0.6.24',
+593 silly addNameRange     '0.6.25',
+593 silly addNameRange     '0.6.26',
+593 silly addNameRange     '0.7.0',
+593 silly addNameRange     '0.7.1',
+593 silly addNameRange     '0.7.2',
+593 silly addNameRange     '0.7.3',
+593 silly addNameRange     '0.7.4',
+593 silly addNameRange     '0.7.5',
+593 silly addNameRange     '0.7.6',
+593 silly addNameRange     '0.7.7' ] ]
+594 silly addNamed zone.js@0.6.26
+595 verbose addNamed "0.6.26" is a plain semver version for zone.js
+596 verbose get https://registry.npmjs.org/@angular%2fcommon not expired, no request
+597 verbose get https://registry.npmjs.org/rxjs not expired, no request
+598 verbose get https://registry.npmjs.org/@angular%2frouter not expired, no request
+599 verbose get https://registry.npmjs.org/@angular%2fplatform-browser not expired, no request
+600 verbose get https://registry.npmjs.org/@angular%2fplatform-browser-dynamic not expired, no request
+601 verbose get https://registry.npmjs.org/core-js not expired, no request
+602 silly addNameRange number 2 { name: 'core-js', range: '>=2.4.1 <3.0.0', hasData: true }
+603 silly addNameRange versions [ 'core-js',
+603 silly addNameRange   [ '0.0.3',
+603 silly addNameRange     '0.0.4',
+603 silly addNameRange     '0.0.5',
+603 silly addNameRange     '0.0.7',
+603 silly addNameRange     '0.0.8',
+603 silly addNameRange     '0.0.9',
+603 silly addNameRange     '0.1.1',
+603 silly addNameRange     '0.1.2',
+603 silly addNameRange     '0.1.3',
+603 silly addNameRange     '0.1.4',
+603 silly addNameRange     '0.1.5',
+603 silly addNameRange     '0.2.0',
+603 silly addNameRange     '0.2.1',
+603 silly addNameRange     '0.2.2',
+603 silly addNameRange     '0.2.3',
+603 silly addNameRange     '0.2.4',
+603 silly addNameRange     '0.2.5',
+603 silly addNameRange     '0.3.0',
+603 silly addNameRange     '0.3.1',
+603 silly addNameRange     '0.3.2',
+603 silly addNameRange     '0.3.3',
+603 silly addNameRange     '0.4.0',
+603 silly addNameRange     '0.4.1',
+603 silly addNameRange     '0.4.2',
+603 silly addNameRange     '0.4.3',
+603 silly addNameRange     '0.4.4',
+603 silly addNameRange     '0.4.5',
+603 silly addNameRange     '0.4.6',
+603 silly addNameRange     '0.4.7',
+603 silly addNameRange     '0.4.8',
+603 silly addNameRange     '0.4.9',
+603 silly addNameRange     '0.4.10',
+603 silly addNameRange     '0.5.0',
+603 silly addNameRange     '0.5.1',
+603 silly addNameRange     '0.5.2',
+603 silly addNameRange     '0.5.3',
+603 silly addNameRange     '0.5.4',
+603 silly addNameRange     '0.6.0',
+603 silly addNameRange     '0.6.1',
+603 silly addNameRange     '0.7.0',
+603 silly addNameRange     '0.7.1',
+603 silly addNameRange     '0.7.2',
+603 silly addNameRange     '0.8.0',
+603 silly addNameRange     '0.8.1',
+603 silly addNameRange     '0.8.2',
+603 silly addNameRange     '0.8.3',
+603 silly addNameRange     '0.8.4',
+603 silly addNameRange     '0.9.0',
+603 silly addNameRange     '0.9.1',
+603 silly addNameRange     '0.9.2',
+603 silly addNameRange     '0.9.3',
+603 silly addNameRange     '0.9.4',
+603 silly addNameRange     '0.9.5',
+603 silly addNameRange     '0.9.6',
+603 silly addNameRange     '0.9.7',
+603 silly addNameRange     '0.9.8',
+603 silly addNameRange     '0.9.9',
+603 silly addNameRange     '0.9.10',
+603 silly addNameRange     '0.9.11',
+603 silly addNameRange     '0.9.12',
+603 silly addNameRange     '0.9.13',
+603 silly addNameRange     '0.9.14',
+603 silly addNameRange     '0.9.15',
+603 silly addNameRange     '0.9.16',
+603 silly addNameRange     '0.9.17',
+603 silly addNameRange     '0.9.18',
+603 silly addNameRange     '1.0.0',
+603 silly addNameRange     '1.0.1',
+603 silly addNameRange     '1.1.0',
+603 silly addNameRange     '1.1.1',
+603 silly addNameRange     '1.1.2',
+603 silly addNameRange     '1.1.3',
+603 silly addNameRange     '1.1.4',
+603 silly addNameRange     '1.2.0',
+603 silly addNameRange     '1.2.1',
+603 silly addNameRange     '1.2.2',
+603 silly addNameRange     '1.2.3',
+603 silly addNameRange     '1.2.4',
+603 silly addNameRange     '1.2.5',
+603 silly addNameRange     '1.2.6',
+603 silly addNameRange     '2.0.0-alpha',
+603 silly addNameRange     '2.0.0-beta',
+603 silly addNameRange     '2.0.0-beta.2',
+603 silly addNameRange     '2.0.0',
+603 silly addNameRange     '2.0.1',
+603 silly addNameRange     '2.0.2',
+603 silly addNameRange     '2.0.3',
+603 silly addNameRange     '2.1.0',
+603 silly addNameRange     '2.1.1',
+603 silly addNameRange     '2.1.2',
+603 silly addNameRange     '2.1.3',
+603 silly addNameRange     '2.1.4',
+603 silly addNameRange     '2.1.5',
+603 silly addNameRange     '2.2.0',
+603 silly addNameRange     '2.2.1',
+603 silly addNameRange     '2.2.2',
+603 silly addNameRange     '2.3.0',
+603 silly addNameRange     '2.4.0',
+603 silly addNameRange     '1.2.7',
+603 silly addNameRange     '2.4.1' ] ]
+604 silly addNamed core-js@2.4.1
+605 verbose addNamed "2.4.1" is a plain semver version for core-js
+606 verbose get https://registry.npmjs.org/@angular%2fcore not expired, no request
+607 verbose get https://registry.npmjs.org/reflect-metadata not expired, no request
+608 silly addNameRange number 2 { name: 'reflect-metadata',
+608 silly addNameRange   range: '>=0.1.3 <0.2.0',
+608 silly addNameRange   hasData: true }
+609 silly addNameRange versions [ 'reflect-metadata',
+609 silly addNameRange   [ '0.0.2',
+609 silly addNameRange     '0.0.3',
+609 silly addNameRange     '0.1.0',
+609 silly addNameRange     '0.1.1',
+609 silly addNameRange     '0.1.2',
+609 silly addNameRange     '0.1.3',
+609 silly addNameRange     '0.1.4',
+609 silly addNameRange     '0.1.5',
+609 silly addNameRange     '0.1.6',
+609 silly addNameRange     '0.1.7',
+609 silly addNameRange     '0.1.8',
+609 silly addNameRange     '0.1.9',
+609 silly addNameRange     '0.1.10' ] ]
+610 silly addNamed reflect-metadata@0.1.10
+611 verbose addNamed "0.1.10" is a plain semver version for reflect-metadata
+612 verbose get https://registry.npmjs.org/bootstrap not expired, no request
+613 silly addNameRange number 2 { name: 'bootstrap', range: '>=3.3.6 <4.0.0', hasData: true }
+614 silly addNameRange versions [ 'bootstrap',
+614 silly addNameRange   [ '0.0.1',
+614 silly addNameRange     '0.0.2',
+614 silly addNameRange     '3.1.1',
+614 silly addNameRange     '3.2.0',
+614 silly addNameRange     '3.3.0',
+614 silly addNameRange     '3.3.1',
+614 silly addNameRange     '3.3.2',
+614 silly addNameRange     '3.3.4',
+614 silly addNameRange     '3.3.5',
+614 silly addNameRange     '3.3.6',
+614 silly addNameRange     '4.0.0-alpha.2',
+614 silly addNameRange     '3.3.7',
+614 silly addNameRange     '4.0.0-alpha.3',
+614 silly addNameRange     '4.0.0-alpha.4',
+614 silly addNameRange     '4.0.0-alpha.5',
+614 silly addNameRange     '4.0.0-alpha.6' ] ]
+615 silly addNamed bootstrap@3.3.7
+616 verbose addNamed "3.3.7" is a plain semver version for bootstrap
+617 verbose get https://registry.npmjs.org/systemjs not expired, no request
+618 silly cache afterAdd @angular/http@2.0.0
+619 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\http\2.0.0\package\package.json not in flight; writing
+620 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+621 silly cache afterAdd @angular/compiler@2.0.0
+622 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\compiler\2.0.0\package\package.json not in flight; writing
+623 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+624 silly cache afterAdd @angular/forms@2.0.0
+625 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\forms\2.0.0\package\package.json not in flight; writing
+626 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+627 silly cache afterAdd zone.js@0.6.26
+628 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\zone.js\0.6.26\package\package.json not in flight; writing
+629 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+630 silly cache afterAdd @angular/common@2.0.0
+631 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\common\2.0.0\package\package.json not in flight; writing
+632 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+633 silly cache afterAdd rxjs@5.0.0-beta.12
+634 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\rxjs\5.0.0-beta.12\package\package.json not in flight; writing
+635 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+636 silly cache afterAdd @angular/platform-browser@2.0.0
+637 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\platform-browser\2.0.0\package\package.json not in flight; writing
+638 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+639 silly cache afterAdd @angular/router@3.0.0
+640 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\router\3.0.0\package\package.json not in flight; writing
+641 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+642 silly cache afterAdd @angular/platform-browser-dynamic@2.0.0
+643 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\platform-browser-dynamic\2.0.0\package\package.json not in flight; writing
+644 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+645 silly cache afterAdd core-js@2.4.1
+646 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\core-js\2.4.1\package\package.json not in flight; writing
+647 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+648 silly cache afterAdd @angular/core@2.0.0
+649 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\core\2.0.0\package\package.json not in flight; writing
+650 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+651 silly cache afterAdd reflect-metadata@0.1.10
+652 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\reflect-metadata\0.1.10\package\package.json not in flight; writing
+653 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+654 silly cache afterAdd bootstrap@3.3.7
+655 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\bootstrap\3.3.7\package\package.json not in flight; writing
+656 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+657 silly cache afterAdd systemjs@0.19.27
+658 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\systemjs\0.19.27\package\package.json not in flight; writing
+659 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+660 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\compiler\2.0.0\package\package.json written
+661 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\zone.js\0.6.26\package\package.json written
+662 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\forms\2.0.0\package\package.json written
+663 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\http\2.0.0\package\package.json written
+664 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\router\3.0.0\package\package.json written
+665 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\platform-browser\2.0.0\package\package.json written
+666 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\core-js\2.4.1\package\package.json written
+667 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\common\2.0.0\package\package.json written
+668 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\platform-browser-dynamic\2.0.0\package\package.json written
+669 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\@angular\core\2.0.0\package\package.json written
+670 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\rxjs\5.0.0-beta.12\package\package.json written
+671 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\bootstrap\3.3.7\package\package.json written
+672 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\reflect-metadata\0.1.10\package\package.json written
+673 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\systemjs\0.19.27\package\package.json written
+674 silly fetchNamedPackageData symbol-observable
+675 silly mapToRegistry name symbol-observable
+676 silly mapToRegistry using default registry
+677 silly mapToRegistry registry https://registry.npmjs.org/
+678 silly mapToRegistry data Result {
+678 silly mapToRegistry   raw: 'symbol-observable',
+678 silly mapToRegistry   scope: null,
+678 silly mapToRegistry   escapedName: 'symbol-observable',
+678 silly mapToRegistry   name: 'symbol-observable',
+678 silly mapToRegistry   rawSpec: '',
+678 silly mapToRegistry   spec: 'latest',
+678 silly mapToRegistry   type: 'tag' }
+679 silly mapToRegistry uri https://registry.npmjs.org/symbol-observable
+680 verbose request uri https://registry.npmjs.org/symbol-observable
+681 verbose request no auth needed
+682 info attempt registry request try #1 at 1:57:12 PM
+683 verbose etag W/"57fff5a9-470b"
+684 verbose lastModified Thu, 13 Oct 2016 20:59:21 GMT
+685 http request GET https://registry.npmjs.org/symbol-observable
+686 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+687 info attempt registry request try #2 at 1:57:43 PM
+688 verbose etag W/"57fff5a9-470b"
+689 verbose lastModified Thu, 13 Oct 2016 20:59:21 GMT
+690 http request GET https://registry.npmjs.org/symbol-observable
+691 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+692 info attempt registry request try #3 at 1:59:04 PM
+693 verbose etag W/"57fff5a9-470b"
+694 verbose lastModified Thu, 13 Oct 2016 20:59:21 GMT
+695 http request GET https://registry.npmjs.org/symbol-observable
+696 silly get cb [ 304, undefined ]
+697 verbose etag https://registry.npmjs.org/symbol-observable from cache
+698 verbose get saving symbol-observable to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\symbol-observable\.cache.json
+699 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+700 silly resolveWithNewModule symbol-observable@1.0.4 checking installable status
+701 silly cache add args [ 'symbol-observable@^1.0.1', null ]
+702 verbose cache add spec symbol-observable@^1.0.1
+703 silly cache add parsed spec Result {
+703 silly cache add   raw: 'symbol-observable@^1.0.1',
+703 silly cache add   scope: null,
+703 silly cache add   escapedName: 'symbol-observable',
+703 silly cache add   name: 'symbol-observable',
+703 silly cache add   rawSpec: '^1.0.1',
+703 silly cache add   spec: '>=1.0.1 <2.0.0',
+703 silly cache add   type: 'range' }
+704 silly addNamed symbol-observable@>=1.0.1 <2.0.0
+705 verbose addNamed ">=1.0.1 <2.0.0" is a valid semver range for symbol-observable
+706 silly addNameRange { name: 'symbol-observable',
+706 silly addNameRange   range: '>=1.0.1 <2.0.0',
+706 silly addNameRange   hasData: false }
+707 silly mapToRegistry name symbol-observable
+708 silly mapToRegistry using default registry
+709 silly mapToRegistry registry https://registry.npmjs.org/
+710 silly mapToRegistry data Result {
+710 silly mapToRegistry   raw: 'symbol-observable',
+710 silly mapToRegistry   scope: null,
+710 silly mapToRegistry   escapedName: 'symbol-observable',
+710 silly mapToRegistry   name: 'symbol-observable',
+710 silly mapToRegistry   rawSpec: '',
+710 silly mapToRegistry   spec: 'latest',
+710 silly mapToRegistry   type: 'tag' }
+711 silly mapToRegistry uri https://registry.npmjs.org/symbol-observable
+712 verbose addNameRange registry:https://registry.npmjs.org/symbol-observable not in flight; fetching
+713 verbose get https://registry.npmjs.org/symbol-observable not expired, no request
+714 silly addNameRange number 2 { name: 'symbol-observable',
+714 silly addNameRange   range: '>=1.0.1 <2.0.0',
+714 silly addNameRange   hasData: true }
+715 silly addNameRange versions [ 'symbol-observable',
+715 silly addNameRange   [ '0.1.0',
+715 silly addNameRange     '0.2.0',
+715 silly addNameRange     '0.2.1',
+715 silly addNameRange     '0.2.2',
+715 silly addNameRange     '0.2.3',
+715 silly addNameRange     '0.2.4',
+715 silly addNameRange     '1.0.0',
+715 silly addNameRange     '1.0.1',
+715 silly addNameRange     '1.0.2',
+715 silly addNameRange     '1.0.3',
+715 silly addNameRange     '1.0.4' ] ]
+716 silly addNamed symbol-observable@1.0.4
+717 verbose addNamed "1.0.4" is a plain semver version for symbol-observable
+718 silly cache afterAdd symbol-observable@1.0.4
+719 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\symbol-observable\1.0.4\package\package.json not in flight; writing
+720 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+721 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\symbol-observable\1.0.4\package\package.json written
+722 silly fetchNamedPackageData when
+723 silly mapToRegistry name when
+724 silly mapToRegistry using default registry
+725 silly mapToRegistry registry https://registry.npmjs.org/
+726 silly mapToRegistry data Result {
+726 silly mapToRegistry   raw: 'when',
+726 silly mapToRegistry   scope: null,
+726 silly mapToRegistry   escapedName: 'when',
+726 silly mapToRegistry   name: 'when',
+726 silly mapToRegistry   rawSpec: '',
+726 silly mapToRegistry   spec: 'latest',
+726 silly mapToRegistry   type: 'tag' }
+727 silly mapToRegistry uri https://registry.npmjs.org/when
+728 verbose request uri https://registry.npmjs.org/when
+729 verbose request no auth needed
+730 info attempt registry request try #1 at 1:59:28 PM
+731 verbose etag W/"58aa3d9c-1d513"
+732 verbose lastModified Mon, 20 Feb 2017 00:51:40 GMT
+733 http request GET https://registry.npmjs.org/when
+734 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+735 info attempt registry request try #2 at 1:59:59 PM
+736 verbose etag W/"58aa3d9c-1d513"
+737 verbose lastModified Mon, 20 Feb 2017 00:51:40 GMT
+738 http request GET https://registry.npmjs.org/when
+739 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+740 info attempt registry request try #3 at 2:01:20 PM
+741 verbose etag W/"58aa3d9c-1d513"
+742 verbose lastModified Mon, 20 Feb 2017 00:51:40 GMT
+743 http request GET https://registry.npmjs.org/when
+744 silly get cb [ 304, undefined ]
+745 verbose etag https://registry.npmjs.org/when from cache
+746 verbose get saving when to C:\Users\Alaa\AppData\Roaming\npm-cache\registry.npmjs.org\when\.cache.json
+747 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+748 silly resolveWithNewModule when@3.7.8 checking installable status
+749 silly cache add args [ 'when@^3.7.5', null ]
+750 verbose cache add spec when@^3.7.5
+751 silly cache add parsed spec Result {
+751 silly cache add   raw: 'when@^3.7.5',
+751 silly cache add   scope: null,
+751 silly cache add   escapedName: 'when',
+751 silly cache add   name: 'when',
+751 silly cache add   rawSpec: '^3.7.5',
+751 silly cache add   spec: '>=3.7.5 <4.0.0',
+751 silly cache add   type: 'range' }
+752 silly addNamed when@>=3.7.5 <4.0.0
+753 verbose addNamed ">=3.7.5 <4.0.0" is a valid semver range for when
+754 silly addNameRange { name: 'when', range: '>=3.7.5 <4.0.0', hasData: false }
+755 silly mapToRegistry name when
+756 silly mapToRegistry using default registry
+757 silly mapToRegistry registry https://registry.npmjs.org/
+758 silly mapToRegistry data Result {
+758 silly mapToRegistry   raw: 'when',
+758 silly mapToRegistry   scope: null,
+758 silly mapToRegistry   escapedName: 'when',
+758 silly mapToRegistry   name: 'when',
+758 silly mapToRegistry   rawSpec: '',
+758 silly mapToRegistry   spec: 'latest',
+758 silly mapToRegistry   type: 'tag' }
+759 silly mapToRegistry uri https://registry.npmjs.org/when
+760 verbose addNameRange registry:https://registry.npmjs.org/when not in flight; fetching
+761 verbose get https://registry.npmjs.org/when not expired, no request
+762 silly addNameRange number 2 { name: 'when', range: '>=3.7.5 <4.0.0', hasData: true }
+763 silly addNameRange versions [ 'when',
+763 silly addNameRange   [ '1.2.0',
+763 silly addNameRange     '1.3.0',
+763 silly addNameRange     '1.4.0',
+763 silly addNameRange     '1.4.1',
+763 silly addNameRange     '1.4.2',
+763 silly addNameRange     '1.4.3',
+763 silly addNameRange     '1.4.4',
+763 silly addNameRange     '1.5.0',
+763 silly addNameRange     '1.5.1',
+763 silly addNameRange     '1.5.2',
+763 silly addNameRange     '1.6.0',
+763 silly addNameRange     '1.6.1',
+763 silly addNameRange     '1.7.0',
+763 silly addNameRange     '1.7.1',
+763 silly addNameRange     '1.8.0',
+763 silly addNameRange     '1.8.1',
+763 silly addNameRange     '2.0.0',
+763 silly addNameRange     '2.0.1',
+763 silly addNameRange     '2.1.0',
+763 silly addNameRange     '2.1.1',
+763 silly addNameRange     '2.2.0',
+763 silly addNameRange     '2.2.1',
+763 silly addNameRange     '2.3.0',
+763 silly addNameRange     '2.4.0',
+763 silly addNameRange     '2.5.0',
+763 silly addNameRange     '2.5.1',
+763 silly addNameRange     '2.6.0',
+763 silly addNameRange     '2.7.0',
+763 silly addNameRange     '2.7.1',
+763 silly addNameRange     '2.8.0',
+763 silly addNameRange     '3.0.0',
+763 silly addNameRange     '3.0.1',
+763 silly addNameRange     '3.1.0',
+763 silly addNameRange     '3.2.0',
+763 silly addNameRange     '3.2.1',
+763 silly addNameRange     '3.2.2',
+763 silly addNameRange     '3.2.3',
+763 silly addNameRange     '3.3.0',
+763 silly addNameRange     '3.3.1',
+763 silly addNameRange     '3.4.0',
+763 silly addNameRange     '3.4.1',
+763 silly addNameRange     '3.4.2',
+763 silly addNameRange     '3.4.3',
+763 silly addNameRange     '3.4.4',
+763 silly addNameRange     '3.4.5',
+763 silly addNameRange     '3.4.6',
+763 silly addNameRange     '3.5.0',
+763 silly addNameRange     '3.5.1',
+763 silly addNameRange     '3.5.2',
+763 silly addNameRange     '3.6.0',
+763 silly addNameRange     '3.6.1',
+763 silly addNameRange     '3.6.2',
+763 silly addNameRange     '3.6.3',
+763 silly addNameRange     '3.6.4',
+763 silly addNameRange     '3.7.0',
+763 silly addNameRange     '3.7.1',
+763 silly addNameRange     '3.7.2',
+763 silly addNameRange     '3.7.3',
+763 silly addNameRange     '3.7.4',
+763 silly addNameRange     '3.7.5',
+763 silly addNameRange     '3.7.6',
+763 silly addNameRange     '3.7.7',
+763 silly addNameRange     '3.7.8' ] ]
+764 silly addNamed when@3.7.8
+765 verbose addNamed "3.7.8" is a plain semver version for when
+766 silly cache afterAdd when@3.7.8
+767 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\when\3.7.8\package\package.json not in flight; writing
+768 verbose correctMkdir C:\Users\Alaa\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+769 verbose afterAdd C:\Users\Alaa\AppData\Roaming\npm-cache\when\3.7.8\package\package.json written
+770 silly fetchNamedPackageData concurrently
+771 silly mapToRegistry name concurrently
+772 silly mapToRegistry using default registry
+773 silly mapToRegistry registry https://registry.npmjs.org/
+774 silly mapToRegistry data Result {
+774 silly mapToRegistry   raw: 'concurrently',
+774 silly mapToRegistry   scope: null,
+774 silly mapToRegistry   escapedName: 'concurrently',
+774 silly mapToRegistry   name: 'concurrently',
+774 silly mapToRegistry   rawSpec: '',
+774 silly mapToRegistry   spec: 'latest',
+774 silly mapToRegistry   type: 'tag' }
+775 silly mapToRegistry uri https://registry.npmjs.org/concurrently
+776 silly fetchNamedPackageData lite-server
+777 silly mapToRegistry name lite-server
+778 silly mapToRegistry using default registry
+779 silly mapToRegistry registry https://registry.npmjs.org/
+780 silly mapToRegistry data Result {
+780 silly mapToRegistry   raw: 'lite-server',
+780 silly mapToRegistry   scope: null,
+780 silly mapToRegistry   escapedName: 'lite-server',
+780 silly mapToRegistry   name: 'lite-server',
+780 silly mapToRegistry   rawSpec: '',
+780 silly mapToRegistry   spec: 'latest',
+780 silly mapToRegistry   type: 'tag' }
+781 silly mapToRegistry uri https://registry.npmjs.org/lite-server
+782 silly fetchNamedPackageData tslint
+783 silly mapToRegistry name tslint
+784 silly mapToRegistry using default registry
+785 silly mapToRegistry registry https://registry.npmjs.org/
+786 silly mapToRegistry data Result {
+786 silly mapToRegistry   raw: 'tslint',
+786 silly mapToRegistry   scope: null,
+786 silly mapToRegistry   escapedName: 'tslint',
+786 silly mapToRegistry   name: 'tslint',
+786 silly mapToRegistry   rawSpec: '',
+786 silly mapToRegistry   spec: 'latest',
+786 silly mapToRegistry   type: 'tag' }
+787 silly mapToRegistry uri https://registry.npmjs.org/tslint
+788 silly fetchNamedPackageData typescript
+789 silly mapToRegistry name typescript
+790 silly mapToRegistry using default registry
+791 silly mapToRegistry registry https://registry.npmjs.org/
+792 silly mapToRegistry data Result {
+792 silly mapToRegistry   raw: 'typescript',
+792 silly mapToRegistry   scope: null,
+792 silly mapToRegistry   escapedName: 'typescript',
+792 silly mapToRegistry   name: 'typescript',
+792 silly mapToRegistry   rawSpec: '',
+792 silly mapToRegistry   spec: 'latest',
+792 silly mapToRegistry   type: 'tag' }
+793 silly mapToRegistry uri https://registry.npmjs.org/typescript
+794 silly fetchNamedPackageData typings
+795 silly mapToRegistry name typings
+796 silly mapToRegistry using default registry
+797 silly mapToRegistry registry https://registry.npmjs.org/
+798 silly mapToRegistry data Result {
+798 silly mapToRegistry   raw: 'typings',
+798 silly mapToRegistry   scope: null,
+798 silly mapToRegistry   escapedName: 'typings',
+798 silly mapToRegistry   name: 'typings',
+798 silly mapToRegistry   rawSpec: '',
+798 silly mapToRegistry   spec: 'latest',
+798 silly mapToRegistry   type: 'tag' }
+799 silly mapToRegistry uri https://registry.npmjs.org/typings
+800 verbose request uri https://registry.npmjs.org/concurrently
+801 verbose request no auth needed
+802 info attempt registry request try #1 at 2:01:41 PM
+803 verbose etag W/"58b91657-7f34"
+804 verbose lastModified Fri, 03 Mar 2017 07:08:07 GMT
+805 http request GET https://registry.npmjs.org/concurrently
+806 verbose request uri https://registry.npmjs.org/lite-server
+807 verbose request no auth needed
+808 info attempt registry request try #1 at 2:01:41 PM
+809 verbose etag W/"58bc1870-6cd1"
+810 verbose lastModified Sun, 05 Mar 2017 13:53:52 GMT
+811 http request GET https://registry.npmjs.org/lite-server
+812 verbose request uri https://registry.npmjs.org/tslint
+813 verbose request no auth needed
+814 info attempt registry request try #1 at 2:01:41 PM
+815 verbose etag W/"58ba1a43-3dc7b"
+816 verbose lastModified Sat, 04 Mar 2017 01:37:07 GMT
+817 http request GET https://registry.npmjs.org/tslint
+818 verbose request uri https://registry.npmjs.org/typings
+819 verbose request no auth needed
+820 info attempt registry request try #1 at 2:01:42 PM
+821 verbose etag W/"58a86dca-30c89"
+822 verbose lastModified Sat, 18 Feb 2017 15:52:42 GMT
+823 http request GET https://registry.npmjs.org/typings
+824 verbose request uri https://registry.npmjs.org/typescript
+825 verbose request no auth needed
+826 info attempt registry request try #1 at 2:01:42 PM
+827 verbose etag W/"58bd1c26-157210"
+828 verbose lastModified Mon, 06 Mar 2017 08:21:58 GMT
+829 http request GET https://registry.npmjs.org/typescript
+830 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+831 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+832 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+833 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+834 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+835 info attempt registry request try #2 at 2:02:13 PM
+836 verbose etag W/"58bc1870-6cd1"
+837 verbose lastModified Sun, 05 Mar 2017 13:53:52 GMT
+838 http request GET https://registry.npmjs.org/lite-server
+839 info attempt registry request try #2 at 2:02:13 PM
+840 verbose etag W/"58b91657-7f34"
+841 verbose lastModified Fri, 03 Mar 2017 07:08:07 GMT
+842 http request GET https://registry.npmjs.org/concurrently
+843 info attempt registry request try #2 at 2:02:13 PM
+844 verbose etag W/"58a86dca-30c89"
+845 verbose lastModified Sat, 18 Feb 2017 15:52:42 GMT
+846 http request GET https://registry.npmjs.org/typings
+847 info attempt registry request try #2 at 2:02:13 PM
+848 verbose etag W/"58ba1a43-3dc7b"
+849 verbose lastModified Sat, 04 Mar 2017 01:37:07 GMT
+850 http request GET https://registry.npmjs.org/tslint
+851 info attempt registry request try #2 at 2:02:13 PM
+852 verbose etag W/"58bd1c26-157210"
+853 verbose lastModified Mon, 06 Mar 2017 08:21:58 GMT
+854 http request GET https://registry.npmjs.org/typescript
+855 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+856 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+857 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+858 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+859 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.149.10.11:8080
+860 verbose stack Error: kill ENOSYS
+860 verbose stack     at exports._errnoException (util.js:1022:11)
+860 verbose stack     at process.kill (internal/process.js:172:13)
+860 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+860 verbose stack     at emitNone (events.js:91:20)
+860 verbose stack     at process.emit (events.js:185:7)
+860 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+860 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+860 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+861 verbose cwd D:\ITI\ITI 37\Angular 2\Angular2-GettingStarted-master\APM - Start
+862 error Windows_NT 10.0.14393
+863 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+864 error node v6.10.0
+865 error npm  v3.10.10
+866 error code ENOSYS
+867 error errno ENOSYS
+868 error syscall kill
+869 error kill ENOSYS
+870 error If you need help, you may report this error at:
+870 error     <https://github.com/npm/npm/issues>
+871 verbose exit [ 1, true ]
