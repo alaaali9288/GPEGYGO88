@@ -1,0 +1,16 @@
+.container{background-color: #3F5666; margin-top: 15px;}
+
+#headAdd2{font-size: 40px; margin-top: 40px; text-align: center; color: #EA6045; font-weight: 600;}
+
+.labelN{padding-top: 15px;}
+.inputtxtbg{background-color: #F5E5C0; margin: 15px; }
+
+.list{width: 60%; padding: 10px; margin: 15px;}
+
+#aboutTA{height: 100px; width: 60%; margin-bottom: 20px; resize: none; font-size: 16px;}
+
+#formZone{ margin: 0 25px; background-color:  #F5E5C0; height: 50px; width: 49%;}
+
+#map{margin:230px 230px 30px 230px; width:400px; height:250px; background-color:#F5E5C0;}
+
+#submitBtn{float: right; padding: 15px; margin: 20 280px 80px 0;}

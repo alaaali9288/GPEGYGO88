@@ -1114,7 +1114,8 @@ input[type="search"].sb-search-input {
 /*----//End-footer----*/
 /*-----start-destination----*/
 .destination-head{
-	background: url(../images/places.jpg) no-repeat 0px 0px;
+
+	background-image: url(/app/components/images/places.jpg);
 	padding: 2em 0 8em;
 }
 .dfind-place{
@@ -1263,7 +1264,7 @@ input[type="search"].sb-search-input {
 }
 /*----strat-criuses-----*/
 .criuses-head{
-	background: url(../images/trips.jpg) no-repeat 0px 0px;
+	background: url('./app/components/images/trips.jpg') no-repeat 0px 0px;
 	padding: 2em 0 8em;
 	
 }
@@ -2727,4 +2728,6 @@ height:100px
     margin-bottom: -100%;
 	}
 	
-
+.destinations{
+	background-color: red;
+}

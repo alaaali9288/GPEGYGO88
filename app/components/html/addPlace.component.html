@@ -1,0 +1,100 @@
+
+
+<div class="container">
+    
+    <h2 id="headAdd2">Add or Edit a Place</h2>
+    
+    <div class="p-ww">
+        <form action="submit" method="post" autocomplete="on" >
+            <div class="col-lg-2 labelN"><label for="placeN"><span>Place name </span></label></div>
+            <!--<div class="col-lg-10"><input id="placeN" style="width: 60%;" required class="inputtxtbg" type="text" value="Place Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Place Name';}"></div>-->
+            <div class="col-lg-10"><input id="placeN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter place name" ></div>            
+            <div class="col-lg-2 labelN"><label for="address"><span>Address </span></label></div>
+            <div class="col-lg-10"><input id="address" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter address"></div>
+
+
+            <div class="col-lg-2 labelN"><label for="cityN"><span>City name</span></label></div>
+            <div class="col-lg-10">
+                <select id="cityN" class="list" required> 
+                    <option>Cairo</option>
+                    <option>Giza</option>
+                    <option>Marsa Matruh</option>
+                    <option>SharmElSheik</option>
+                    <option>Alex</option>
+                </select>
+            </div>
+
+            <div class="col-lg-2 labelN"><label for="placeT"><span>Place Type </span></label></div>
+            <div class="col-lg-10">
+                <select id="placeT" class="list" required> 
+                    <option>Historical</option>
+                    <option>Entertainment</option>
+                    <option>Educational</option>
+                    <option>observation</option>
+                    <option>athletic</option>
+                </select>
+            </div>
+
+            <div class="col-lg-2 labelN"><label for="activ"><span>Activities </span></label></div>
+            <div class="col-lg-10">
+                <select id="activ" class="selectActivities list" required multiple="multiple">
+                    <option>skiing</option>
+                    <option>swiming</option>
+                    <option>Diving</option>
+                    <option>football</option>
+                    <option>eating</option>
+                </select>
+            </div>
+            
+
+            <div class="col-lg-2 labelN"><label for="workH"><span>Work hours</span></label></div>
+            <div class="col-lg-10"><input id="workH" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter work hours"></div>
+
+
+        <div class="checkbox" >
+            <div class="col-lg-2 labelN"><label for="checkbox-2-1"><span>Food </span></label></div>
+            <input type="checkbox" id="checkbox-2-1" class="regular-checkbox big-checkbox col-lg-4" />
+            <label style="float: left; margin: 0 30px;" for="checkbox-2-1"></label>
+        </div>        
+    
+
+<!--<div class="clear" style="margin: 20px 0;"></div>-->
+
+        <div class="checkbox" >
+            <div class="col-lg-2 labelN"><label for="checkbox-2-2"><span>Bathroom </span></label></div>
+            <input type="checkbox" id="checkbox-2-2" class="regular-checkbox big-checkbox col-lg-4" />
+            <label style="float: left; margin: 0 30px;" for="checkbox-2-2"></label>
+        </div>
+
+
+            <div class="clear" style="margin: 20px 0;"></div>
+
+            <div class="form-group">
+                <div class="col-lg-2 labelN"><label for="aboutTA"><span>About </span></label></div>
+                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" placeholder="About this place"></textarea></div>
+            </div>
+
+      <!--  <div class="col-lg-2 labelN"> <span>Pictures </span></div>
+        <form action="/file-upload" class="dropzone col-lg-10" id="formZone">
+                <div class="fallback">
+                    <input name="file" type="file" multiple /> (This is just a demo dropzone. Selected files are not actually uploaded.)
+                </div>
+        </form>
+        -->
+
+            <div class="col-lg-2 labelN"><label for="formZone"><span>Pictures </span></label></div>  
+            <input type="file" multiple action="/upload-target" class="col-lg-10" id="formZone" />
+
+
+            <div id="map"></div>
+
+            <input id="submitBtn" type="submit" value="    Save    " />
+        </form>
+    </div>
+
+
+
+
+</div>
+
+<br><br>

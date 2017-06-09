@@ -4,11 +4,10 @@
 				<div class="wrap">
 				<div class="top-header-left">
 					<ul>
-						<li><a href="#"><span> </span> Agent Login</a></li>
-						<li><a href="#"><span> </span> Agent Login</a></li>
-						<li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" href="#"> Register</a></li>
-						<li><p class="contact-info">Call Us Now :815-123-4567</p></li>
-						<div class="clear"> </div>
+	
+						<li><a [routerLink]='["/loginAndReg"]'><span> </span> Agent Login</a></li>
+						<li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" [routerLink]='["/loginAndReg"]'> Register</a></li>
+									<div class="clear"> </div>
 					</ul>
 				</div>
 				<div class="top-header-right">
@@ -29,15 +28,15 @@
 				<div class="wrap">
 				<!--- start-logo---->
 				<div class="logo">
-					<a href="index.html"><img src="{{logoPath}}EgyGo-Logo.png" title="egygologo" /></a>
+					<a [routerLink]='["/"]'><img src="{{logoPath}}EgyGo-Logo.png" title="egygologo" /></a>
 				</div>
 				<!--- //End-logo---->
 				<!--- start-top-nav---->
 			<div class="top-nav">
 						<ul class="flexy-menu thick orange">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="">Trips</a>
-								<ul>
+							<li ><a [routerLink]='["/"]'>Home</a></li>
+							<li><a [routerLink]='["/trips"]'>Trips</a>
+							<!--	<ul>
 								<li><a href="destinations.html">Dropdown item</a></li>
 								<li><a href="destinations.html">Dropdown item</a></li>
 								<li><a href="destinations.html">Dropdown item</a>
@@ -58,19 +57,20 @@
 								<li><a href="#">Dropdown item</a></li>
 								<li><a href="#">Dropdown item</a></li>
 							</ul>
+							-->
 							</li>
-							<li><a href="criuses.html">Places</a></li>
-							<li><a href="destinations.html">Contact</a></li>
-							<li><a href="destinations.html">About</a></li>
+							<li><a [routerLink]='["/places"]'>Places</a></li>
+							<li><a [routerLink]='["/contactUS"]'>Contact</a></li>
+							<li><a [routerLink]='["/aboutus"]'>About</a></li>
 						</ul>
 						<div class="search-box">
-							<div id="sb-search" class="sb-search">
+						<!--	<div id="sb-search" class="sb-search">
 								<form>
 									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
 									<input class="sb-search-submit" type="submit" value="">
 									<span class="sb-icon-search"> </span>
 								</form>
-							</div>
+							</div>-->
 						</div>
 						<!----search-scripts---->
 						<script src="js/modernizr.custom.js"></script>
@@ -90,7 +90,7 @@
 		<div class="destinations">
 			<div class="destination-head">
 				<div class="wrap">
-					<h3>Destinations</h3>
+					<h3> &nbsp;&nbsp;&nbsp;&nbsp;  </h3>
 				</div>
 				<!---End-destinatiuons---->
 					<div class="find-place">

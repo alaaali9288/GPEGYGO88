@@ -1,0 +1,823 @@
+
+@media only screen and (max-width:1366px) and (min-width:1280px){
+	.wrap {
+		width: 80%;
+	}
+	.top-nav {
+		width: 70%;
+	}
+	.p-ww span {
+		margin: 0 0.5em;	
+	}
+	.destination-places-grid {
+		width: 31.8%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0.9em;
+	}
+}
+@media only screen and (max-width:1280px) and (min-width:1024px){
+	.wrap {
+		width: 90%;
+	}
+	.top-nav {
+		width: 74%;
+	}
+	.p-ww span {
+		margin: 0 0.5em;	
+	}
+	.destination-places-grid {
+		width: 20%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0.5em;
+	}
+	.blog-poast-admin {
+		left: 0.5em;
+	}
+	.contact-to input[type="text"] {
+		width: 30.4%;
+	}
+	.footer-grid input[type="text"] {
+		width: 70%;
+	}
+	.clients {
+		padding: 1em 0 3em;
+	}
+	.destination-pagenate {
+		margin: 0.5em 0 5em 0;
+	}
+}
+@media only screen and (max-width:1024px) and (min-width:768px){
+	.wrap {
+		width: 90%;
+	}
+	.top-nav {
+		width: 84%;
+	}
+	.p-ww span {
+		margin: 0 0.5em;	
+	}
+	.destination-places-grid {
+		width: 28%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0em;
+		display: block;
+		padding: 0.2em 0;
+	}
+	.blog-poast-admin {
+		left: 1.2em;
+	}
+	.contact-to input[type="text"] {
+		width: 30.15%;
+	}
+	.footer-grid input[type="text"] {
+		width: 66%;
+	}
+	.clients {
+		padding: 1em 0 3em;
+	}
+	.destination-pagenate {
+		margin: 0.5em 0 5em 0;
+	}
+	.p-ww input[type="text"] {
+		width: 28%;
+	}
+	.p-h label {
+		font-size: 1.2em;
+	}
+	.offers-head {
+		padding: 1.5em 0;
+	}
+	.holiday-type-grids {
+		width: 100%;
+	}
+	.holiday-types {
+		padding: 2em 0;
+		margin: 1em 0 2em;
+		background-size: 100% 100%;
+	}
+	.dfind-place input[type="submit"] {
+		padding: 0.5em 1em;
+	}
+	.criuse-info-left ul li {
+		display: block;
+	}
+	.criuse-info-left ul li a {
+		padding: 0.2em 0.5em;
+	}
+	.criuse-info-right {
+		margin: 2em;
+	}
+	.criuse-main {
+		padding: 0 0 5em 0;
+	}
+	.criuse-pic-info-top-place-name h2 span {
+		font-size: 1.5em;
+	}
+	.criuse-grid-info h1 a {
+		font-size: 1.3em;
+	}
+	.blog-poast-info {
+		text-align: right;
+	}
+}
+@media only screen and (max-width:768px) and (min-width:640px){
+	.wrap {
+		width: 80%;
+	}
+	.top-nav {
+		width: 100%;
+		float:none;
+	}
+	.p-ww span {
+		margin: 0;
+		display: block;		
+	}
+	.destination-places-grid {
+		width: 100%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0em;
+		display: block;
+		padding: 0.2em 0;
+	}
+	.blog-poast-admin {
+		left: 1.2em;
+	}
+	.contact-to input[type="text"] {
+		width: 97.8%;
+	}
+	.contact-to input[type="text"]:nth-child(2), .contact-to input[type="text"]:nth-child(3) {
+		margin-left: 0px;
+	}
+	.footer-grid input[type="text"] {
+		width: 66%;
+	}
+	.clients {
+		padding: 1em 0 3em;
+	}
+	.destination-pagenate {
+		margin: 0.5em 0 5em 0;
+	}
+	.p-ww input[type="text"] {
+		width: 94%;
+	}
+	.p-h label {
+		font-size: 1.2em;
+	}
+	.offers-head {
+		padding: 1.5em 0;
+	}
+	.holiday-type-grids {
+		width: 100%;
+	}
+	.holiday-types {
+		padding: 2em 0;
+		margin: 0em 0 0em;
+		background-size: 100% 100%;
+		border-bottom: 1px solid #253541;
+	}
+	.dfind-place input[type="submit"] {
+		padding: 0.5em 1em;
+	}
+	.criuse-info-left ul li {
+		display: block;
+	}
+	.criuse-info-left ul li a {
+		padding: 0.2em 0.5em;
+	}
+	.criuse-info-right {
+		margin: 1.88em;
+	}
+	.criuse-main {
+		padding: 0 0 5em 0;
+	}
+	.criuse-pic-info-top-place-name h2 span {
+		font-size: 1.2em;
+	}
+	.criuse-grid-info h1 a {
+		font-size: 1.3em;
+	}
+	.blog-poast-info {
+		text-align: center;
+	}
+	.top-header-left ul li:nth-child(1),.top-header-left ul li:nth-child(2),.top-header-left ul li:nth-child(3){
+		display:none;
+	}
+	.top-header-left ul li{
+		border-left:none;
+	}
+	.flexy-menu>li.showhide {
+		background:none;
+		height: 18px;
+	}
+	.flexy-menu>li.showhide span.title {
+		display: none;
+	}
+	.flexy-menu {
+		margin-right: 0%;
+	}
+	.flexy-menu>li.showhide span.icon {
+		margin: 17px 20px;
+		float: right;
+		position: absolute;
+		right: 3em;
+		top: -50px;
+	}
+	.flexy-menu>li.showhide .icon em {
+		margin-bottom: 3px;
+		display: block;
+		width: 31px;
+		height: 4px;
+		background: #2C3E50;
+	}
+	.orange li:hover>a, .orange li.active a {
+		background: #F5E5C0;
+	}
+	.p-ww {
+		float: none;
+		width: 100%;
+		padding: 0.3em 0 0 0;
+	}
+	.p-h {
+		float: none;
+		width: 100%;
+		padding: 0.5em 0;
+		text-align: left;
+		background:none
+	}
+	.p-h span {
+		display:inline-block
+	}
+	.p-ww input[type="submit"] {
+		outline: none;
+		display: block;
+		width: 99.5%;
+		margin: 1em 0 0;
+		border-radius: 0.3em;
+		-webkit-border-radius: 0.3em;
+		-moz-border-radius: 0.3em;
+		-o-border-radius: 0.3em;
+	}
+	.find-place {
+		padding-bottom: 0.8em;
+	}
+	.holiday-type-grid {
+		width: 33.33%;
+		margin-bottom: 1em;
+	}
+	.clients{
+		display:none;
+	}
+	.footer-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 1em;
+	}
+	.Newsletter,.tags{
+		display:none;
+	}
+	.footer-grids {
+		padding: 1em 0;
+	}
+	.dest-place-pic img {
+		width: 100%;
+	}
+	.criuse-pic-info-top-place-name h2 label {
+		font-size: 1em;
+	}
+	.criuse-pic-info {
+		bottom: 1em;
+		left: 1em;
+	}
+	.blog-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 2em;
+	}
+	.map{
+		display:none;
+	}
+	.span_1_of_first1 {
+		width: 100%;
+	}
+	.col_1_of_bottom {
+		display: block;
+		float: none;
+		margin: 0 0 1em 0;
+	}
+	.contact {
+		margin: 1em 0 9em;
+	}
+}
+@media only screen and (max-width:640px) and (min-width:480px){
+	.wrap {
+		width: 80%;
+	}
+	.top-nav {
+		width: 100%;
+		float:none;
+	}
+	.p-ww span {
+		margin: 0;
+		display: block;		
+	}
+	.destination-places-grid {
+		width: 100%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0em;
+		display: block;
+		padding: 0.2em 0;
+	}
+	.blog-poast-admin {
+		left: 1.2em;
+	}
+	.contact-to input[type="text"] {
+		width: 97.8%;
+	}
+	.contact-to input[type="text"]:nth-child(2), .contact-to input[type="text"]:nth-child(3) {
+		margin-left: 0px;
+	}
+	.footer-grid input[type="text"] {
+		width: 66%;
+	}
+	.clients {
+		padding: 1em 0 3em;
+	}
+	.destination-pagenate {
+		margin: 0.5em 0 5em 0;
+	}
+	.p-ww input[type="text"] {
+		width: 92%;
+	}
+	.p-h label {
+		font-size: 1.2em;
+	}
+	.offers-head {
+		padding: 1.5em 0;
+	}
+	.holiday-type-grids {
+		width: 100%;
+	}
+	.holiday-types {
+		padding: 2em 0;
+		margin: 0em 0 0em;
+		background-size: 100% 100%;
+		border-bottom: 1px solid #253541;
+	}
+	.dfind-place input[type="submit"] {
+		padding: 0.5em 1em;
+	}
+	.criuse-info-left ul li {
+		display: block;
+	}
+	.criuse-info-left ul li a {
+		padding: 0.2em 0.5em;
+	}
+	.criuse-info-right {
+		margin: 1.88em;
+	}
+	.criuse-main {
+		padding: 0 0 5em 0;
+	}
+	.criuse-pic-info-top-place-name h2 span {
+		font-size: 1.2em;
+	}
+	.criuse-grid-info h1 a {
+		font-size: 1.3em;
+	}
+	.blog-poast-info {
+		text-align: center;
+	}
+	.top-header-left ul li:nth-child(1),.top-header-left ul li:nth-child(2),.top-header-left ul li:nth-child(3){
+		display:none;
+	}
+	.top-header-left ul li{
+		border-left:none;
+	}
+	.flexy-menu>li.showhide {
+		background:none;
+		height: 18px;
+	}
+	.flexy-menu>li.showhide span.title {
+		display: none;
+	}
+	.flexy-menu {
+		margin-right: 0%;
+	}
+	.flexy-menu>li.showhide span.icon {
+		margin: 17px 20px;
+		float: right;
+		position: absolute;
+		right: 3em;
+		top: -50px;
+	}
+	.flexy-menu>li.showhide .icon em {
+		margin-bottom: 3px;
+		display: block;
+		width: 31px;
+		height: 4px;
+		background: #2C3E50;
+	}
+	.orange li:hover>a, .orange li.active a {
+		background: #F5E5C0;
+	}
+	.p-ww {
+		float: none;
+		width: 100%;
+		padding: 0.3em 0 0 0;
+	}
+	.p-h {
+		float: none;
+		width: 100%;
+		padding: 0.5em 0;
+		text-align: left;
+		background:none
+	}
+	.p-h span {
+		display:inline-block
+	}
+	.p-ww input[type="submit"] {
+		outline: none;
+		display: block;
+		width: 99.5%;
+		margin: 1em 0 0;
+		border-radius: 0.3em;
+		-webkit-border-radius: 0.3em;
+		-moz-border-radius: 0.3em;
+		-o-border-radius: 0.3em;
+	}
+	.find-place {
+		padding-bottom: 0.8em;
+	}
+	.holiday-type-grid {
+		width: 33.33%;
+		margin-bottom: 1em;
+	}
+	.clients{
+		display:none;
+	}
+	.footer-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 1em;
+	}
+	.Newsletter,.tags{
+		display:none;
+	}
+	.footer-grids {
+		padding: 1em 0;
+	}
+	.dest-place-pic img {
+		width: 100%;
+	}
+	.criuse-pic-info-top-place-name h2 label {
+		font-size: 1em;
+	}
+	.criuse-pic-info {
+		bottom: 1em;
+		left: 1em;
+	}
+	.blog-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 2em;
+	}
+	.map{
+		display:none;
+	}
+	.span_1_of_first1 {
+		width: 100%;
+	}
+	.col_1_of_bottom {
+		display: block;
+		float: none;
+		margin: 0 0 1em 0;
+	}
+	.contact {
+		margin: 1em 0 9em;
+	}
+}
+@media only screen and (max-width:480px) and (min-width:320px){
+	.wrap {
+		width: 85%;
+	}
+	.top-nav {
+		width: 100%;
+		float:none;
+	}
+	.p-ww span {
+		margin: 0;
+		display: block;		
+	}
+	.destination-places-grid {
+		width: 100%;
+	}
+	.dest-place-opt-fea li {
+		margin-right: 0em;
+		display: block;
+		padding: 0.2em 0;
+	}
+	.blog-poast-admin {
+		left: 0.2em;
+	}
+	.contact-to input[type="text"] {
+		width: 94.8%;
+	}
+	.contact-to input[type="text"]:nth-child(2), .contact-to input[type="text"]:nth-child(3) {
+		margin-left: 0px;
+	}
+	.footer-grid input[type="text"] {
+		width: 66%;
+	}
+	.clients {
+		padding: 1em 0 3em;
+	}
+	.destination-pagenate {
+		margin: 0.5em 0 5em 0;
+	}
+	.p-ww input[type="text"] {
+		width: 91%;
+	}
+	.p-h label {
+		font-size: 1.2em;
+	}
+	.offers-head {
+		padding: 1.5em 0;
+	}
+	.holiday-type-grids {
+		width: 100%;
+	}
+	.holiday-types {
+		padding: 2em 0;
+		margin: 0em 0 0em;
+		background-size: 100% 100%;
+		border-bottom: 1px solid #253541;
+	}
+	.dfind-place input[type="submit"] {
+		padding: 0.5em 1em;
+	}
+	.criuse-info-left ul li {
+		display: block;
+	}
+	.criuse-info-left ul li a {
+		padding: 0.2em 0.5em;
+	}
+	.criuse-info-right {
+		margin: 1.88em;
+	}
+	.criuse-main {
+		padding: 0 0 5em 0;
+	}
+	.criuse-pic-info-top-place-name h2 span {
+		font-size: 1em;
+	}
+	.criuse-grid-info h1 a {
+		font-size: 1.3em;
+	}
+	.blog-poast-info {
+		text-align: right;
+	}
+	.top-header-left ul li:nth-child(1),.top-header-left ul li:nth-child(2),.top-header-left ul li:nth-child(3){
+		display:none;
+	}
+	.top-header-left ul li{
+		border-left:none;
+	}
+	.flexy-menu>li.showhide {
+		background:none;
+		height: 18px;
+	}
+	.flexy-menu>li.showhide span.title {
+		display: none;
+	}
+	.flexy-menu {
+		margin-right: 0%;
+	}
+	.flexy-menu>li.showhide span.icon {
+		margin: 17px 20px;
+		float: right;
+		position: absolute;
+		right: 3em;
+		top: -50px;
+	}
+	.flexy-menu>li.showhide .icon em {
+		margin-bottom: 3px;
+		display: block;
+		width: 31px;
+		height: 4px;
+		background: #2C3E50;
+	}
+	.orange li:hover>a, .orange li.active a {
+		background: #F5E5C0;
+	}
+	.p-ww {
+		float: none;
+		width: 100%;
+		padding: 0.3em 0 0 0;
+	}
+	.p-h {
+		float: none;
+		width: 100%;
+		padding: 0.5em 0;
+		text-align: left;
+		background:none
+	}
+	.p-h span {
+		display:inline-block
+	}
+	.p-ww input[type="submit"] {
+		outline: none;
+		display: block;
+		width: 99.5%;
+		margin: 1em 0 0;
+		border-radius: 0.3em;
+		-webkit-border-radius: 0.3em;
+		-moz-border-radius: 0.3em;
+		-o-border-radius: 0.3em;
+	}
+	.find-place {
+		padding-bottom: 0.8em;
+	}
+	.holiday-type-grid {
+		width: 33.33%;
+		margin-bottom: 1em;
+	}
+	.clients{
+		display:none;
+	}
+	.footer-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 1em;
+	}
+	.Newsletter,.tags{
+		display:none;
+	}
+	.footer-grids {
+		padding: 1em 0;
+	}
+	.dest-place-pic img {
+		width: 100%;
+	}
+	.criuse-pic-info-top-place-name h2 label {
+		font-size: 0.8em;
+	}
+	.criuse-pic-info {
+		bottom: 0em;
+		left: 0em;
+	}
+	.blog-grid {
+		float: none;
+		width: 100%;
+		margin-right: 0%;
+		margin-bottom: 2em;
+	}
+	.map{
+		display:none;
+	}
+	.span_1_of_first1 {
+		width: 100%;
+	}
+	.col_1_of_bottom {
+		display: block;
+		float: none;
+		margin: 0 0 1em 0;
+	}
+	.contact {
+		margin: 1em 0 4em;
+	}
+	.criuse-pic-info-top {
+		padding: 0.3em 0.5em;
+		float:left;
+	}
+	.criuse-pic-info-price {
+		padding: 0.2em 0.5em;
+		float:left;
+	}
+	
+	.blog-poast-info ul li {
+		margin-right: 0.8em;
+	}
+	.to-top span {
+		left: 44%;
+	}
+	.blog-grids-head h3 {
+		font-size: 1.2em;
+		color: #7F91A2;
+		padding: 0 0 1em 0;
+	}
+	.destination-head {
+		padding: 2em 0 6em;
+	}
+	.destination-places-head h3 {
+		font-size: 1.2em;
+		padding: 0 0 0.6em 0;
+	}
+	.blog-grids {
+		margin-top: -4.8em;
+	}
+	.text2 textarea {
+		height: 150px;
+		resize:none;
+		width: 94.8%;
+	}
+}
+
+.destination-places-grid{
+	width: 30%;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	border: 1px solid #F5E5C0;
+}
+.dest-place-opt-fea li{
+	display:inline-block;
+	margin-right: 1.2em;
+}
+.dest-place-opt-fea li span{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	margin: 0 0.2em;
+}
+.dest-place-opt-fea{
+	background: #3F5666;
+	padding: 0.5em 0.8em;
+}
+.dest-place-opt-fea li a{
+	color: #F5E5C0;
+	text-transform: uppercase;
+	font-size: 0.875em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.dest-place-opt-fea li a:hover{
+	color:#F8CA4D;
+}
+.dest-place-pic img{
+	display:block;
+	opacity: 0.9;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.dest-place-pic img:hover,.destination-places-grid:hover .dest-place-pic img{
+	opacity: 1;
+}
+.destination-places-grid:hover{
+	cursor:pointer;
+}
+.hot span{
+	background:url(app/images/hotel-icon.png) no-repeat 0px 0px;
+}
+.plain span{
+	background:url(app/images/plain.png) no-repeat 0px 0px;
+}
+.Breakfast span{
+	background:url(app/images/tea.png) no-repeat 0px 0px;
+}
+.dest-place-opt-cast{
+	background: #2F3440;
+	padding:0.8em;
+}
+.dest-place-opt-cast li a{
+	color:#F8CA4D;
+	text-transform: uppercase;
+}
+.dest-place-pic img{
+	display:block;
+	opacity: 0.9;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.dest-place-pic img:hover,.destination-places-grid:hover .dest-place-pic img{
+	opacity: 1;
+}
+.d-place{
+	float:left;
+}
+.d-price{
+	float: right;
+	font-size: 0.875em;
+	padding-top: 0.1em;
+}
+.last-d-grid{
+	margin-right:0;
+}
+.destination-places{
+	padding:2em 0;
+	margin-top: 3em;
+}

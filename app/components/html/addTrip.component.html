@@ -1,0 +1,86 @@
+
+
+
+<div class="container">
+    
+    <h2 id="headAdd2">Add or Edit a Trip</h2>
+    
+    <div class="p-ww">
+        <form action="submit" method="post" autocomplete="on">
+            <div class="col-lg-2 labelN"><label for="tripN"><span>Trip name </span></label></div>
+            <div class="col-lg-10"><input id="tripN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter trip name"></div>
+            <div class="col-lg-2 labelN"><label for="price"><span>Price </span></label></div>
+            <div class="col-lg-10"><input id="price" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter the price"></div>
+
+            <div class="col-lg-2 labelN"><label for="from"><span>From:</span></label></div>
+            <div class="col-lg-10"><input id="from" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus location"></div>
+            <div class="col-lg-2 labelN"><label for="to"><span>To:</span></label></div>
+            <div class="col-lg-10"><input id="to" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus location"></div>
+  
+
+            <div class="col-lg-2 labelN"><label for="tripT"><span>Trip Type </span></label></div>
+            <div class="col-lg-10">
+                <select id="tripT" class="list" required> 
+                    <option>Historical</option>
+                    <option>Entertainment</option>
+                    <option>Educational</option>
+                    <option>observation</option>
+                    <option>Mixed</option>
+                </select>
+            </div>
+
+            <div class="col-lg-2 labelN"><label for="places"><span>Places</span></label></div>
+            <div class="col-lg-10">
+                <select id="places" class="selectPlaces list" required multiple="multiple"> 
+                    <option>Cairo</option>
+                    <option>Giza</option>
+                    <option>Marsa Matruh</option>
+                    <option>SharmElSheik</option>
+                    <option>Alex</option>
+                </select>
+            </div>
+
+            <div class="col-lg-2 labelN"><label for="activ"><span>Activities </span></label></div>
+            <div class="col-lg-10">
+                <select id="activ" class="selectActivities list" required multiple="multiple">
+                    <option >skiing</option>
+                    <option>swiming</option>
+                    <option>Diving</option>
+                    <option>football</option>
+                    <option>eating</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-lg-2 labelN"><label for="aboutTA"><span>About </span></label></div>
+                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" placeholder="About the trip"></textarea></div>
+            </div>
+<!--
+        <div class="col-lg-2 labelN"> <span>Pictures </span></div>        
+        <form action="/file-upload" class="dropzone col-lg-10" id="formZone">
+                <div class="fallback">
+                    <input name="file" type="file" multiple /> (This is just a demo dropzone. Selected files are not actually uploaded.)
+                </div>
+        </form>
+-->
+
+<!--
+         <div class="col-lg-2 labelN"><label for="formZone"><span>Pictures </span></label></div>  
+         <div action="/upload-target" class="dropzone col-lg-10" id="formZone"></div>      
+       -->
+            
+
+<!-- Change /upload-target to your upload address 
+<form style="border: 1px red solid;" action="/upload-target" class="dropzone"></form>
+-->
+
+
+            <input id="submitBtn" type="submit" value="    Save    " />
+        </form>
+    </div>
+
+
+
+</div>
+
+<br><br>

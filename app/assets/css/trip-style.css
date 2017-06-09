@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/* CSS Document */
+body{
+	background-color:#F5E5C0}
+.title{
+	
+	margin-top:34%;
+	margin-left:0;
+	background-color:rgba(63,86,102,0.6)}
+	
+	.images-slider{
+		margin-top:1%;
+		}
+		.vbtn{
+			margin-left:90%;
+			margin-top:-20%;
+			background-color:#EA6045;
+			}
+			
+			
+			#rate{
+				  height: 100px;
+				  width:100px;
+				  position:absolute;
+  					margin-left:90%;
+					margin-top:32%;
+					color:#F8CA4D;
+				font-size:24px;
+					margin-right:3%;
+					margin-bottom:3%
+					}
+					.bx-wrapper{
+						background:#3F5666 !important;
+						border:0 !important;
+						}
+					.bx-wrapper .bx-viewport{
+						background:#3F5666;}
+					.placeDetail{
+						color:#F5E5C0;
+						background-color:#3F5666;
+						padding:2%;
+						padding-top:3%;
+						padding-bottom:3%;
+						
+						
+						}.placeDetail h1{color:#F8CA4D}
+					.placeDetail h2{
+						color:#EA6045;
+						font-size:27px;
+						font-weight:bold
+						}
+						
+						.pict{
+							margin-top:10%}
+						.pic{
+							margin-top:1.5%;
+							margin-left:-5%;}
+						#upic{
+							width:150px;
+							height:150px;
+							border:1px solid #EA6045;
+							border-radius:50%;
+							background-image:url(../images/admin-pic4.jpg);
+							   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+							
+							
+						
+							
+							}
+							#usersReview{
+								
+								width:90%;
+								height:40%;
+								border:1px solid #EA6045;
+								margin-left:10%;
+								margin-top:3%;
+								}
+								#ureview p{
+									
+									margin-top:3%;}
+								#ureview img{
+									
+									padding-right:0px;
+									margin-left:2%;
+									width:100px;
+									height:100px
+									}
+	
+	
+										
+
+	.stars{
+		margin-top:6%;
+		color:#F8CA4D; padding-left:7;}
+		.stars fa{
+			color:#F8CA4D;
+			}	
+			.review{
+				border:1px solid #F8CA4D;
+				padding:2%;
+				 overflow-y: scroll;
+				 height:500px;}							
+				.bxslider li{
+					border-top:5px solid #3F5666}
+					.tst{color:#F5E5C0}
+					.tst span{color:#EA6045}
+					.#thumbnail-slider{
+						background-color:#F5E5C0 !important}
+						.aboutTrip{
+							margin-top:3%;}
+							.aboutTrip h4{
+								color:#F8CA4D}
+								.aboutTrip ul{
+									margin:4%;}
+								.aboutTrip a{
+								
+									font-size:18px;
+									color:#F5E5C0}
+							.data{
+								border-right:1px solid #F8CA4D }
+								#info{
+									border:1px solid #EA6045;
+									
+									padding:3%;}
+									#info a{color:#F5E5C0}
+									#info i{
+										
+										margin:1%;
+							
+										color:#F8CA4D} #map {
+   width: 100%;
+   height: 250px;
+   background-color: grey;
+ }
+ h3{
+	 color:#EA6045}
+	 
+	 .addReview{
+		 border:1px solid #EA6045;
+		 padding:2%;
+		 
+		 }
+		 .addReview .form-control{
+			 width:50%;
+			 }
+			 .form{margin-left:5%;}
+			 label{
+				 margin-top:2%}
+				 .addReview i{
+					 margin-top:2%;}
+					 
+						 #ureview a{
+							 color:#EA6045}
+							 #comment{background-color:#F5E5C;
+							 }
+							 .form .btn{background:#F5E5C0 }
+							 .sub{
+						 margin-left:-1%;
+						 margin-top:8%;
+						 background:#EA6045 !important}
+						 .fallback{
+							 color:#EA6045}
+							 .dropzone span{color:#EA6045}
+							 #info li,#info i,#info span{
+								text-align:left;
+								}
+								.dropzone{
+									width:50%;
+									
+									min-height:10%;}
+	 * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+  .slick-slide  img{
+	  width:300px;
+	  height:200px;}					
+	  
+	  /*testmonials*/
+	  	/* testmonials*/
+												
+.testimonial{
+    margin: 20px 0;
+}
+.testimonial .testimonial-content{
+    width: 20%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+   
+}
+.testimonial .pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid rgba(255,255,255,0.15);
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .title{
+
+    margin: 10px 0 0 0;
+}
+.testimonial .post{
+    
+    
+}
+.testimonial .description{
+    display: inline-block;
+    width: 60%;
+    padding: 10px 10px;
+    border: 1px solid rgba(248, 202, 77,0.15);
+   
+    
+    margin: 0;
+    position: relative;
+}
+.testimonial .description:before{
+    content: "";
+    border: 10px solid transparent;
+    border-right: 10px solid rgba(248, 202, 77,0.15);
+    position: absolute;
+    top: 20px;
+    left: -21px;
+}
+.owl-theme .owl-controls .owl-page.active span{
+    background: #EA6045;
+    border: 1px solid #F5E5C0;
+}
+.owl-theme .owl-controls .owl-page span{
+    border: 1px solid #F5E5C0;
+    background: transparent;
+    opacity: 1;
+}
+@media only screen and (max-width: 767px){
+    .testimonial .testimonial-content{
+        float: none;
+        width: 70%;
+        margin: 0 0 20px 0;
+    }
+    .testimonial .description{
+        width: 100%;
+    }
+    .testimonial .description:before{
+        border: 10px solid transparent;
+        border-bottom: 10px solid rgba(255,255,255,0.15);
+        position: absolute;
+        top: -20px;
+        left: 47.5%;
+    }
+	
+}
+#tst{margin-left:0;
+padding-left:0}
+#rateTags{
+	background-color:#3F5666;
+	
+	padding:2%;
+	margin-right:0%;
+	margin-left:0%;
+	
+	padding-left:20%;
+	    
+	 border-bottom:1px solid #F5E5C0}
+	 #rateTags .btn{
+		 background-color:#EA6045}
+	 #rateTags .btn:hover{
+		 color:#2F3440;
+		 border-color:#2F3440}
+	.rate{
+		color:#F8CA4D;
+		padding-top:1%;
+		 float:left;
+		 margin-right:2%;
+		}
+		 .tags{
+			 padding-top:1%;}
+	.urate{
+		color:#F8CA4D;
+		padding-top:1%;
+		
+		}
+		.owl-item{
+			width:25% !important; 
+			overflow:hidden}
+			.rating{z-index:55;
+			}
+			
+			
+			
+			
+
+   
+   #dialog{
+	   width:100%;
+	   height:100%;
+	   background-color:#F5E5C0;
+	   z-index:100;
+	  }
+	  .image a{
+		  cursor:pointer}
+		  #dialog img{
+			  width:100%;
+			  height:100%}
+			  #imgpho{
+				  width:20%;
+				  height:20%}
+				  #animatedModal{
+	
+	width:60% !important;
+	height:80% !important;
+	margin:auto !important;
+	background-color:rgba(44, 62, 80, .5) ;
+	    top: 2% !important;
+    left: 20% !important;
+	color:#F5E5C0;
+	margin:auto !important;
+	    }
+		.modal-content{
+			background-color:rgba(44, 62, 80, .5)}
+	.close-animatedModal{
+		margin-left:80%;
+		cursor:pointer;
+		}
+		.modal-content .table{
+			margin-left:0}

@@ -56,7 +56,16 @@ input[type="radio"][id="green"]:checked ~ .blue, input[type="radio"][id="green"]
   margin:0;
   opacity:0;
 }
-
+input[type="radio"][id="price"]:checked + label {
+  background:#ff66ff;
+}
+input[type="radio"][id="price"]:checked ~ .red, input[type="radio"][id="price"]:checked ~ .green, input[type="radio"][id="price"]:checked ~ .blue  {
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
 .tile {
   width:23%;
   height:100px;
@@ -65,6 +74,7 @@ input[type="radio"][id="green"]:checked ~ .blue, input[type="radio"][id="green"]
   margin:0.5%;
   padding:0.5%;
 }
+
 .green {
   background:#66dd99;
 }
@@ -73,4 +83,7 @@ input[type="radio"][id="green"]:checked ~ .blue, input[type="radio"][id="green"]
 }
 .red {
   background:#ff4466;
+}
+.price{
+   background:#ff66ff;
 }

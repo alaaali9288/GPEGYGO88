@@ -1,0 +1,90 @@
+
+#profileSection{
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+
+}
+
+#About{
+    width:90%;
+    margin-right:auto;
+    margin-left:auto;
+    border: 1px rgba(47, 52, 64, .4) solid;
+    border-radius: 5px;
+}
+.ppTd{
+    width:25%;
+}
+.pp{
+    width:100%;
+    border-radius: 50%;
+}
+.userName{
+    font-size: 20pt;
+    font-weight: bolder;
+    color: #ea6045;
+}
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+.aboutMe{
+    font-size: 12pt;
+    font-weight: 400;
+    text-align:justify;
+}
+.detailHeader{
+    font-size: 14pt;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn{
+    background: #ea6045;
+    border: 0;
+    width:100%;
+    margin:1px;
+    padding:10%;
+}
+.btn:hover{
+    background: #ea6045;
+    border: 0;
+}
+.detailProfile{
+    width:70%
+}
+.rate{
+    text-align: right;
+}
+.progress{
+    width:70%;
+    float:left;
+}
+.Level{
+    margin-left:2%;
+    font-size: 11pt;
+    font-weight: bold;
+}
+.levelBlock{
+    margin-top:2%;
+}
+.placesProfile{
+    font-size: 15pt;
+    font-weight: bold;
+}
+.progress-bar{
+    background-color: #f8ca4d;
+    color: #ea6045
+}
+.tab-pane{
+    color: #2f3440;
+}
+.tab-content{
+     color: #2f3440;
+}
+
+.nav-tabs > li > a{
+   color:#2f3440 ;
+}
+.nav-tabs > li > a:hover{
+   color:#f8ca4d ;
+}

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+
 @Component({
    moduleId:module.id,
     selector:'EGYGO-Search',
-   // template:'<h1>HEWDER</h1>'
-    templateUrl:'html/searchComponent.html',
+    //template:'<h1>HEWDER</h1>',
+    templateUrl:'html/search.html',
+   //templateUrl:'html/search.html',
      styleUrls:[
-    './css/contentFiltter2.css',
-      ]
+    'css/fillterstyle.css', ]
      
      
 })

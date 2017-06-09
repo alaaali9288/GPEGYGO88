@@ -15,7 +15,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "\n      <EGYGO-Header></EGYGO-Header>\n        <EGYGO-Search></EGYGO-Search>\n        <EGYGO-Footer></EGYGO-Footer>\n \n    "
+        template: "\n   <EGYGO-Header></EGYGO-Header>\n   <router-outlet></router-outlet>\n   <EGYGO-Footer></EGYGO-Footer>\n\n     ",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

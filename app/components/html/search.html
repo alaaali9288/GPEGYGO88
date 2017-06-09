@@ -1,0 +1,155 @@
+
+<!-- hene code fo2 L filter -->
+
+	<div class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder"> 
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li> 
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Place</a></li>
+					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Trip</a></li>
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+		<section class="cd-gallery">
+			<ul>
+				<li class="mix color-1 check1 radio2 option3"><img src="{{Path}}img/img-1.jpg" alt="Image 1"></li>
+				<li class="mix color-2 check2 radio2 option2"><img src="{{Path}}img/img-2.jpg" alt="Image 2"></li>
+				<li class="mix color-1 check3 radio3 option1"><img src="{{Path}}img/img-3.jpg" alt="Image 3"></li>
+				<li class="mix color-1 check3 radio2 option4"><img src="{{Path}}img/img-4.jpg" alt="Image 4"></li>
+				<li class="mix color-1 check1 radio3 option2"><img src="{{Path}}img/img-5.jpg" alt="Image 5"></li>
+				<li class="mix color-2 check2 radio3 option3"><img src="{{Path}}img/img-6.jpg" alt="Image 6"></li>
+				<li class="mix color-2 check2 radio2 option1"><img src="{{Path}}img/img-7.jpg" alt="Image 7"></li>
+				<li class="mix color-1 check1 radio3 option4"><img src="{{Path}}img/img-8.jpg" alt="Image 8"></li>
+				<li class="mix color-2 check1 radio2 option3"><img src="{{Path}}img/img-9.jpg" alt="Image 9"></li>
+				<li class="mix color-1 check3 radio2 option4"><img src="{{Path}}img/img-10.jpg" alt="Image 10"></li>
+				<li class="mix color-1 check3 radio3 option2"><img src="{{Path}}img/img-11.jpg" alt="Image 11"></li>
+				<li class="mix color-2 check1 radio3 option1"><img src="{{Path}}img/img-12.jpg" alt="Image 12"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+			</ul>
+			<div class="cd-fail-message">No results found</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+					
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Trip, Place ,...">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Type</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">Culture</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">Romantic</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Spirtual</label>
+						</li>
+						<!--I added from here so id and data-filter -->
+						<li>
+							<input class="filter" data-filter=".check4" type="checkbox" id="checkbox4">
+							<label class="checkbox-label" for="checkbox4">Advanture</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".check5" type="checkbox" id="checkbox5">
+							<label class="checkbox-label" for="checkbox5">Family</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".check6" type="checkbox" id="checkbox6">
+							<label class="checkbox-label" for="checkbox6">Relaxtion</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				
+					<div class="cd-filter-block">
+					<h4>Price</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">1000-2500 lE</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">2600-3500 lE</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">3600-5000 lE</label>
+						</li>
+						
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+				
+				<div class="cd-filter-block">
+					<h4>Dates</h4>
+					
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose an Date</option>
+								<option value=".option1">Next Summer</option>
+								<option value=".option2">Christmas</option>
+								<option value=".option3">Weekends</option>
+												</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Avarge Reating</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+							<label class="radio-label" for="radio1">5 Stars</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
+							<label class="radio-label" for="radio2">4 Stars</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">3 Stars</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">2 Stars</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">1 Stars</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+			</form>
+
+			<a href="#0" class="cd-close">Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Filters</a>
+	</div> <!-- cd-main-content -->
