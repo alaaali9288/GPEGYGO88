@@ -36,6 +36,19 @@ var UserService = (function () {
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
+    UserService.prototype.createUser = function (user) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        var body = JSON.stringify(user);
+        return this._http.post("http://localhost:5000/user", body, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.getuserByName = function (uname) {
+        return this._http.get("http://localhost:5000/user/un/" + uname).map(function (res) { return res.json(); });
+    };
+    UserService.prototype.getuserByNameAlaa = function (uname) {
+        return this._http.get("http://localhost:5000/user/un/" + uname);
+    };
     return UserService;
 }());
 UserService = __decorate([

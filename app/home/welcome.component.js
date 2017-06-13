@@ -15,7 +15,7 @@ var WelcomeComponent = (function () {
 }());
 WelcomeComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/home/welcome.component.html'
+        template: "\n    <main></main>\n    <offers></offers>\n    "
     })
 ], WelcomeComponent);
 exports.WelcomeComponent = WelcomeComponent;

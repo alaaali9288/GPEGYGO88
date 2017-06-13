@@ -50,16 +50,16 @@ jQuery(document).ready(function(jQuery (this.elRef.nativeElement).find)){
 		jQuery (this.elRef.nativeElement).find(this).toggleClass('closed').siblings('.cd-filter-content').slideToggle(300);
 	})
 
-	//fix lateral filter and gallery on scrolling
-	jQuery (this.elRef.nativeElement).find(window).on('scroll', function(){
-		(!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
-	});
+	// //fix lateral filter and gallery on scrolling
+	// jQuery (this.elRef.nativeElement).find(window).on('scroll', function(){
+		// (!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
+	// });
 
-	function fixGallery() {
-		var offsetTop = jQuery (this.elRef.nativeElement).find('.cd-main-content').offset().top,
-			scrollTop = jQuery (this.elRef.nativeElement).find(window).scrollTop();
-		( scrollTop >= offsetTop ) ? jQuery (this.elRef.nativeElement).find('.cd-main-content').addClass('is-fixed') : jQuery (this.elRef.nativeElement).find('.cd-main-content').removeClass('is-fixed');
-	}
+	// function fixGallery() {
+		// var offsetTop = jQuery (this.elRef.nativeElement).find('.cd-main-content').offset().top,
+			// scrollTop = jQuery (this.elRef.nativeElement).find(window).scrollTop();
+		// ( scrollTop >= offsetTop ) ? jQuery (this.elRef.nativeElement).find('.cd-main-content').addClass('is-fixed') : jQuery (this.elRef.nativeElement).find('.cd-main-content').removeClass('is-fixed');
+	// }
 
 	/************************************
 		MitItUp filter settings

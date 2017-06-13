@@ -1,7 +1,89 @@
 
-	<div class="placeDetail container">
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>	
+
+<!---//calender-style---->
+
+<!----start-wrap----> 
+<!----start-wrap----> 
+
+<!----start-images-slider---->
+<div *ngIf ="place">
+
+<div class="container">
+  <div class="row">
+    <div class="images-slider col-md-9 col-xs-12"> 
+      <!-- start slider -->
+      <div id="fwslider">
+        <div class="slideer_container">
+          <div class="slidee"> 
+            <!-- Slide image --> 
+            
+            <img [src]="'./app/assets/images/'+place.placePicsUrl[0]" alt="{{place.placeName}}"/> 
+            <!-- /Slide image --> 
+            <!-- Texts container -->
+            <div class="slide_content">
+              <div class="slide_content_wrap"> 
+                <!-- Text title -->
+                <div id="ico">
+                  <button class="btn love"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></button>
+                  <button class="btn go"><i class="fa fa-check fa-2x" aria-hidden="true"></i></button>
+                </div>
+                <h4 class="title">{{place.placeName}}</h4>
+                <!--start activity section-->
+                <div class="activities" >
+                  <ul>
+                    <li *ngFor="let activity of place.activities">{{activity}} </li>
+                  
+                  </ul>
+                </div>
+                
+                <!--end activity section--> 
+              </div>
+              <!-- /Texts container --> 
+            </div>
+            
+            <!--/slide --> 
+          </div>
+        </div>
+      </div>
+      <!--/slider --> 
+      
+    </div>
+    <div class="col-md-3 hidden-xs placeImg">
+      <div class="image" > <img src="./app/assets/images/1462353277_cm.jpg" style="position:relative"/> <a id="photograph" href="./app/components/placeSliderComponent/photographimgs.component.html" target="_blank"> <span style="position:absolute; width:100%;top:28%;background-color:rgba(44, 62, 80, .5);color:#F5E5C0; padding:2%;">Photographers Photos</span></a> 
         
+       
+      </div>
+      <!--End photography--> 
+      <!--start photography-->
+      <div class="image"> <img src="./app/assets/images/1462353277_cm.jpg" style="position:relative"/> <a ><span style="position:absolute; top:65%;background-color:rgba(44, 62, 80, .5);width:100%;color:#F5E5C0; padding:2%;">Visitors Photos</span></a> </div>
+      <!--End Visitors-->
+      <div class=" map">
+        <div id="maps" style="position:relative ;width:275px;height:110px; margin-top:3%;"></div>
+        
+        <span style="position:absolute; top:93%;background-color:rgba(44, 62, 80, .5);width:100%;color:#F5E5C0; padding:2%;">Map</span> </div>
+    </div>
+  </div>
+  <div id="rateTags" class="row">
+    <div class="rate">
+       <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span> 
+        <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+         <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></span>
+           </div>
+    <div class="tags">
+      <button class="btn">safary</button>
+      <button class="btn">natural</button>
+      <button class="btn">natural</button>
+      <button class="btn">relax</button>
+    </div>
+  </div>
+</div>
+
+
+	<div class="placeDetail container">
+        <h2>{{place.placeName}}</h2>
+<p>{{place.description}}</p>        
         <div class="container">
         <div class="row">
         <div class="col-sm-5">
@@ -134,4 +216,4 @@
      </div>
      <!--End reviews section-->
      
-    
+    </div>

@@ -16,36 +16,32 @@ require("rxjs/add/operator/do");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
 require("rxjs/add/observable/throw");
-var PlaceService = (function () {
+var TripTypeService = (function () {
     // private _userUrl = 'localhost:5000/user/all'; 
-    function PlaceService(_http) {
+    function TripTypeService(_http) {
         this._http = _http;
     }
-    PlaceService.prototype.getplaceById = function (id) {
-        return this._http.get("http://localhost:5000/place/i/" + id).map(function (res) { return res.json(); });
+    TripTypeService.prototype.getTypebyID = function (id) {
+        return this._http.get("http://localhost:5000/triptype/i/" + id).map(function (res) { return res.json(); });
     };
-    PlaceService.prototype.getAllPlaces = function () {
-        return this._http.get("http://localhost:5000/place/all").map(function (res) { return res.json(); });
+    TripTypeService.prototype.getTripTypeId = function (name) {
+        return this._http.get("http://localhost:5000/triptype/n/" + name)
+            .map(function (res) { return res.json(); });
     };
-    PlaceService.prototype.handleError = function (error) {
+    TripTypeService.prototype.getTripType = function () {
+        return this._http.get("http://localhost:5000/triptype/all").map(function (res) { return res.json(); });
+    };
+    TripTypeService.prototype.handleError = function (error) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
-    PlaceService.prototype.createPlace = function (place) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*' });
-        //    let options = new RequestOptions({ headers: headers });
-        var body = JSON.stringify(place);
-        return this._http.post("http://localhost:5000/place", body, { headers: headers })
-            .map(function (res) { return res.json(); });
-    };
-    return PlaceService;
+    return TripTypeService;
 }());
-PlaceService = __decorate([
+TripTypeService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], PlaceService);
-exports.PlaceService = PlaceService;
-//# sourceMappingURL=place.service.js.map
+], TripTypeService);
+exports.TripTypeService = TripTypeService;
+//# sourceMappingURL=tripType.service.js.map

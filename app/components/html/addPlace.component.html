@@ -1,80 +1,71 @@
-
-
 <div class="container">
-    
+
     <h2 id="headAdd2">Add or Edit a Place</h2>
-    
+
     <div class="p-ww">
-        <form action="submit" method="post" autocomplete="on" >
+        <form action="submit" method="post" autocomplete="on">
             <div class="col-lg-2 labelN"><label for="placeN"><span>Place name </span></label></div>
             <!--<div class="col-lg-10"><input id="placeN" style="width: 60%;" required class="inputtxtbg" type="text" value="Place Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Place Name';}"></div>-->
-            <div class="col-lg-10"><input id="placeN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter place name" ></div>            
+            <div class="col-lg-10"><input id="placeN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter place name" [(ngModel)]="placeName" [ngModelOptions]="{standalone: true}"></div>
             <div class="col-lg-2 labelN"><label for="address"><span>Address </span></label></div>
-            <div class="col-lg-10"><input id="address" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter address"></div>
+            <div class="col-lg-10"><input id="address" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter address" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"></div>
 
 
             <div class="col-lg-2 labelN"><label for="cityN"><span>City name</span></label></div>
             <div class="col-lg-10">
-                <select id="cityN" class="list" required> 
-                    <option>Cairo</option>
-                    <option>Giza</option>
-                    <option>Marsa Matruh</option>
-                    <option>SharmElSheik</option>
-                    <option>Alex</option>
-                </select>
+                <input id="address" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter city name" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
             </div>
 
             <div class="col-lg-2 labelN"><label for="placeT"><span>Place Type </span></label></div>
             <div class="col-lg-10">
-                <select id="placeT" class="list" required> 
-                    <option>Historical</option>
-                    <option>Entertainment</option>
-                    <option>Educational</option>
-                    <option>observation</option>
-                    <option>athletic</option>
+                <ul id="ulAppendPlaces"></ul>
+                <select id="placeT"(change)="selectIngredientPlaces($event)" class="list" required> 
+                    <option *ngFor="let types of TripTypes">{{types.type}}</option>
+                   
                 </select>
             </div>
 
+ <div class="col-lg-2 labelN"><label for="placeTag"><span>Tags </span></label></div>
+            <div class="col-lg-10">
+                <ul id="ulAppendTags"></ul>
+            <input id="tagtxt" style="width: 50%;" required class="inputtxtbg" type="text" placeholder="Enter Tags" [(ngModel)]="tagTxt" [ngModelOptions]="{standalone: true}">              
+                <input type="button" id="placeTag" class="btn btn-warning" (click)="selectIngredientTags($event)" value="Add Tag"/>
+            </div>
+            <!-- enddddddddddddddd-->
             <div class="col-lg-2 labelN"><label for="activ"><span>Activities </span></label></div>
             <div class="col-lg-10">
-                <select id="activ" class="selectActivities list" required multiple="multiple">
-                    <option>skiing</option>
-                    <option>swiming</option>
-                    <option>Diving</option>
-                    <option>football</option>
-                    <option>eating</option>
-                </select>
-            </div>
+                <ul id="ulAppend"></ul>
+            <input id="activ" style="width: 50%;" required class="inputtxtbg" type="text" placeholder="Enter Activities" [(ngModel)]="activity" [ngModelOptions]="{standalone: true}">              
+                <input type="button" id="placeTag" class="btn btn-warning" (click)="selectIngredient($event)" value="Add Activity"/>
+                
             
-
-            <div class="col-lg-2 labelN"><label for="workH"><span>Work hours</span></label></div>
-            <div class="col-lg-10"><input id="workH" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter work hours"></div>
+            </div>
 
 
-        <div class="checkbox" >
-            <div class="col-lg-2 labelN"><label for="checkbox-2-1"><span>Food </span></label></div>
-            <input type="checkbox" id="checkbox-2-1" class="regular-checkbox big-checkbox col-lg-4" />
-            <label style="float: left; margin: 0 30px;" for="checkbox-2-1"></label>
-        </div>        
-    
+            <div class="checkbox">
+                <div class="col-lg-2 labelN"><label for="checkbox-2-1"><span>Food </span></label></div>
+                <input type="checkbox" id="checkbox-2-1" class="regular-checkbox big-checkbox col-lg-4" />
+                <label style="float: left; margin: 0 30px;" for="checkbox-2-1"></label>
+            </div>
 
-<!--<div class="clear" style="margin: 20px 0;"></div>-->
 
-        <div class="checkbox" >
-            <div class="col-lg-2 labelN"><label for="checkbox-2-2"><span>Bathroom </span></label></div>
-            <input type="checkbox" id="checkbox-2-2" class="regular-checkbox big-checkbox col-lg-4" />
-            <label style="float: left; margin: 0 30px;" for="checkbox-2-2"></label>
-        </div>
+            <!--<div class="clear" style="margin: 20px 0;"></div>-->
+
+            <div class="checkbox">
+                <div class="col-lg-2 labelN"><label for="checkbox-2-2"><span>Bathroom </span></label></div>
+                <input type="checkbox" id="checkbox-2-2" class="regular-checkbox big-checkbox col-lg-4" />
+                <label style="float: left; margin: 0 30px;" for="checkbox-2-2"></label>
+            </div>
 
 
             <div class="clear" style="margin: 20px 0;"></div>
 
             <div class="form-group">
                 <div class="col-lg-2 labelN"><label for="aboutTA"><span>About </span></label></div>
-                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" placeholder="About this place"></textarea></div>
+                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" placeholder="About this place"></textarea></div>
             </div>
 
-      <!--  <div class="col-lg-2 labelN"> <span>Pictures </span></div>
+            <!--  <div class="col-lg-2 labelN"> <span>Pictures </span></div>
         <form action="/file-upload" class="dropzone col-lg-10" id="formZone">
                 <div class="fallback">
                     <input name="file" type="file" multiple /> (This is just a demo dropzone. Selected files are not actually uploaded.)
@@ -82,16 +73,26 @@
         </form>
         -->
 
-            <div class="col-lg-2 labelN"><label for="formZone"><span>Pictures </span></label></div>  
-            <input type="file" multiple action="/upload-target" class="col-lg-10" id="formZone" />
+            <!--<div class="col-lg-2 labelN"><label for="formZone"><span>Pictures </span></label></div>-->
+            <!--<input type="file" multiple action="/upload-target" class="col-lg-10" id="formZone" />-->
 
 
-            <div id="map"></div>
+            <div class="col-lg-2 labelN"><label><span>Pictures </span></label></div>
+            <div class="col-lg-10">
+                <input style="display:none;" type="file" multiple name="pp" id="file-5" class="inputfile inputfile-4" (change)="getFiles($event)"data-multiple-caption="{count} files selected"
+                />
+                <label for="file-5"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></figure> <span>Choose a file&hellip;</span></label>
+            </div>
 
-            <input id="submitBtn" type="submit" value="    Save    " />
+
+
+            <!--<div class="row" id="map"></div>-->
+
+
+            <input id="submitBtn" type="submit" value="    Save    " (click)="addPlace()" />
+            <input id="submitBtn" type="submit"  [routerLink]='["/places"]' value="  Cancel  " />
         </form>
     </div>
-
 
 
 

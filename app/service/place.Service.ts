@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response,RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
@@ -18,7 +18,9 @@ export class PlaceService{
   getplaceById(id:string)  {
       return this._http.get(`http://localhost:5000/place/i/${id}`).map(res => res.json());
   }
-
+getAllPlaces(){
+    return this._http.get("http://localhost:5000/place/all").map(res=> res.json());
+}
 
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
@@ -26,4 +28,16 @@ export class PlaceService{
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }
+     createPlace(place:any){
+          
+           let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+        //    let options = new RequestOptions({ headers: headers });
+           let body = JSON.stringify(place) ;
+            
+     return this._http.post("http://localhost:5000/place",body,{headers:headers})
+               .map((res:Response) => res.json());
+               
+              
+      }
 }

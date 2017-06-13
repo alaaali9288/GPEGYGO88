@@ -10,7 +10,12 @@ var core_1 = require("@angular/core");
 var HeaderComponent = (function () {
     function HeaderComponent() {
         this.logoPath = './app/components/images/';
+        this._localStorge = localStorage;
+        this.profilePath = "/profile/" + localStorage.getItem("UserId");
     }
+    HeaderComponent.prototype.logoOut = function () {
+        localStorage.clear();
+    };
     return HeaderComponent;
 }());
 HeaderComponent = __decorate([

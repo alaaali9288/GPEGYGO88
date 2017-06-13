@@ -5,11 +5,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var trip_service_1 = require("../../service/trip.service");
+var tripType_service_1 = require("../../service/tripType.service");
 var TripComponent = (function () {
-    function TripComponent() {
+    function TripComponent(_TripService, _TripTypeService) {
+        this._TripService = _TripService;
+        this._TripTypeService = _TripTypeService;
     }
+    TripComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._TripService.getAllTrips().subscribe(function (trips) {
+            _this.trips = trips;
+        });
+    };
     return TripComponent;
 }());
 TripComponent = __decorate([
@@ -21,8 +34,10 @@ TripComponent = __decorate([
             '../../assets/css/flexslider.css',
             '../../assets/css/flexslider.css',
             '../../assets/css/jquery-ui.css',
-            '../../assets/css/zalki_hover_img.css']
-    })
+            '../../assets/css/zalki_hover_img.css'],
+        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService],
+    }),
+    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService])
 ], TripComponent);
 exports.TripComponent = TripComponent;
 //# sourceMappingURL=trip.component.js.map

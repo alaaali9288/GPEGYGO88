@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/User.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import {Http, Response, Request, RequestMethod} from '@angular/http';
+import {FormBuilder, FormGroup,FormControl, FormControlName, Validator} from '@angular/forms'
+
 //local
 //import { LocalStorageService } from 'angular-2-local-storage';
 
@@ -19,6 +22,13 @@ export class RegistrationComponent implements OnInit {
     username: string;
     userPassword: string;
 
+    userPass:string;
+confPass:string;
+     bio:string;
+
+ userEmail:string;
+valid:boolean;
+userV:boolean;
     constructor(private UserService: UserService,private _route: ActivatedRoute,
                 private _router: Router
                // private localStorageService: LocalStorageService
@@ -27,6 +37,7 @@ export class RegistrationComponent implements OnInit {
     ngOnInit() {
         console.log("Ayman");
         // this.UserService.getAllUsers().subscribe(user => this.users = user);
+       
 
     }
 
@@ -35,6 +46,38 @@ export class RegistrationComponent implements OnInit {
         this.checkUserNameandPass(this.username, this.userPassword);
     }
 
+    // signUp(){
+    //   //userOb:[]=this.UserService.getuserByNameAlaa(this.username);
+    //        this._router.navigate(["/"]);
+    //       // this.checkUserNameandPass(this.username, this.userPassword);// REG
+    // }
+Validate(){
+   var dummy={
+       firstName:this.username,
+          userName:this.username,
+          userPassword:this.userPass,
+          email:this.userEmail,
+        isDeleted: false,
+        userBio:this.bio
+   };
+
+        if (this.userPass != this.confPass ) {
+          this.valid=false;
+          alert("password doesn't match")
+        }else {
+            this.valid=true;
+//            if(this.UserService.getuserByName(this.username)){
+//                this.userV=false;
+//                alert("userName doesnt exsist")
+//            }else
+//            {
+// this.userV=false;
+           
+           this.UserService.createUser(dummy).subscribe(data=>JSON.stringify(data),()=>this._router.navigate(["/"]));
+          // }
+              
+ 
+       }}
 
     checkUserNameandPass(uName: string, uPass: string) {
 

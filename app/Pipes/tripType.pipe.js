@@ -10,26 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var place_service_1 = require("../../service/place.service");
-var PlaceComponent = (function () {
-    function PlaceComponent(_PlaceService) {
-        this._PlaceService = _PlaceService;
+var tripType_service_1 = require("../service/tripType.service");
+var TripTypePipe = (function () {
+    function TripTypePipe(_TripTypeService) {
+        this._TripTypeService = _TripTypeService;
     }
-    PlaceComponent.prototype.ngOnInit = function () {
+    TripTypePipe.prototype.transform = function (id) {
         var _this = this;
-        this._PlaceService.getAllPlaces().subscribe(function (places) { _this.places = places; });
+        this._TripTypeService.getTypebyID(id).subscribe(function (type) {
+            _this.typeName = type[0].type; //type[0].type;
+            console.log(_this.typeName);
+        });
+        return this.typeName;
     };
-    return PlaceComponent;
+    return TripTypePipe;
 }());
-PlaceComponent = __decorate([
-    core_1.Component({
-        selector: 'place',
-        moduleId: module.id,
-        templateUrl: 'place.template.html',
-        styleUrls: ['../../assets/css/style.css', '../../assets/css/place.style.css'],
-        providers: [place_service_1.PlaceService]
+TripTypePipe = __decorate([
+    core_1.Pipe({
+        name: 'TripType',
     }),
-    __metadata("design:paramtypes", [place_service_1.PlaceService])
-], PlaceComponent);
-exports.PlaceComponent = PlaceComponent;
-//# sourceMappingURL=place.component.js.map
+    __metadata("design:paramtypes", [tripType_service_1.TripTypeService])
+], TripTypePipe);
+exports.TripTypePipe = TripTypePipe;
+//# sourceMappingURL=tripType.pipe.js.map

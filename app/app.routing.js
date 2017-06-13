@@ -8,8 +8,9 @@ var addTrip_component_1 = require("./components/addTrip.component");
 var placeDetails_component_1 = require("./components/placeDetailsComponent/placeDetails.component");
 var trip_component_1 = require("./components/tripComponent/trip.component");
 var registration_component_1 = require("./components/registration.component");
-var places_component_1 = require("./components/places/places.component");
-var trips_component_1 = require("./components/trips/trips.component");
+var place_component_1 = require("./components/place/place.component");
+var trip_component_2 = require("./components/trip/trip.component");
+//import {TripsComponent} from './components/trips/trips.component';
 var main_component_1 = require("./components/main/main.component");
 var contactus_component_1 = require("./components/contactus.component");
 var about_component_1 = require("./components/aboutComponent/about.component");
@@ -32,11 +33,11 @@ var app_routes = [
     },
     {
         path: 'places',
-        component: places_component_1.PlacesComponent
+        component: place_component_1.PlaceComponent //PlacesComponent
     },
     {
         path: 'trips',
-        component: trips_component_1.TripsComponent
+        component: trip_component_2.TripComponent
     },
     {
         path: 'search',
@@ -55,11 +56,11 @@ var app_routes = [
         component: addTrip_component_1.addTrip
     },
     {
-        path: 'placeDetails',
+        path: 'placeDetails/:id',
         component: placeDetails_component_1.PlaceDetails
     },
     {
-        path: 'tripContent',
+        path: 'tripContent/:id',
         component: trip_component_1.TripContent
     },
 ];

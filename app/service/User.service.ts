@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response ,RequestOptions, Headers} from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
@@ -35,5 +35,23 @@ getUserName(userName:string, password:string){
         // instead of just logging it to the console
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');
+    }
+        createUser(user:any){
+     
+           let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+           let body = JSON.stringify(user) ;
+            
+     return this._http.post("http://localhost:5000/user",body,{headers:headers})
+               .map((res:Response) => res.json());
+               
+              
+      }
+      getuserByName(uname:string){
+      return this._http.get(`http://localhost:5000/user/un/${uname}`).map(res =>res.json());
+    }
+
+       getuserByNameAlaa(uname:string){
+      return this._http.get(`http://localhost:5000/user/un/${uname}`);
     }
 }

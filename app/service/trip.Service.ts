@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
@@ -17,11 +17,13 @@ export class TripService{
 
 
 
-
   getTripById(id:string)  {
       return this._http.get(`http://localhost:5000/trip/i/${id}`).map(res => res.json());
   }
 
+getAllTrips(){
+  return this._http.get("http://localhost:5000/trip/all").map(res => res.json());
+}
 
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
@@ -29,4 +31,15 @@ export class TripService{
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }
+     createTrip(trip:any){
+     
+           let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+           let body = JSON.stringify(trip) ;
+            
+     return this._http.post("http://localhost:5000/trip",body,{headers:headers})
+               .map((res:Response) => res.json());
+               
+              
+      }
 }

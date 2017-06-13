@@ -14,4 +14,10 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
     logoPath:string = './app/components/images/';
+
+    _localStorge:any=localStorage;
+    profilePath:string=`/profile/${localStorage.getItem("UserId")}`;
+    logoOut(){
+        localStorage.clear();
+    }
 }

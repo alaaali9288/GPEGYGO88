@@ -20,7 +20,7 @@ import {RegistrationComponent} from './components/registration.component';
 import {PlacesComponent} from './components/places/places.component';
 import {PlaceComponent} from './components/place/place.component';
 import {TripComponent} from './components/trip/trip.component';
-import {TripsComponent} from './components/trips/trips.component';
+//import {TripsComponent} from './components/trips/trips.component';
 import {MainComponent} from './components/main/main.component';
 import {OffersComponent} from './components/offers/offers.component';
 import {HolidayComponent} from './components/holiday/holiday.component';
@@ -31,10 +31,15 @@ import {otherUserProfileComponent} from './components/otherUserProfile.component
 import{HttpModule} from '@angular/http';
 //import {UserService} from './service/User.service';
 
+import {TripTypeService} from "./service/tripType.service";
+
 
 
 import {RouterModule} from '@angular/router'
 import{routers} from './app.routing';
+
+//pipes
+import{TripTypePipe} from "./Pipes/tripType.pipe";
 
 import * as $ from 'jquery';
 
@@ -45,8 +50,10 @@ import * as $ from 'jquery';
   imports: [ BrowserModule,routers,HttpModule,FormsModule],
   declarations: [ AppComponent,HeaderComponent,FooterComponent, SearchComponent,ProfileComponent,addPlace,AboutComponent
   ,addTrip,PlaceSlider,PlaceDetails,PlaceRelated,PlacePage,TripContent,Photograp,RegistrationComponent,PlacesComponent,PlaceComponent,
-  TripComponent,TripsComponent,MainComponent,OffersComponent ,HolidayComponent , AdventuresComponent,ContactUSComponent,otherUserProfileComponent],
-  
+  TripComponent,MainComponent,OffersComponent ,HolidayComponent , AdventuresComponent,ContactUSComponent,otherUserProfileComponent
+  ,TripTypePipe],
+ 
   bootstrap: [ AppComponent ],
+  providers:[TripTypeService]
 })
 export class AppModule { }

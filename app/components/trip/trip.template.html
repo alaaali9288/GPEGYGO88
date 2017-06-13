@@ -1,8 +1,11 @@
+<div *ngFor="let trip of trips">
 <div class="criuse-grid">
     <div class="criuse-grid-head">
         <div class="criuse-img">
             <div class="criuse-pic">
-                <img src="../../app/assets/images/t1.jpg" title="criuse-name" />
+                <a class="thumbnail" [routerLink]='["/tripContent/"+trip._id]'>
+               <img class="img-responsive" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{trip.title}}">
+                </a>
             </div>
             <div class="criuse-pic-info">
                 <div class="criuse-pic-info-top">
@@ -10,12 +13,12 @@
                         <p>33<label>o</label><i>c</i><span> </span></p>
                     </div>
                     <div class="criuse-pic-info-top-place-name">
-                        <h2><label>Aswan</label><span>Cruise</span></h2>
+                        <h2><label>{{trip.title}}</label><span>{{trip.holidayType[0] | TripType}} EXO</span></h2>
                     </div>
                 </div>
                 <div class="criuse-pic-info-price">
                     <span>Starting Form</span>
-                        <h4>250 $</h4>
+                        <h4>{{trip.price}} $</h4>
                    
                 </div>
             </div>
@@ -23,29 +26,19 @@
         <div class="criuse-info">
             <div class="criuse-info-left">
                 <ul>
-                    <li><a class="c-hotel" href="#"><span> </span>6 Nights VIp/Luurious hotel </a></li>
-                    <li><a class="c-air" href="#"><span> </span> Return Air Ticket</a></li>
-                    <li><a class="c-fast" href="#"><span> </span> Complimentry beark fast</a></li>
-                    <li><a class="c-car" href="#"><span> </span> Car for All transfers</a></li>
+                   <li *ngFor="let activity of trip.activities"><a><span></span> {{activity}}</a></li>
+               
                     <div class="clear"> </div>
                 </ul>
             </div>
-            <div class="criuse-info-right">
-                <ul>
-                    <li><a class="c-face" href="#"><span> </span> </a></li>
-                    <li><a class="c-twit" href="#"><span> </span> </a></li>
-                    <li><a class="c-tub" href="#"><span> </span> </a></li>
-                    <li><a class="c-pin" href="#"><span> </span> </a></li>
-                </ul>
-            </div>
+        
             <div class="clear"> </div>
         </div>
     </div>
     <div class="criuse-grid-info">
-        <h1><a href="#">Lorem Ipsum is typesetting industry</a></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-        <a class="btn" href="#">DeTails</a>
+        <h1><a  [routerLink]='["/tripContent/"+trip._id]'>{{trip.title}}</a></h1>
+        <p>{{trip.description}}</p>
+        <a class="btn" [routerLink]='["/tripContent/"+trip._id]'>DeTails</a>
     </div>
+</div>
 </div>

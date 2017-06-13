@@ -2,11 +2,17 @@
 			<!--start-top-header-->
 			<div class="top-header" id="header">
 				<div class="wrap">
-				<div class="top-header-left">
+				<div *ngIf='_localStorge.length === 0' class="top-header-left">
+					<ul>
+						<li><a [routerLink]='["/loginAndReg"]'><span> </span> Login/Register</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div *ngIf='_localStorge.length > 0'  class="top-header-left">
 					<ul>
 	
-						<li><a [routerLink]='["/loginAndReg"]'><span> </span> Agent Login</a></li>
-						<li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" [routerLink]='["/loginAndReg"]'> Register</a></li>
+						<li><a [routerLink]='["/loginAndReg"]' (click)="logoOut()"><span> </span> LogOut</a></li>
+						<li><a class="reg" [routerLink]='[profilePath]'>Profile</a></li>
 									<div class="clear"> </div>
 					</ul>
 				</div>

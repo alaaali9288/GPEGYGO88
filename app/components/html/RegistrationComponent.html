@@ -19,7 +19,7 @@
 					<label for="check"><span class="icon"></span> Keep me Signed in</label>
 				</div>
 				<div class="group">
-					<input [routerLink]='["/profile"]' (click)="signIn()" type="submit" class="button" value="Sign In">
+					<input  (click)="signIn()" type="submit" class="button" value="Sign In">
 				</div>
 				<div class="foot-lnk">
 					<a href="#forgot"><p style="margin-top:20px;">Forgot Password?</p></a>
@@ -34,27 +34,43 @@
 			<div class="sign-up-htm">
 				<div class="group">
 					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="inp">
+					<input id="user" type="text" class="inp" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="inp" data-type="password">
+					<input id="pass" type="password" class="inp" data-type="password"[(ngModel)]="userPass" [ngModelOptions]="{standalone: true}">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="inp" data-type="password">
+					<input id="pass" type="password" class="inp" data-type="password" [(ngModel)]="confPass" [ngModelOptions]="{standalone: true}">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="inp">
+					<input id="pass" type="text" class="inp"[(ngModel)]="userEmail" [ngModelOptions]="{standalone: true}">
+				</div>
+					<div class="group">
+					<label for="user" class="label">BIO</label>
+					<textarea  rows="4" cols="50" class="txtar" [(ngModel)]="bio" [ngModelOptions]="{standalone: true}"></textarea>
 				</div>
 				<div class="group">
-					<input [routerLink]='["/profile"]' type="submit" class="button" value="Sign Up" style="margin-top:37px">
+				<label for="user" class="label">Profile Picture</label>
+				<form action="/action_page.php">
+                 <input type="file" name="pp" accept="image/*" >
+                </form>				
 				</div>
+				<div class="group">
+						<!--[routerLink]='["/profile"]'-->
+					<input  type="submit" class="button" value="Sign Up" style="margin-top:37px" (click)="Validate()">
+				</div>
+
 				<div class="hr"></div>
+				
 				<div class="foot-lnk">
+				
 				<label for="tab-1">Already Member?</label></div>
+
 			</div>
+					
 		</div>
 	</div>
 </div>

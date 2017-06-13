@@ -30,6 +30,37 @@ var RegistrationComponent = (function () {
     RegistrationComponent.prototype.signIn = function () {
         this.checkUserNameandPass(this.username, this.userPassword);
     };
+    // signUp(){
+    //   //userOb:[]=this.UserService.getuserByNameAlaa(this.username);
+    //        this._router.navigate(["/"]);
+    //       // this.checkUserNameandPass(this.username, this.userPassword);// REG
+    // }
+    RegistrationComponent.prototype.Validate = function () {
+        var _this = this;
+        var dummy = {
+            firstName: this.username,
+            userName: this.username,
+            userPassword: this.userPass,
+            email: this.userEmail,
+            isDeleted: false,
+            userBio: this.bio
+        };
+        if (this.userPass != this.confPass) {
+            this.valid = false;
+            alert("password doesn't match");
+        }
+        else {
+            this.valid = true;
+            //            if(this.UserService.getuserByName(this.username)){
+            //                this.userV=false;
+            //                alert("userName doesnt exsist")
+            //            }else
+            //            {
+            // this.userV=false;
+            this.UserService.createUser(dummy).subscribe(function (data) { return JSON.stringify(data); }, function () { return _this._router.navigate(["/"]); });
+            // }
+        }
+    };
     RegistrationComponent.prototype.checkUserNameandPass = function (uName, uPass) {
         var _this = this;
         this.UserService.getUserName(uName, uPass).subscribe(function (user) {

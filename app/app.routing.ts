@@ -17,7 +17,7 @@ import {RegistrationComponent} from './components/registration.component';
 import {PlacesComponent} from './components/places/places.component';
 import {PlaceComponent} from './components/place/place.component';
 import {TripComponent} from './components/trip/trip.component';
-import {TripsComponent} from './components/trips/trips.component';
+//import {TripsComponent} from './components/trips/trips.component';
 import {MainComponent} from './components/main/main.component';
 import {OffersComponent} from './components/offers/offers.component';
 import {HolidayComponent} from './components/holiday/holiday.component';
@@ -45,11 +45,11 @@ const app_routes:Routes=[
     },
       {
         path:'places',
-        component:PlacesComponent
+        component:PlaceComponent //PlacesComponent
     },
         {
         path:'trips',
-        component:TripsComponent
+        component:TripComponent
     },
     
     {
@@ -70,11 +70,11 @@ component:SearchComponent
         component:addTrip
     },
      {
-        path:'placeDetails',
+        path:'placeDetails/:id',
         component:PlaceDetails
     },
      {
-        path:'tripContent',//tripContent/:id
+        path:'tripContent/:id',//tripContent/:id
         component:TripContent
     },
       

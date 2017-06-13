@@ -8,52 +8,58 @@
     <div class="p-ww">
         <form action="submit" method="post" autocomplete="on">
             <div class="col-lg-2 labelN"><label for="tripN"><span>Trip name </span></label></div>
-            <div class="col-lg-10"><input id="tripN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter trip name"></div>
+            <div class="col-lg-10"><input id="tripN" style="width: 60%;" required autofocus class="inputtxtbg" type="text" placeholder="Enter trip name" [(ngModel)]="title" [ngModelOptions]="{standalone: true}"></div>
             <div class="col-lg-2 labelN"><label for="price"><span>Price </span></label></div>
-            <div class="col-lg-10"><input id="price" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter the price"></div>
+            <div class="col-lg-10"><input id="price" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter the price" [(ngModel)]="price" [ngModelOptions]="{standalone: true}"></div>
 
             <div class="col-lg-2 labelN"><label for="from"><span>From:</span></label></div>
-            <div class="col-lg-10"><input id="from" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus location"></div>
-            <div class="col-lg-2 labelN"><label for="to"><span>To:</span></label></div>
-            <div class="col-lg-10"><input id="to" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus location"></div>
+            <div class="col-lg-10"><input id="from" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus leave location" [(ngModel)]="busLeaveLoc" [ngModelOptions]="{standalone: true}"></div>
+            <div class="col-lg-2 labelN"><label for="to"><span> To:</span></label></div>
+            <div class="col-lg-10"><input id="to" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus back Location"[(ngModel)]="busBackLoc" [ngModelOptions]="{standalone: true}"></div>
+            <div class="col-lg-2 labelN"><label for="from"><span>Time From:</span></label></div>
+            <div class="col-lg-10"><input id="from" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus leave Time 'hh:mm'" [(ngModel)]="busLeave" [ngModelOptions]="{standalone: true}"></div>
+            <div class="col-lg-2 labelN"><label for="to"><span>Time To:</span></label></div>
+            <div class="col-lg-10"><input id="to" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Bus leave Time 'hh:mm'" [(ngModel)]="busBack" [ngModelOptions]="{standalone: true}"></div>
+
+            <div class="col-lg-2 labelN"><label for="from"><span>DateFrom:</span></label></div>
+            <div class="col-lg-10"><input id="from" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="yyyy/mm/dd" [(ngModel)]="dateFrom" [ngModelOptions]="{standalone: true}"></div>
+            <div class="col-lg-2 labelN"><label for="to"><span>DateTo:</span></label></div>
+            <div class="col-lg-10"><input id="to" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="yyyy/mm/dd"[(ngModel)]="dateTo" [ngModelOptions]="{standalone: true}"></div>
+  
+  
+            <div class="col-lg-2 labelN"><label for="phoneNumber"><span>Mobile</span></label></div>
+            <div class="col-lg-10"><input id="phoneNumber" style="width: 60%;" required class="inputtxtbg" type="text" placeholder="Enter phone number" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"></div>
   
 
-            <div class="col-lg-2 labelN"><label for="tripT"><span>Trip Type </span></label></div>
-            <div class="col-lg-10">
-                <select id="tripT" class="list" required> 
-                    <option>Historical</option>
-                    <option>Entertainment</option>
-                    <option>Educational</option>
-                    <option>observation</option>
-                    <option>Mixed</option>
-                </select>
-            </div>
+          
 
-            <div class="col-lg-2 labelN"><label for="places"><span>Places</span></label></div>
+            <div class="col-lg-2 labelN"><label for="places"><span>Trip Type</span></label></div>
             <div class="col-lg-10">
-                <select id="places" class="selectPlaces list" required multiple="multiple"> 
-                    <option>Cairo</option>
-                    <option>Giza</option>
-                    <option>Marsa Matruh</option>
-                    <option>SharmElSheik</option>
-                    <option>Alex</option>
+                <ul id="ulAppendPlaces"></ul>
+                <select id="places" (change)="selectIngredientPlaces($event)" class="list" required> 
+                         <option *ngFor="let types of TripTypes">{{types.type}}</option>
+                   
                 </select>
             </div>
 
             <div class="col-lg-2 labelN"><label for="activ"><span>Activities </span></label></div>
-            <div class="col-lg-10">
-                <select id="activ" class="selectActivities list" required multiple="multiple">
-                    <option >skiing</option>
-                    <option>swiming</option>
-                    <option>Diving</option>
-                    <option>football</option>
-                    <option>eating</option>
-                </select>
+             <div class="col-lg-10">
+                <ul id="ulAppendActiv"></ul>
+            <input id="activ" style="width: 50%;" required class="inputtxtbg" type="text" placeholder="Enter Activities" [(ngModel)]="activity" [ngModelOptions]="{standalone: true}">              
+                <input type="button" id="placeTag" class="btn btn-warning" (click)="selectIngredientActiv($event)" value="Add Activity"/>
+                   
+            </div>
+             <div class="col-lg-2 labelN"><label for="tag"><span>Tags </span></label></div>
+             <div class="col-lg-10">
+                <ul id="ulAppendTag"></ul>
+            <input id="tag" style="width: 50%;" required class="inputtxtbg" type="text" placeholder="Enter Tags" [(ngModel)]="tagtxt" [ngModelOptions]="{standalone: true}">              
+                <input type="button" id="placeTag" class="btn btn-warning" (click)="selectIngredientTag($event)" value="Add Tag"/>
+               
             </div>
     
             <div class="form-group">
                 <div class="col-lg-2 labelN"><label for="aboutTA"><span>About </span></label></div>
-                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" placeholder="About the trip"></textarea></div>
+                <div class="col-lg-10"><textarea required class="form-control inputtxtbg" rows="4" id="aboutTA" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" placeholder="About the trip"></textarea></div>
             </div>
 <!--
         <div class="col-lg-2 labelN"> <span>Pictures </span></div>        
@@ -75,7 +81,9 @@
 -->
 
 
-            <input id="submitBtn" type="submit" value="    Save    " />
+            <input id="submitBtn" type="submit"  value="    Save    " (click)="addTrip()"/> 
+            <input id="submitBtn" type="submit"  [routerLink]='["/trips"]' value="  Cancel  " />
+
         </form>
     </div>
 
