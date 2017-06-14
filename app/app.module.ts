@@ -9,6 +9,9 @@ import {FooterComponent} from './components/footer.component';
 import {SearchComponent} from './components/search.component';
 import {ProfileComponent} from './components/profile.component';
 import {addPlace} from './components/addPlace.component';
+import {updatePlace} from './components/updatePlace.component';
+import {updateTrip} from './components/updateTrip.component';
+
 import {addTrip} from './components/addTrip.component';
 import {PlaceSlider} from "./components/placeSliderComponent/placeSlider.component";
 import {PlaceDetails} from "./components/placeDetailsComponent/placeDetails.component";
@@ -28,11 +31,16 @@ import {AdventuresComponent} from './components/adventures/adventures.component'
 import {ContactUSComponent} from './components/contactus.component';
 import {AboutComponent} from './components/aboutComponent/about.component';
 import {otherUserProfileComponent} from './components/otherUserProfile.component';
+import {review} from './components/review.component';
 import{HttpModule} from '@angular/http';
+//import {FilterComponent} from './components/filter/filter.component';
+//import {PlaceContentComponent} from './components/placeContent/placeContent.component';
+//import {PlaceViewComponent} from './components/placeView/placeView.component';
+//import{PlaceContainerComponent} from './components/placeFilterContainer/placeFilter.component';
 //import {UserService} from './service/User.service';
-
+import {filter} from './components/filter/filter.component';
 import {TripTypeService} from "./service/tripType.service";
-
+import {Tripfilter} from './components/tripFilter/tripFilter.component';
 
 
 import {RouterModule} from '@angular/router'
@@ -51,7 +59,7 @@ import * as $ from 'jquery';
   declarations: [ AppComponent,HeaderComponent,FooterComponent, SearchComponent,ProfileComponent,addPlace,AboutComponent
   ,addTrip,PlaceSlider,PlaceDetails,PlaceRelated,PlacePage,TripContent,Photograp,RegistrationComponent,PlacesComponent,PlaceComponent,
   TripComponent,MainComponent,OffersComponent ,HolidayComponent , AdventuresComponent,ContactUSComponent,otherUserProfileComponent
-  ,TripTypePipe],
+  ,TripTypePipe,updatePlace,updateTrip,review,filter,Tripfilter],
  
   bootstrap: [ AppComponent ],
   providers:[TripTypeService]

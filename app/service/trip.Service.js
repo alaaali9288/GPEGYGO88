@@ -27,6 +27,9 @@ var TripService = (function () {
     TripService.prototype.getAllTrips = function () {
         return this._http.get("http://localhost:5000/trip/all").map(function (res) { return res.json(); });
     };
+    TripService.prototype.getAllTripsLeader = function () {
+        return this._http.get("http://localhost:5000/trip/AllLeader").map(function (res) { return res.json(); });
+    };
     TripService.prototype.handleError = function (error) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
@@ -38,6 +41,13 @@ var TripService = (function () {
             'Access-Control-Allow-Origin': '*' });
         var body = JSON.stringify(trip);
         return this._http.post("http://localhost:5000/trip", body, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    TripService.prototype.updateTrip = function (trip) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        var body = JSON.stringify(trip);
+        return this._http.post("http://localhost:5000/trip/update", body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return TripService;

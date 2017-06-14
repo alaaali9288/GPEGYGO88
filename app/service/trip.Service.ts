@@ -25,6 +25,11 @@ getAllTrips(){
   return this._http.get("http://localhost:5000/trip/all").map(res => res.json());
 }
 
+
+getAllTripsLeader(){
+  return this._http.get("http://localhost:5000/trip/AllLeader").map(res => res.json());
+}
+
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
@@ -38,6 +43,17 @@ getAllTrips(){
            let body = JSON.stringify(trip) ;
             
      return this._http.post("http://localhost:5000/trip",body,{headers:headers})
+               .map((res:Response) => res.json());
+               
+              
+      }
+           updateTrip(trip:any){
+     
+           let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+           let body = JSON.stringify(trip) ;
+            
+     return this._http.post("http://localhost:5000/trip/update",body,{headers:headers})
                .map((res:Response) => res.json());
                
               

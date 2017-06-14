@@ -22,6 +22,9 @@ getAllPlaces(){
     return this._http.get("http://localhost:5000/place/all").map(res=> res.json());
 }
 
+getAllPlacesLeader(){
+    return this._http.get("http://localhost:5000/place/AllLeader").map(res=> res.json());
+}
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
@@ -39,5 +42,14 @@ getAllPlaces(){
                .map((res:Response) => res.json());
                
               
+      }
+      updatePlace(place:any){
+              let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+        //    let options = new RequestOptions({ headers: headers });
+           let body = JSON.stringify(place) ;
+            
+     return this._http.post("http://localhost:5000/place/update",body,{headers:headers})
+               .map((res:Response) => res.json());
       }
 }

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-
-
 import * as $ from 'jquery';
 import { Http } from "@angular/http";
 
@@ -11,7 +9,6 @@ import { Http } from "@angular/http";
    <EGYGO-Header></EGYGO-Header>
    <router-outlet></router-outlet>
    <EGYGO-Footer></EGYGO-Footer>
-
      `,
 
 })

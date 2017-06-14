@@ -15,6 +15,8 @@ var footer_component_1 = require("./components/footer.component");
 var search_component_1 = require("./components/search.component");
 var profile_component_1 = require("./components/profile.component");
 var addPlace_component_1 = require("./components/addPlace.component");
+var updatePlace_component_1 = require("./components/updatePlace.component");
+var updateTrip_component_1 = require("./components/updateTrip.component");
 var addTrip_component_1 = require("./components/addTrip.component");
 var placeSlider_component_1 = require("./components/placeSliderComponent/placeSlider.component");
 var placeDetails_component_1 = require("./components/placeDetailsComponent/placeDetails.component");
@@ -34,9 +36,16 @@ var adventures_component_1 = require("./components/adventures/adventures.compone
 var contactus_component_1 = require("./components/contactus.component");
 var about_component_1 = require("./components/aboutComponent/about.component");
 var otherUserProfile_component_1 = require("./components/otherUserProfile.component");
+var review_component_1 = require("./components/review.component");
 var http_1 = require("@angular/http");
+//import {FilterComponent} from './components/filter/filter.component';
+//import {PlaceContentComponent} from './components/placeContent/placeContent.component';
+//import {PlaceViewComponent} from './components/placeView/placeView.component';
+//import{PlaceContainerComponent} from './components/placeFilterContainer/placeFilter.component';
 //import {UserService} from './service/User.service';
+var filter_component_1 = require("./components/filter/filter.component");
 var tripType_service_1 = require("./service/tripType.service");
+var tripFilter_component_1 = require("./components/tripFilter/tripFilter.component");
 var app_routing_1 = require("./app.routing");
 //pipes
 var tripType_pipe_1 = require("./Pipes/tripType.pipe");
@@ -53,7 +62,7 @@ AppModule = __decorate([
         declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent, footer_component_1.FooterComponent, search_component_1.SearchComponent, profile_component_1.ProfileComponent, addPlace_component_1.addPlace, about_component_1.AboutComponent,
             addTrip_component_1.addTrip, placeSlider_component_1.PlaceSlider, placeDetails_component_1.PlaceDetails, placeRelated_component_1.PlaceRelated, placePage_component_1.PlacePage, trip_component_1.TripContent, photographyImgs_component_1.Photograp, registration_component_1.RegistrationComponent, places_component_1.PlacesComponent, place_component_1.PlaceComponent,
             trip_component_2.TripComponent, main_component_1.MainComponent, offers_component_1.OffersComponent, holiday_component_1.HolidayComponent, adventures_component_1.AdventuresComponent, contactus_component_1.ContactUSComponent, otherUserProfile_component_1.otherUserProfileComponent,
-            tripType_pipe_1.TripTypePipe],
+            tripType_pipe_1.TripTypePipe, updatePlace_component_1.updatePlace, updateTrip_component_1.updateTrip, review_component_1.review, filter_component_1.filter, tripFilter_component_1.Tripfilter],
         bootstrap: [app_component_1.AppComponent],
         providers: [tripType_service_1.TripTypeService]
     })

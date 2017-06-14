@@ -1,0 +1,26 @@
+ .btn-primary {
+            background-color: #EA6045;
+        }
+
+
+
+
+        .btn-primary:hover {
+            background-color: #EA6045;
+        }
+
+
+
+
+        .modal-content {
+            background-color: #2F3440;
+            font-size: 13px;
+            font-family: 'Open Sans', sans-serif;
+            color: #F5E5C0;
+        }
+
+        .padd15px{
+            padding: 15px;
+            margin-left: -15px;
+            
+        }

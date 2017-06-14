@@ -27,6 +27,9 @@ var PlaceService = (function () {
     PlaceService.prototype.getAllPlaces = function () {
         return this._http.get("http://localhost:5000/place/all").map(function (res) { return res.json(); });
     };
+    PlaceService.prototype.getAllPlacesLeader = function () {
+        return this._http.get("http://localhost:5000/place/AllLeader").map(function (res) { return res.json(); });
+    };
     PlaceService.prototype.handleError = function (error) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
@@ -39,6 +42,14 @@ var PlaceService = (function () {
         //    let options = new RequestOptions({ headers: headers });
         var body = JSON.stringify(place);
         return this._http.post("http://localhost:5000/place", body, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    PlaceService.prototype.updatePlace = function (place) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        //    let options = new RequestOptions({ headers: headers });
+        var body = JSON.stringify(place);
+        return this._http.post("http://localhost:5000/place/update", body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return PlaceService;

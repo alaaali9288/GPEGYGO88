@@ -7,16 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var review = (function () {
+    function review() {
     }
-    return AppComponent;
+    review.prototype.ngOnInit = function () {
+    };
+    return review;
 }());
-AppComponent = __decorate([
+review = __decorate([
     core_1.Component({
-        selector: 'pm-app',
-        template: "\n   <EGYGO-Header></EGYGO-Header>\n   <router-outlet></router-outlet>\n   <EGYGO-Footer></EGYGO-Footer>\n     ",
+        moduleId: module.id,
+        selector: 'review',
+        templateUrl: './html/review.html',
+        styleUrls: ['./css/rangeStyle.css',
+            './css/checkboxStyle.css',
+            './css/StartStyle.css',
+            './css/popUpStyle.css',
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+        ]
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], review);
+exports.review = review;
+//# sourceMappingURL=review.component.js.map
