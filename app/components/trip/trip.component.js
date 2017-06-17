@@ -31,10 +31,7 @@ TripComponent = __decorate([
         moduleId: module.id,
         templateUrl: 'trip.template.html',
         styleUrls: ['../../assets/css/style.css',
-            '../../assets/css/flexslider.css',
-            '../../assets/css/flexslider.css',
-            '../../assets/css/jquery-ui.css',
-            '../../assets/css/zalki_hover_img.css'],
+            '../../assets/css/trips.css'],
         providers: [trip_service_1.TripService, tripType_service_1.TripTypeService],
     }),
     __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService])

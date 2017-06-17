@@ -27,6 +27,14 @@ var TripService = (function () {
     TripService.prototype.getAllTrips = function () {
         return this._http.get("http://localhost:5000/trip/all").map(function (res) { return res.json(); });
     };
+    TripService.prototype.getTripByplaceID = function (Pid) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        //    let options = new RequestOptions({ headers: headers });
+        var body = JSON.stringify(Pid);
+        return this._http.post("http://localhost:5000/trip/places", body, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     TripService.prototype.getAllTripsLeader = function () {
         return this._http.get("http://localhost:5000/trip/AllLeader").map(function (res) { return res.json(); });
     };

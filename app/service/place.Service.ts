@@ -22,6 +22,10 @@ getAllPlaces(){
     return this._http.get("http://localhost:5000/place/all").map(res=> res.json());
 }
 
+
+
+
+
 getAllPlacesLeader(){
     return this._http.get("http://localhost:5000/place/AllLeader").map(res=> res.json());
 }

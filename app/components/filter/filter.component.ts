@@ -9,7 +9,7 @@ import { PlaceService } from "../../service/place.Service";
     moduleId: module.id,
     selector: 'filter',
     templateUrl: './filter.html',
-    styleUrls: ['./filter.css',],
+    styleUrls: ['./bootstrap.min.css','./filter.css',],
     providers: [TripTypeService, PlaceService]
 })
 

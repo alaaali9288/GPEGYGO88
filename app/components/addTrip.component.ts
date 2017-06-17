@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, Request, RequestMethod } from '@angular/http';
 import { TripService } from '../service/trip.service';
+import { UserService } from '../service/user.service';
 import { FormBuilder, FormGroup, FormControl, FormControlName, Validator } from '@angular/forms'
 import { TripTypeService } from '../service/tripType.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -16,11 +17,13 @@ import { Router, ActivatedRoute } from '@angular/router';
         //  './css/dropzone.css',
         //  './css/fwslider.css'
     ],
-    providers: [TripService, TripTypeService]
+    providers: [TripService, TripTypeService,UserService]
 })
 
 export class addTrip implements OnInit {
-    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router) { } //private fb: FormBuilder
+      
+    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router , private _UserService:UserService) { } //private fb: FormBuilder
+
 
     title: string;
     price: number;
@@ -43,8 +46,14 @@ export class addTrip implements OnInit {
     busBackLoc: string;
     tagtxt: string;
     activity: string;
+   User:any;
+
+
     ngOnInit() {
-        this._tripTypeService.getTripType().subscribe(triptypes => this.TripTypes = triptypes)
+        this._tripTypeService.getTripType().subscribe(triptypes => this.TripTypes = triptypes);
+         var Uid = localStorage.getItem("UserId");
+         var uuser =  this._UserService.getById(Uid);
+       //  this.User = uuser[0].firstName;
 
     }
     selectIngredientActiv(select: any): void {
@@ -100,6 +109,45 @@ export class addTrip implements OnInit {
     
     }
 
+
+   
+    //select multiple
+    selectIngredientTypes(select: any): void {
+        var option = select.target.options.selectedIndex;     //selected index
+        var ul = document.getElementById("ulAppendTypes");
+
+        var li = document.createElement('li');
+        var input = document.createElement('input');
+        var a = document.createElement('a');
+        var text = document.createTextNode(select.target.options[option].value);  // selected text
+
+        input.type = 'hidden';
+        input.name = 'activities[]';
+        input.value = select.target.options[option].value;
+
+        a.setAttribute('onclick', 'this.parentNode.remove(this);');//
+        a.setAttribute('style', 'font-size:20px; text-decoration:none; margin-right:5px; padding: 0 3px; background-color:#F8CA4D;');//        
+        a.innerHTML = '&times;';//
+
+        li.appendChild(input);
+        li.appendChild(a);
+        li.appendChild(text);
+        li.setAttribute('style', 'display:inline; padding:8px;');
+
+        ul.appendChild(li);
+        this.activ.push(input.value);
+
+        this.typeName = input.value;
+        this._tripTypeService.getTripTypeId(this.typeName)
+            .subscribe(triptypeId => {
+
+                for (let t = 0; t < triptypeId.length; t++) {
+
+                    this.TripTypeId = triptypeId[t]._id;
+                    this.holidayType.push(this.TripTypeId);
+                }
+            })
+    }
 
     //select multiple
     selectIngredientPlaces(select: any): void {

@@ -6,7 +6,7 @@ import { PlaceService } from "../../service/place.service";
 selector: 'place',
 moduleId:module.id,
 templateUrl: 'place.template.html',
-styleUrls:['../../assets/css/style.css' ,'../../assets/css/place.style.css'],
+styleUrls:['../../assets/css/style.css' ,'../../assets/css/place.style.css','../../assets/css/places.css'],
 providers:[PlaceService]
 
 })

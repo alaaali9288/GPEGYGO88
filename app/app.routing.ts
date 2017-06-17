@@ -30,6 +30,8 @@ import {AboutComponent} from './components/aboutComponent/about.component';
 import {review} from './components/review.component';
 import {filter} from './components/filter/filter.component';
 import {Tripfilter} from './components/tripFilter/tripFilter.component';
+import {WelcomeComponent} from './components/home/welcome.component'
+
 //import {PlaceContentComponent} from './components/placeContent/placeContent.component';
 //import {PlaceViewComponent} from './components/placeView/placeView.component';
 //import{PlaceContainerComponent} from './components/placeFilterContainer/placeFilter.component';
@@ -38,7 +40,7 @@ import {Tripfilter} from './components/tripFilter/tripFilter.component';
 const app_routes:Routes=[
     {
         path:'',
-        component:MainComponent
+        component:WelcomeComponent
     },
     {
         path:'loginAndReg',

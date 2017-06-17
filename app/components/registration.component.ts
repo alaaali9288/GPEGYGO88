@@ -86,7 +86,7 @@ Validate(){
             this.user = user[0];
                 if (this.userPassword === this.user.userPassword) {
                   //  alert(this.user._id);
-                  if (localStorage.getItem("currentUser")===null){
+                  if (localStorage.getItem("currenrtUser")===null){
                       
                       localStorage.setItem("currenrtUser",this.user) ;
                       localStorage.setItem("UserId",this.user._id) ;

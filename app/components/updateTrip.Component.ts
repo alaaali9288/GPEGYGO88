@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs/Subscription';
     styleUrls: ['./css/addPlace.component.css',
         './css/style.css',
         './css/bootstrap.min.css',
+         './font-awesome-4.7.0/css/font-awesome.min.css'
         //  './css/select2.min.css',
         //  './css/dropzone.css',
         //  './css/fwslider.css'

@@ -15,7 +15,7 @@ export class TripService{
    constructor(private _http:Http){}
     anyUser:any;
 
-
+trips :any[];
 
   getTripById(id:string)  {
       return this._http.get(`http://localhost:5000/trip/i/${id}`).map(res => res.json());
@@ -25,6 +25,17 @@ getAllTrips(){
   return this._http.get("http://localhost:5000/trip/all").map(res => res.json());
 }
 
+ getTripByplaceID(Pid:any){
+
+ let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+        //    let options = new RequestOptions({ headers: headers });
+           let body = JSON.stringify(Pid) ;
+            
+     return this._http.post("http://localhost:5000/trip/places",body,{headers:headers})
+               .map((res:Response) => res.json());
+
+ }
 
 getAllTripsLeader(){
   return this._http.get("http://localhost:5000/trip/AllLeader").map(res => res.json());

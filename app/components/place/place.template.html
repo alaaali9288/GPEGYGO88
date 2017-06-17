@@ -1,30 +1,169 @@
-    <div class="destination-places-grids">
-<div *ngFor="let place of places">
-<div class="destination-places-grid">
-    <div class="dest-place-pic main_box user_style4" data-hipop="two-horizontal">
+<div class="destination-places-grids container" style="clear:both; padding-top: 60px; margin: 100px 200px;">
+    <div class="col-md-6 col-sm-6">
 
-        <div class="imgPlace"> 
-      <a class="thumbnail" [routerLink]='["/placeDetails/"+place._id]'>
-               <img class="img-responsive" [src]="'./app/components/images/'+place.placePicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{place.placeName}}">
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w3.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+
+  <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w6.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w7.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w8.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w9.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w10.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w11.jpg" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!-- colored -->
+        <div class="ih-item square colored effect3 bottom_to_top">
+            <a href="#">
+                <div class="img"><img src="./app/assets/images/w2.png" alt="img"></div>
+                <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                </div>
+            </a>
+        </div>
+        <!-- end colored -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div *ngFor="let place of places">
+        <div class="destination-places-grid" style="margin: 0 30px 60px 0;">
+            <div class="dest-place-pic main_box user_style4" data-hipop="two-horizontal">
+
+                <div class="imgPlace">
+                    <a class="thumbnail" [routerLink]='["/placeDetails/"+place._id]'>
+               <img class="img-responsive" [src]="'./app/components/images/'+place.placePicsUrl[0]" onError="this.src='./app/components/images/p6.jpg';" alt="{{place.placeName}}">
                 </a>
-            </div>
+                </div>
 
-        <a href="#" class="popup"> </a>
-        <a href="#" class="popup2"> </a>
-    </div>
-    <div class="dest-place-opt">
-        <ul class="dest-place-opt-fea">
-            <li *ngFor="let activty of place.activities"><a class="hot" href="#"><span> </span> {{activty}}</a></li>
-            <!--<li><a class="plain" href="#"><span> </span> Air ticket</a></li>
-            <li><a class="Breakfast" href="#"><span> </span> Break Fast</a></li>-->
-            <div class="clear"> </div>
-        </ul>
-        <ul class="dest-place-opt-cast">
-            <li><a class="d-place" [routerLink]='["/placeDetails/"+place._id]'>>{{place.placeName}}</a></li>
-            <li><a class="d-price">Starting Form {{place.price}}$</a></li>
-            <div class="clear"> </div>
-        </ul>
-    </div>
+                <a href="#" class="popup"> </a>
+                <a href="#" class="popup2"> </a>
+            </div>
+            <div class="dest-place-opt">
+                <ul class="dest-place-opt-fea" style="height: 60px; ">
+                    <li *ngFor="let activty of place.activities"><a class="hot" href="#"><span> </span> {{activty}}</a></li>
+        
+                    <div class="clear"> </div>
+                </ul>
+                <ul class="dest-place-opt-cast" style="height: 80px; ">
+
+                    <li><a class="d-price">Starting Form {{place.price}}$</a></li>
+                    <div class="clear"> </div>
+                </ul>
+            </div>
+        </div>
+    </div>-->
 </div>
-</div>
-    </div>

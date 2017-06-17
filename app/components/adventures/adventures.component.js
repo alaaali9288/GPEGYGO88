@@ -17,7 +17,7 @@ AdventuresComponent = __decorate([
         selector: 'adventures',
         moduleId: module.id,
         templateUrl: 'adventures.template.html',
-        styleUrls: ['../../assets/css/style.css', '../../assets/css/jquery.bxslider.css']
+        styleUrls: ['../../assets/css/adventures.css']
     })
 ], AdventuresComponent);
 exports.AdventuresComponent = AdventuresComponent;

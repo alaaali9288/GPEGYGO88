@@ -1,30 +1,65 @@
+
+<div class="container bd">
 <div class="row">
-    <div class="col-md-2">Types </div>
-    <div class="row">
-        <div class="col-md-4">
+<div class="col-sm-4">
+<div class="span3 ourfilter">
+    <div class="sidebar-nav">
+        <div class="base">
+            <input type="text" placeholder="Search..by Name /Holiday Type." class="form-control srch" [(ngModel)]="keyword" (keyup)="applyFilters()" />
+            <div class="filterHeader">
+                <h3>Holiday Type</h3>
+            </div>
             <ul class="nav nav-list tags" *ngIf="placesTypes">
-                <li *ngFor="let tag of placesTypes">
+                <li *ngFor="let tag of placesTypes" >
                     <div class="checkbox ourCheckbox">
-                        <label><input class="filterInput" type="checkbox"  (change)="chooseTag($event)" value="{{tag._id}}"/>{{tag.type}}</label>
+                        <label><input class="filterInput" type="checkbox"  (change)="chooseTag($event)" value="{{tag._id}}"/><span style="margin-left:20px;">{{tag.type}}</span></label>
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="col-md-4">
-            <input type="range" name="range" min="100" max="1000" value="1000" [(ngModel)]="priceFilter" (change)="choosePrice()" onchange="rangeCal.value=value">
-            <output id="rangeCal">1000</output>
-        </div>
-        <div class="col-md-4">
-            <input type="text" placeholder="Search..." class="form-control" [(ngModel)]="keyword" (keyup)="applyFilters()" />
-        </div>
-    </div>
-    <div class="col-md-4">
-        <ul class="nav nav-list tags" *ngIf="places">
-            <li *ngFor="let place of places">
+            <div class="filterHeader">
+                <h3>Price Range</h3>
+            </div>
 
-                <label>{{place.title}}</label>
+            <div class="range">
+        
+            <input type="range" name="range" min="100" max="1000" 
+            value="1000" [(ngModel)]="priceFilter" (change)="choosePrice()" onchange="rangeCal.value=value">
+                    
+                <output id="rangeCal">1000</output>
+            </div>
 
-            </li>
-        </ul>
+            <br/>
+      
+
+
+        </div>
     </div>
 </div>
+</div>
+<div class="col-sm-8">
+
+<div class="row" *ngIf="places">
+<!-- start -->
+  <div class="col-sm-6 col-md-4" *ngFor="let place of places" >
+    <div class="thumbnail">
+      <img [src]="'./app/components/images/'+place.tripPicsUrl[0]" onError="this.src='./app/components/images/Martin-Bauer-Landscape-Photography-AFRICA_-_EGYPT_-_GIZEH_PYRAMIDS_POSTCARD.jpg'" alt="{{place.placeName}}">
+      <div class="caption">
+        <h3>{{place.title}}</h3>
+        <p>{{place.price}} .LE</p>
+        
+        <p><a [routerLink]='["/tripContent/"+place._id]' class="btn btn-primary" role="button">More Details</a></p>
+      </div>
+    </div>
+  </div>
+
+<!--end-->
+
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+

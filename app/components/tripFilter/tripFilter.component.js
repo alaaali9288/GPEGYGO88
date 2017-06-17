@@ -165,7 +165,7 @@ Tripfilter = __decorate([
         moduleId: module.id,
         selector: 'tripFilter',
         templateUrl: './tripFilter.html',
-        styleUrls: ['./tripFilter.css',],
+        styleUrls: ['./bootstrap.min.css', './tripFilter.css',],
         providers: [tripType_Service_1.TripTypeService, trip_Service_1.TripService]
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute, tripType_Service_1.TripTypeService, trip_Service_1.TripService])

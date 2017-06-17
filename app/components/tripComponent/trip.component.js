@@ -51,13 +51,12 @@ TripContent = __decorate([
         selector: "trip-page",
         templateUrl: "./trip.component.html",
         styles: ["\n        @import \"https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css\";\n        @import \"https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css\";\n    "],
-        styleUrls: ["../../assets/css/style.css",
+        styleUrls: [
             "../../assets/css/bootstrap.min.css",
             "../../assets/font-awesome-4.7.0/css/font-awesome.min.css",
-            "../../assets/css/glide.core.css",
-            "../../assets/css/glide.theme.css",
-            "../../assets/css/trip-style.css",
-        ], providers: [user_service_1.UserService, trip_service_1.TripService]
+            "../../assets/css/trip-style.css"
+        ],
+        providers: [user_service_1.UserService, trip_service_1.TripService]
     }),
     __metadata("design:paramtypes", [trip_service_1.TripService, user_service_1.UserService, router_1.ActivatedRoute, router_1.Router])
 ], TripContent);

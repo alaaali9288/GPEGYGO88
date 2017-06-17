@@ -14,7 +14,8 @@ import { Subscription } from 'rxjs/Subscription';
         './css/style.css',
         './css/BoxStyle.css',
         './css/inputFileStyle.css',
-        './css/bootstrap.min.css'
+        './css/bootstrap.min.css',
+         './font-awesome-4.7.0/css/font-awesome.min.css'
     ],providers:[PlaceService,TripTypeService]
 })
 

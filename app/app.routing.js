@@ -12,20 +12,19 @@ var trip_component_1 = require("./components/tripComponent/trip.component");
 var registration_component_1 = require("./components/registration.component");
 var place_component_1 = require("./components/place/place.component");
 var trip_component_2 = require("./components/trip/trip.component");
-//import {TripsComponent} from './components/trips/trips.component';
-var main_component_1 = require("./components/main/main.component");
 var contactus_component_1 = require("./components/contactus.component");
 var about_component_1 = require("./components/aboutComponent/about.component");
 var review_component_1 = require("./components/review.component");
 var filter_component_1 = require("./components/filter/filter.component");
 var tripFilter_component_1 = require("./components/tripFilter/tripFilter.component");
+var welcome_component_1 = require("./components/home/welcome.component");
 //import {PlaceContentComponent} from './components/placeContent/placeContent.component';
 //import {PlaceViewComponent} from './components/placeView/placeView.component';
 //import{PlaceContainerComponent} from './components/placeFilterContainer/placeFilter.component';
 var app_routes = [
     {
         path: '',
-        component: main_component_1.MainComponent
+        component: welcome_component_1.WelcomeComponent
     },
     {
         path: 'loginAndReg',

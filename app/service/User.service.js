@@ -37,8 +37,10 @@ var UserService = (function () {
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
     UserService.prototype.createUser = function (user) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*' });
+        var headers = new http_1.Headers({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        });
         var body = JSON.stringify(user);
         return this._http.post("http://localhost:5000/user", body, { headers: headers })
             .map(function (res) { return res.json(); });
@@ -48,6 +50,28 @@ var UserService = (function () {
     };
     UserService.prototype.getuserByNameAlaa = function (uname) {
         return this._http.get("http://localhost:5000/user/un/" + uname);
+    };
+    UserService.prototype.updateVisitedPlaces = function (Uid) {
+        // this.getById(Uid).subscribe(user => {
+        //   this.userVP = user[0];
+        //  this.userVP.userVisitedPlace.push("593ab7839770e412c09158a5");
+        var user = {
+            _id: Uid,
+            userVisitedPlace: ["593ab7839770e412c0915999"]
+        };
+        this.updateUser(user).subscribe(function (data) { return JSON.stringify(data); }, function () { return console.log("bbbb"); });
+        // console.log("EXO");
+        // console.log(this.userVP.userVisitedPlace);
+    };
+    UserService.prototype.updateUser = function (User) {
+        console.log("hajar");
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        // let options = new RequestOptions({ headers: headers });
+        var body = JSON.stringify(User);
+        return this._http.post("http://localhost:5000/user/update", body, { headers: headers })
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) { console.log("zaft => ", data); });
     };
     return UserService;
 }());

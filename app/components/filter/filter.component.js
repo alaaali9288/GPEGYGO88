@@ -165,7 +165,7 @@ filter = __decorate([
         moduleId: module.id,
         selector: 'filter',
         templateUrl: './filter.html',
-        styleUrls: ['./filter.css',],
+        styleUrls: ['./bootstrap.min.css', './filter.css',],
         providers: [tripType_Service_1.TripTypeService, place_Service_1.PlaceService]
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute, tripType_Service_1.TripTypeService, place_Service_1.PlaceService])

@@ -179,7 +179,8 @@ updatePlace = __decorate([
             './css/style.css',
             './css/BoxStyle.css',
             './css/inputFileStyle.css',
-            './css/bootstrap.min.css'
+            './css/bootstrap.min.css',
+            './font-awesome-4.7.0/css/font-awesome.min.css'
         ], providers: [place_service_1.PlaceService, tripType_service_1.TripTypeService]
     }),
     __metadata("design:paramtypes", [place_service_1.PlaceService, tripType_service_1.TripTypeService, router_1.Router, router_1.ActivatedRoute])

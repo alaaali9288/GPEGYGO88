@@ -33,6 +33,8 @@ import {AboutComponent} from './components/aboutComponent/about.component';
 import {otherUserProfileComponent} from './components/otherUserProfile.component';
 import {review} from './components/review.component';
 import{HttpModule} from '@angular/http';
+import {WelcomeComponent} from './components/home/welcome.component'
+
 //import {FilterComponent} from './components/filter/filter.component';
 //import {PlaceContentComponent} from './components/placeContent/placeContent.component';
 //import {PlaceViewComponent} from './components/placeView/placeView.component';
@@ -59,7 +61,7 @@ import * as $ from 'jquery';
   declarations: [ AppComponent,HeaderComponent,FooterComponent, SearchComponent,ProfileComponent,addPlace,AboutComponent
   ,addTrip,PlaceSlider,PlaceDetails,PlaceRelated,PlacePage,TripContent,Photograp,RegistrationComponent,PlacesComponent,PlaceComponent,
   TripComponent,MainComponent,OffersComponent ,HolidayComponent , AdventuresComponent,ContactUSComponent,otherUserProfileComponent
-  ,TripTypePipe,updatePlace,updateTrip,review,filter,Tripfilter],
+  ,TripTypePipe,updatePlace,updateTrip,review,filter,Tripfilter,WelcomeComponent],
  
   bootstrap: [ AppComponent ],
   providers:[TripTypeService]

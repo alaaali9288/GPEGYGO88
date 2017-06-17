@@ -26,7 +26,7 @@ PlaceComponent = __decorate([
         selector: 'place',
         moduleId: module.id,
         templateUrl: 'place.template.html',
-        styleUrls: ['../../assets/css/style.css', '../../assets/css/place.style.css'],
+        styleUrls: ['../../assets/css/style.css', '../../assets/css/place.style.css', '../../assets/css/places.css'],
         providers: [place_service_1.PlaceService]
     }),
     __metadata("design:paramtypes", [place_service_1.PlaceService])

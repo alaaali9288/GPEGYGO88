@@ -11,19 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var place_Service_1 = require("../../service/place.Service");
+var trip_Service_1 = require("../../service/trip.Service");
+var user_Service_1 = require("../../service/user.Service");
 //rotut
 var router_1 = require("@angular/router");
 var PlaceDetails = (function () {
-    function PlaceDetails(_PlaceService, _route, _router) {
+    function PlaceDetails(_PlaceService, _route, _router, _TripService, _UserService) {
         this._PlaceService = _PlaceService;
         this._route = _route;
         this._router = _router;
+        this._TripService = _TripService;
+        this._UserService = _UserService;
     }
     PlaceDetails.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this._route.params.subscribe(function (params) {
             var id = params['id'];
+            _this.placeID = id;
             _this.getPlaceById(id);
+            _this.getTripByplaceID(id);
         });
     };
     PlaceDetails.prototype.getPlaceById = function (id) {
@@ -31,6 +37,38 @@ var PlaceDetails = (function () {
         this._PlaceService.getplaceById(id).subscribe(function (place) {
             _this.place = place[0];
             console.log(_this.place);
+        });
+    };
+    PlaceDetails.prototype.getTripByplaceID = function (id) {
+        var _this = this;
+        this.pID = new Array();
+        this.pID.push(id);
+        var placeid = {
+            // place:["591cc3d142e8bc19745157bf"] 
+            place: this.pID
+        };
+        this._TripService.getTripByplaceID(placeid).subscribe(function (data) {
+            JSON.stringify(data);
+            _this.tripsWithPlaces = data;
+            console.log(_this.tripsWithPlaces);
+            console.log("exo");
+        });
+    };
+    PlaceDetails.prototype.placesVisted = function () {
+        // alert("Chen");
+        var UID = localStorage.getItem("UserId");
+        console.log(UID);
+        this._UserService.updateVisitedPlaces(UID);
+    };
+    PlaceDetails.prototype.updateUsrV = function () {
+        var _this = this;
+        var UID = localStorage.getItem("UserId");
+        var user = this._UserService.getById(UID).subscribe(function (res) {
+            _this.nor = res[0];
+            _this.nor.userVisitedPlace.push(_this.placeID);
+            _this._UserService.updateUser(_this.nor);
+            console.log(_this.placeID);
+            console.log("dne");
         });
     };
     return PlaceDetails;
@@ -50,9 +88,10 @@ PlaceDetails = __decorate([
             "../../assets/css/place_style.css",
             "../../assets/css/fwslider.css",
             "../../assets/css/animate.min.css", "../../assets/css/lightbox.min.css",
-        ], providers: [place_Service_1.PlaceService]
+        ], providers: [place_Service_1.PlaceService, trip_Service_1.TripService, user_Service_1.UserService]
     }),
-    __metadata("design:paramtypes", [place_Service_1.PlaceService, router_1.ActivatedRoute, router_1.Router])
+    __metadata("design:paramtypes", [place_Service_1.PlaceService, router_1.ActivatedRoute, router_1.Router,
+        trip_Service_1.TripService, user_Service_1.UserService])
 ], PlaceDetails);
 exports.PlaceDetails = PlaceDetails;
 //# sourceMappingURL=placeDetails.component.js.map

@@ -1,14 +1,17 @@
 import {Component} from '@angular/core';
+import {ViewEncapsulation} from '@angular/core';
 
 @Component({
 selector: 'main',
 moduleId:module.id,
 templateUrl: 'main.template.html',
-styleUrls:['../../assets/css/style.css' ,
-    '../../assets/css/jquery-ui.css', 
-    '../../assets/css/fwslider.css']
+styleUrls:['../../assets/css/homeCSS.css' ,'../../assets/css/style.css'],
+encapsulation: ViewEncapsulation.None
 
 })
 export class MainComponent{
 
+
+
 }
+

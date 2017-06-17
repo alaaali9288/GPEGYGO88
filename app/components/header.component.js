@@ -12,9 +12,26 @@ var HeaderComponent = (function () {
         this.logoPath = './app/components/images/';
         this._localStorge = localStorage;
         this.profilePath = "/profile/" + localStorage.getItem("UserId");
+        // window : any = window;
+        // // Close the dropdown if the user clicks outside of it
+        // this.window.onclick = function(event) {
+        //   if (!event.target.matches('.dropbtn')) {
+        //     var dropdowns = document.getElementsByClassName("dropdown-content");
+        //     var i;
+        //     for (i = 0; i < dropdowns.length; i++) {
+        //       var openDropdown = dropdowns[i];
+        //       if (openDropdown.classList.contains('show')) {
+        //         openDropdown.classList.remove('show');
+        //       }
+        //     }
+        //   }
+        // }
     }
     HeaderComponent.prototype.logoOut = function () {
         localStorage.clear();
+    };
+    HeaderComponent.prototype.myFunction = function () {
+        document.getElementById("myDropdown").classList.toggle("show");
     };
     return HeaderComponent;
 }());
@@ -24,7 +41,7 @@ HeaderComponent = __decorate([
         selector: 'EGYGO-Header',
         // template:'<h1>HEWDER</h1>'
         templateUrl: 'html/HeaderComponent.html',
-        styleUrls: ['css/style.css',
+        styleUrls: ['css/style.css', 'css/dropDown.css'
         ]
     })
 ], HeaderComponent);

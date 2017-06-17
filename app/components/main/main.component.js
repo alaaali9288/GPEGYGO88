@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var core_2 = require("@angular/core");
 var MainComponent = (function () {
     function MainComponent() {
     }
@@ -17,9 +18,8 @@ MainComponent = __decorate([
         selector: 'main',
         moduleId: module.id,
         templateUrl: 'main.template.html',
-        styleUrls: ['../../assets/css/style.css',
-            '../../assets/css/jquery-ui.css',
-            '../../assets/css/fwslider.css']
+        styleUrls: ['../../assets/css/homeCSS.css', '../../assets/css/style.css'],
+        encapsulation: core_2.ViewEncapsulation.None
     })
 ], MainComponent);
 exports.MainComponent = MainComponent;

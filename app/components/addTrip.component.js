@@ -11,13 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var trip_service_1 = require("../service/trip.service");
+var user_service_1 = require("../service/user.service");
 var tripType_service_1 = require("../service/tripType.service");
 var router_1 = require("@angular/router");
 var addTrip = (function () {
-    function addTrip(_placeService, _tripTypeService, _router) {
+    function addTrip(_placeService, _tripTypeService, _router, _UserService) {
         this._placeService = _placeService;
         this._tripTypeService = _tripTypeService;
         this._router = _router;
+        this._UserService = _UserService;
         this.tags = [];
         this.activities = [];
         this.activ = [];
@@ -26,6 +28,9 @@ var addTrip = (function () {
     addTrip.prototype.ngOnInit = function () {
         var _this = this;
         this._tripTypeService.getTripType().subscribe(function (triptypes) { return _this.TripTypes = triptypes; });
+        var Uid = localStorage.getItem("UserId");
+        var uuser = this._UserService.getById(Uid);
+        //  this.User = uuser[0].firstName;
     };
     addTrip.prototype.selectIngredientActiv = function (select) {
         //  var option = select.target.options.selectedIndex;     //selected index
@@ -67,6 +72,36 @@ var addTrip = (function () {
         li.setAttribute('style', 'display:inline; padding:8px;');
         ul.appendChild(li);
         this.tags.push(this.tagtxt);
+    };
+    //select multiple
+    addTrip.prototype.selectIngredientTypes = function (select) {
+        var _this = this;
+        var option = select.target.options.selectedIndex; //selected index
+        var ul = document.getElementById("ulAppendTypes");
+        var li = document.createElement('li');
+        var input = document.createElement('input');
+        var a = document.createElement('a');
+        var text = document.createTextNode(select.target.options[option].value); // selected text
+        input.type = 'hidden';
+        input.name = 'activities[]';
+        input.value = select.target.options[option].value;
+        a.setAttribute('onclick', 'this.parentNode.remove(this);'); //
+        a.setAttribute('style', 'font-size:20px; text-decoration:none; margin-right:5px; padding: 0 3px; background-color:#F8CA4D;'); //        
+        a.innerHTML = '&times;'; //
+        li.appendChild(input);
+        li.appendChild(a);
+        li.appendChild(text);
+        li.setAttribute('style', 'display:inline; padding:8px;');
+        ul.appendChild(li);
+        this.activ.push(input.value);
+        this.typeName = input.value;
+        this._tripTypeService.getTripTypeId(this.typeName)
+            .subscribe(function (triptypeId) {
+            for (var t = 0; t < triptypeId.length; t++) {
+                _this.TripTypeId = triptypeId[t]._id;
+                _this.holidayType.push(_this.TripTypeId);
+            }
+        });
     };
     //select multiple
     addTrip.prototype.selectIngredientPlaces = function (select) {
@@ -132,9 +167,9 @@ addTrip = __decorate([
             './css/style.css',
             './css/bootstrap.min.css',
         ],
-        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService]
+        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService, user_service_1.UserService]
     }),
-    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router])
+    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router, user_service_1.UserService])
 ], addTrip);
 exports.addTrip = addTrip;
 //# sourceMappingURL=addTrip.component.js.map

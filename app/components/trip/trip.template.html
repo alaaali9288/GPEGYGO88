@@ -1,12 +1,16 @@
+
+<div class="container">
+    <div class="row">
 <div *ngFor="let trip of trips">
 <div class="criuse-grid">
     <div class="criuse-grid-head">
         <div class="criuse-img">
             <div class="criuse-pic">
                 <a class="thumbnail" [routerLink]='["/tripContent/"+trip._id]'>
-               <img class="img-responsive" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{trip.title}}">
+               <img class="img-responsive" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/slider-bg.jpg';" alt="{{trip.title}}" height="300px" >
                 </a>
             </div>
+            
             <div class="criuse-pic-info">
                 <div class="criuse-pic-info-top">
                     <div class="criuse-pic-info-top-weather">
@@ -26,7 +30,7 @@
         <div class="criuse-info">
             <div class="criuse-info-left">
                 <ul>
-                   <li *ngFor="let activity of trip.activities"><a><span></span> {{activity}}</a></li>
+                   <li *ngFor="let activity of trip.activities"><i class="fa fa-tag" aria-hidden="true"></i><a>&nbsp; {{activity}}</a></li>
                
                     <div class="clear"> </div>
                 </ul>
@@ -35,10 +39,15 @@
             <div class="clear"> </div>
         </div>
     </div>
+
     <div class="criuse-grid-info">
+        <blockquote>
         <h1><a  [routerLink]='["/tripContent/"+trip._id]'>{{trip.title}}</a></h1>
         <p>{{trip.description}}</p>
-        <a class="btn" [routerLink]='["/tripContent/"+trip._id]'>DeTails</a>
+        <a class=" btn btn-danger" [routerLink]='["/tripContent/"+trip._id]'>DeTails</a>
+        </blockquote>
     </div>
 </div>
+</div>
+    </div>
 </div>

@@ -1,146 +1,214 @@
-
-		<!----//End-find-place---->
-		<!----start-images-slider---->
-        <div class="container" *ngIf="trip">
-        
-        <div class="placeDetail">
-        
+<!----//End-find-place---->
+<!----start-images-slider---->
+<div class="container" *ngIf="trip">
+    <div class="placeDetail">
         <div class="row">
-        
-        <div class="col-xs-10 tst"></div>
-      <span class="col-xs-2 tst">Status:<span>Finished</span></span>
+            <div class="col-xs-10 tst">
+                <p class="triptitle">
+                    <i class="fa fa-telegram" aria-hidden="true"></i> &nbsp; {{trip.title}}</p>
+            </div>
+            <span class="col-xs-2 tst status"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;Status:<span>
+                 &nbsp; Finished</span></span>
+
         </div>
-        <h1>{{trip.title}}</h1>
+
         <!--start slider>
+        
          <!--start-->
-   <div id="Glide" class="glide">
 
-    <div class="glide__arrows">
-        <button class="glide__arrow prev" data-glide-dir="<">prev</button>
-        <button class="glide__arrow next" data-glide-dir=">">next</button>
+        <section class="slideshow">
+            <div class="slideshow-container slide">
+                <img *ngFor="let pic of tripPicsURLs" [src]="'app/assets/images/'+pic" alt={{pic}}>
+            </div>
+        </section>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="rateTags">
+                <span>
+                    
+                    <label class="update" *ngFor="let tag of tags">
+                         <i class="fa fa-tag" aria-hidden="true"></i> {{tag}}</label>
+                 </span>
+
+            </div>
+            <a style="z-index: 1555; margin-left: 80%;" class="btn btn-danger update" [routerLink]='["/updateTrip/"+trip._id]'>"Update Trip"</a>
+        </div>
     </div>
 
-    <div class="glide__wrapper">
-        <ul class="glide__track">
-            <li class="glide__slide" *ngFor="let pic of tripPicsURLs"><img [src]="'app/assets/images/'+pic" alt={{pic}}>
-</li>
+    <!-- end slider-->
 
-        </ul>
-    </div>
 
-    <div class="glide__bullets"></div>
+    <!-- about trip-->
 
-</div>
+    <div class="aboutTrip">
 
-        <!-- end slider-->
-        <!-- about trip-->
-       <div class="aboutTrip">
-       <div class="row">
-       <div class="col-md-8 col-xs-8 data"> 
-       <a style="z-index: 1555; margin-left: 80%;" class="btn btn-danger" [routerLink]='["/updateTrip/"+trip._id]'>"Update Trip"</a>
-       <h4>About Trip</h4>
-
-        <p>{{trip.description}}</p>
-         <div id="rateTags">
-   
-    <div class="tags">
-      <label class="btn" *ngFor="let tag of tags">{{tag}}</label>
-      
-    </div>
-  </div>
-        </div>
-        <div class="col-lg-4 col-xs-4">
-        <h4>Activities</h4>
-        <ul>
-        <li *ngFor="let activity of activities"><a href="#">{{activity}}</a></li>
-        
-        </ul>
-        
-        </div>
-       
-        </div>
-       <!--end about trip section-->
-       <!-- start info Section-->
-       <h3>Info</h3>
-       <div id="info">
-       <div class="row">
-       <div class="col-md-8 col-xs-12">
-       <ul>
-       <li ><i class="fa fa-credit-card fa-2x" aria-hidden="true"></i><span>&nbsp;{{trip.price}}.EL</span></li>
-       <li><i class="fa fa-mobile fa-3x" aria-hidden="true"></i> <span>&nbsp;&nbsp;&nbsp;&nbsp; 5654342</span></li>
-       <li><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i><span> &nbsp;&nbsp;EgyGo@gmail.com</span></li>
-       <li><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80 Eldoki Egiza</span></li>
-        <li><i class="fa fa-globe fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="www.egygo.com">www.egygo.com</a></span></li>
-       </ul>
-       </div>
-       <div class="col-md-4 hidden-sm">
-       <div id="map"></div>
-        
-       </div>
-       </div>
-       </div>
-       <!-- end info Section-->
-        <div class="container">
         <div class="row">
-       <!--start review section-->
-       <h2>Reviews</h2>
-       
-                        <div id="testimonial-slider" class="owl-carousel col-sm-8">
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <div class="pic ">
-                                <img src="../../app/assets/images/admin-pic3.jpg" alt="">
+
+            <div class="col-md-4 col-xs-4 ">
+                <blockquote>
+                    <h4><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp; About Trip</h4>
+
+                    <ul>
+                        <li>{{trip.description}}</li>
+                    </ul>
+                </blockquote>
+            </div>
+
+            <div class="col-xs-4  col-md-4  ">
+                <blockquote>
+                    <h4><i class="fa fa-rocket" aria-hidden="true"></i>&nbsp;Activities</h4>
+
+                    <ul>
+                        <li *ngFor="let activity of activities">{{activity}}</li>
+                    </ul>
+
+                </blockquote>
+            </div>
+
+            <div class="col-xs-4  col-md-4 ">
+                <blockquote>
+                    <h4><i class="fa fa-university" aria-hidden="true"></i> &nbsp;Trip Places</h4>
+
+                    <ul>
+                        <li>Place1</li>
+                        <li>Place2</li>
+                    </ul>
+
+                </blockquote>
+            </div>
+
+        </div>
+        <!--end about trip section-->
+    </div>
+    <!-- start info Section-->
+    <div id="info">
+        <div class="row">
+            <div class="col-md-7 col-xs-7">
+                <h4>Info:</h4>
+                <ul class="tinfo">
+                    <li>
+                        <p><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;{{trip.price}}.EL</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; 5654342</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp;&nbsp;EgyGo@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp; 80 Eldoki Egiza</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="www.egygo.com">www.egygo.com</a></p>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-4 hidden-sm" id="map"></div>
+
+        </div>
+    </div>
+
+    <!-- end info Section-->
+    <div class="container">
+        <div class="row">
+            <!--start review section-->
+            <h2>Reviews</h2>
+
+
+            <div id="slider">
+                <ul>
+                    <li>
+                        <div class="slider-container">
+                            <div class="col-md-2  col-xs-3">
+                                <div>
+                                    <img class="pic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                                </div>
+                                <h5 class="title">Williamson</h5>
+
                             </div>
-                            <h5 class="title">Williamson</h5>
-                            <span class="post">Web Developer</span>
+                            <p class="description">
+
+                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
+                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
+                                volutpat nulla. Suspendisse lorem ex.
+                            </p>
+
                         </div>
-                        <p class="description">
-                                      
-        <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i></span><br>
-     
-        
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse lorem ex, congue at elit id, tincidunt tempor orci. Nullam nec augue ac tellus rhoncus tincidunt nec ut ligula. Praesent.
-                        </p>
-           
-                    </div>
- 
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <div class="pic ">
-                                <img src="../../app/assets/images/admin-pic1.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <div class="slider-container">
+                            <div class="col-md-2  col-xs-3">
+                                <div>
+                                    <img class="pic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                                </div>
+                                <h5 class="title">Williamson</h5>
+
                             </div>
-                            <h5 class="title">kristiana</h5>
-                            <span class="post">Level 1</span>
+                            <p class="description">
+
+                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
+                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
+                                volutpat nulla. Suspendisse lorem ex.
+                            </p>
+
                         </div>
-                        <p class="description">
-                         <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i></span><br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse lorem ex, congue at elit id, tincidunt tempor orci. Nullam nec augue ac tellus rhoncus tincidunt nec ut ligula. Praesent.
-                        </p>
-                    </div>
-                </div>
-       <!--end review section-->
-       </div>
-                              <input type="button" class="btn btn-danger sub" value="Add Review"/>
+                    </li>
 
-       </div>
+                    <li>
+                        <div class="slider-container">
+                            <div class="col-md-2  col-xs-3">
+                                <div>
+                                    <img class="pic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                                </div>
+                                <h5 class="title">Williamson</h5>
+
+                            </div>
+                            <p class="description">
+
+                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
+                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
+                                volutpat nulla. Suspendisse lorem ex.
+
+                            </p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
 
 
-    <!--End photography-->
-    
-    
-        <!--end place details section-->
-        
-        
-        <!-- Add Review Section-->
-        
-       
+        </div>
+        <!--end review section-->
+        <input type="button" class="btn btn-danger sub" value="Add Review" />
 
-		<!----//End-wrap---->
-
- 
-  
+    </div>
+</div>

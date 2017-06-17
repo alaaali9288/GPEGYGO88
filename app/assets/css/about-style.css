@@ -1,52 +1,16 @@
-@charset "utf-8";
-/* CSS Document */
-.about{
-    text-align: center;
-	font-size:100%;
-	background-color:#F5E5C0;
-	color:#2f3440;
-	
-}
-h1{
-	position:relative;
-}
-h1:after{
-	    content: "";
-    border-top: 1px solid black;
-    position: absolute;
-    width: 41%;
-    top: 22px;
-    right: 0%;
-}
-h1:before{
-	    content: "";
-    border-top: 1px solid black;
-    position: absolute;
-    width: 41%;
-    top: 22px;
-    left: 0%;
-}
-h3{
-	color:#EA6045}
-#about{
-	text-align:left;
-	}
-	.upic{
-		width:150px;
-		height:150px;
-		border:1px solid #EA6045;
-		border-radius:50%;
-		background-image:url('../images/bad-profile-pic-2.jpeg');
-		 background-repeat:no-repeat; 
-		margin-left:35%;
-		margin-top:10%;
-		margin-right:0;
-		margin-bottom:2%;
-		}
-		.udata{
-			padding:2%;
-			}
+
+.about{ text-align: center; font-size:100%; background-color:#F5E5C0; color:#2f3440; padding-top: 40px; padding-bottom: 40px; }
+
+ #about{ font-size: 20px; text-align: justify; font-weight: bold; line-height: 30px; text-indent: 30px; width: 500px;}
+
+.team{ height: 500px; }
+
+h1{ position:relative; }
+
+h3{ color:#EA6045;  padding: 50px;}
+
+.upic{ width:150px; height:150px; border:1px solid #EA6045; border-radius:50%; margin: 50px; }
+
+.udata{ width: 550px; }
 			
-			.abt{
-				padding:2%;
-				}
+.abt{ padding:2%; }

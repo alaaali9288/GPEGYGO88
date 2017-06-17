@@ -10,7 +10,7 @@ import { TripService } from "../../service/trip.Service";
     moduleId: module.id,
     selector: 'tripFilter',
     templateUrl: './tripFilter.html',
-    styleUrls: ['./tripFilter.css',],
+    styleUrls: ['./bootstrap.min.css','./tripFilter.css',],
     providers: [TripTypeService, TripService]
 })
 

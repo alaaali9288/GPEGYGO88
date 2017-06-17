@@ -68,7 +68,7 @@ var RegistrationComponent = (function () {
                 _this.user = user[0];
                 if (_this.userPassword === _this.user.userPassword) {
                     //  alert(this.user._id);
-                    if (localStorage.getItem("currentUser") === null) {
+                    if (localStorage.getItem("currenrtUser") === null) {
                         localStorage.setItem("currenrtUser", _this.user);
                         localStorage.setItem("UserId", _this.user._id);
                         _this._router.navigate(["/profile/" + _this.user._id]);

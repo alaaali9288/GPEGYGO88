@@ -25,7 +25,7 @@
                 <!-- Text title -->
                 <div id="ico">
                   <button class="btn love"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></button>
-                  <button class="btn go"><i class="fa fa-check fa-2x" aria-hidden="true"></i></button>
+                  <button (click)="updateUsrV()" class="btn go"><i class="fa fa-check fa-2x" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="title">{{place.placeName}}</h4>
                 <!--start activity section-->
@@ -194,11 +194,12 @@
 <div class="col-sm-3"></div>
 <div class="col-sm-4 col-sm-12 toptrip">
 <h3>Related Trips</h3>
-<div id="trip">
-<img src="./app/assets/images/blog-pic.jpg"/>
-<h5>Luxor & Aswan</h5>
+<div *ngFor="let trip of tripsWithPlaces" id="trip" [routerLink]='["/tripContent/"+trip._id]'>
+               <img class="img-responsive" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{trip.title}}">
+<!--<img src="./app/assets/images/blog-pic.jpg"/>-->
+<h5>{{trip.title}}</h5>
 </div>
-<div id="trip">
+<!--<div id="trip">
 <img src="./app/assets/images/blog-pic.jpg"/>
 <h5>Luxor & Aswan</h5>
 </div>
@@ -209,7 +210,7 @@
 <div id="trip">
 <img src="./app/assets/images/d5.jpg"/>
 <h5>Luxor & Aswan</h5>
-</div>
+</div>-->
 
 </div>
 </div>

@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
     selector:'adventures',
     moduleId:module.id,
     templateUrl:'adventures.template.html',
-    styleUrls:['../../assets/css/style.css','../../assets/css/jquery.bxslider.css']
+    styleUrls:['../../assets/css/adventures.css']
 })
 export class AdventuresComponent{
 

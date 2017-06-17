@@ -1,48 +1,49 @@
-		<!--start-wrap-->
-			<!--start-top-header-->
-			<div class="top-header" id="header">
-				<div class="wrap">
-				<div *ngIf='_localStorge.length === 0' class="top-header-left">
-					<ul>
-						<li><a [routerLink]='["/loginAndReg"]'><span> </span> Login/Register</a></li>
-						<div class="clear"> </div>
-					</ul>
-				</div>
-				<div *ngIf='_localStorge.length > 0'  class="top-header-left">
-					<ul>
-	
-						<li><a [routerLink]='["/loginAndReg"]' (click)="logoOut()"><span> </span> LogOut</a></li>
-						<li><a class="reg" [routerLink]='[profilePath]'>Profile</a></li>
-									<div class="clear"> </div>
-					</ul>
-				</div>
-				<div class="top-header-right">
-					<ul>
-						<li><a class="face" href="#"><span> </span></a></li>
-						<li><a class="twit" href="#"><span> </span></a></li>
-						<li><a class="thum" href="#"><span> </span></a></li>
-						<li><a class="pin" href="#"><span> </span></a></li>
-						<div class="clear"> </div>
-					</ul>
-				</div>
+<!--start-wrap-->
+<!--start-top-header-->
+<div class="top-header" id="header">
+	<div class="wrap">
+		<div *ngIf='_localStorge.length === 0' class="top-header-left">
+			<ul>
+				<li><a [routerLink]='["/loginAndReg"]'><span> </span> Login/Register</a></li>
 				<div class="clear"> </div>
-			</div>
-			</div>
-			<!----//End-top-header----->
-			<!---start-header---->
-			<div class="header">
-				<div class="wrap">
-				<!--- start-logo---->
-				<div class="logo">
-					<a [routerLink]='["/"]'><img src="{{logoPath}}EgyGo-Logo.png" title="egygologo" /></a>
-				</div>
-				<!--- //End-logo---->
-				<!--- start-top-nav---->
-			<div class="top-nav">
-						<ul class="flexy-menu thick orange">
-							<li ><a [routerLink]='["/"]'>Home</a></li>
-							<li><a [routerLink]='["/trips"]'>Trips</a>
-							<!--	<ul>
+			</ul>
+		</div>
+		<div *ngIf='_localStorge.length > 0' class="top-header-left">
+			<ul>
+
+				<li><a [routerLink]='["/loginAndReg"]' (click)="logoOut()"><span> </span> LogOut</a></li>
+				<li><a class="reg" [routerLink]='[profilePath]'>Profile</a></li>
+				<div class="clear"> </div>
+			</ul>
+		</div>
+		<div class="top-header-right">
+			<ul>
+				<li><a class="face" href="#"><span> </span></a></li>
+				<li><a class="twit" href="#"><span> </span></a></li>
+				<li><a class="thum" href="#"><span> </span></a></li>
+				<li><a class="pin" href="#"><span> </span></a></li>
+				<div class="clear"> </div>
+			</ul>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<!----//End-top-header----->
+<!---start-header---->
+<div class="header">
+	<div class="wrap">
+		<!--- start-logo---->
+		<span class="logo">
+			<a [routerLink]='["/"]'><img class="logoimg"
+			src="{{logoPath}}EgyGo-Logo.png" title="egygologo" width="100" height="80" /></a>
+		</span>
+		<!--- //End-logo---->
+		<!--- start-top-nav---->
+		<div class="top-nav">
+			<ul class="flexy-menu thick orange">
+				<li><a [routerLink]='["/"]'>Home</a></li>
+				<li><a [routerLink]='["/trips"]'>Trips</a>
+					<!--	<ul>
 								<li><a href="destinations.html">Dropdown item</a></li>
 								<li><a href="destinations.html">Dropdown item</a></li>
 								<li><a href="destinations.html">Dropdown item</a>
@@ -64,69 +65,26 @@
 								<li><a href="#">Dropdown item</a></li>
 							</ul>
 							-->
-							</li>
-							<li><a [routerLink]='["/places"]'>Places</a></li>
-							<li><a [routerLink]='["/contactUS"]'>Contact</a></li>
-							<li><a [routerLink]='["/aboutus"]'>About</a></li>
-							<li><a [routerLink]='["/filter"]'>filter</a></li>
-						</ul>
-						<div class="search-box">
-						<!--	<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>-->
-						</div>
-						<!----search-scripts---->
-						<script src="js/modernizr.custom.js"></script>
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-						<!----//search-scripts---->
-				</div>
-				<!--- //End-top-nav---->
-				<div class="clear"> </div>
-			</div>
-			<!---//End-header---->
-		</div>
-		<!---start-destinatiuons---->
-		<div class="destinations">
-			<div class="destination-head">
-				<div class="wrap">
-					<h3> &nbsp;&nbsp;&nbsp;&nbsp;  </h3>
-				</div>
-				<!---End-destinatiuons---->
-					<div class="find-place">
-			<div class="wrap">
-				<div class="p-h">
-					<span>FIND YOUR</span>
-					<label>HOLYDAYS</label>
-				</div>
-				<!---strat-date-piker---->
-				  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-				  <script>
-				  $(function() {
-				    $( "#datepicker" ).datepicker();
-				  });
-				  </script>
-				<!---/End-date-piker---->
-				<div class="p-ww">
-					<form>
-						<span> Where</span>
-						<input class="dest" type="text" placeholder="Distination">
-						<span> When</span>
-						<input class="date" id="datepicker" type="text" placeholder="Select date">
-						<input type="submit" value="Search" />
-					</form>
-				</div>
-				<div class="clear"> </div>
-			</div>
-		</div>
-				<!----//End-find-place---->
-			</div>
+				</li>
+				<li><a [routerLink]='["/places"]'>Places</a></li>
+				<li><a [routerLink]='["/contactUS"]'>Contact</a></li>
+				<li><a [routerLink]='["/aboutus"]'>About</a></li>
+				<li>
 
-		
+					<a (click)="myFunction()" class="dropbtn">Filter</a>
+					<div id="myDropdown" class="dropdown-content">
+						<a [routerLink]='["/filter"]'>Search Place</a>
+						<a [routerLink]='["/Tripfilter"]'>Search Trip</a>
+
+					</div>
+
+				</li>
+			</ul>
+
+
+		</div>
+		<!--- //End-top-nav---->
+		<div class="clear"> </div>
+	</div>
+	<!---//End-header---->
+</div>
