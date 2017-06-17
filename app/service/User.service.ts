@@ -59,18 +59,18 @@ export class UserService {
         return this._http.get(`http://localhost:5000/user/un/${uname}`);
     }
 
-    updateVisitedPlaces(Uid: string) {
-       // this.getById(Uid).subscribe(user => {
-         //   this.userVP = user[0];
-          //  this.userVP.userVisitedPlace.push("593ab7839770e412c09158a5");
-             var user ={
-                 _id:Uid,
-                userVisitedPlace: ["593ab7839770e412c0915999"]
-             };
-             this.updateUser(user).subscribe(data=>JSON.stringify(data),()=>console.log("bbbb"));
-            // console.log("EXO");
-            // console.log(this.userVP.userVisitedPlace);
-        }
+    // updateVisitedPlaces(Uid: string) {
+    //    // this.getById(Uid).subscribe(user => {
+    //      //   this.userVP = user[0];
+    //       //  this.userVP.userVisitedPlace.push("593ab7839770e412c09158a5");
+    //          var user ={
+    //              _id:Uid,
+    //             userVisitedPlace: ["593ab7839770e412c0915999"]
+    //          };
+    //          this.updateUser(user).subscribe(data=>JSON.stringify(data),()=>console.log("bbbb"));
+    //         // console.log("EXO");
+    //         // console.log(this.userVP.userVisitedPlace);
+    //     }
     
 
      updateUser(User:any){

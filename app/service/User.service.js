@@ -51,18 +51,18 @@ var UserService = (function () {
     UserService.prototype.getuserByNameAlaa = function (uname) {
         return this._http.get("http://localhost:5000/user/un/" + uname);
     };
-    UserService.prototype.updateVisitedPlaces = function (Uid) {
-        // this.getById(Uid).subscribe(user => {
-        //   this.userVP = user[0];
-        //  this.userVP.userVisitedPlace.push("593ab7839770e412c09158a5");
-        var user = {
-            _id: Uid,
-            userVisitedPlace: ["593ab7839770e412c0915999"]
-        };
-        this.updateUser(user).subscribe(function (data) { return JSON.stringify(data); }, function () { return console.log("bbbb"); });
-        // console.log("EXO");
-        // console.log(this.userVP.userVisitedPlace);
-    };
+    // updateVisitedPlaces(Uid: string) {
+    //    // this.getById(Uid).subscribe(user => {
+    //      //   this.userVP = user[0];
+    //       //  this.userVP.userVisitedPlace.push("593ab7839770e412c09158a5");
+    //          var user ={
+    //              _id:Uid,
+    //             userVisitedPlace: ["593ab7839770e412c0915999"]
+    //          };
+    //          this.updateUser(user).subscribe(data=>JSON.stringify(data),()=>console.log("bbbb"));
+    //         // console.log("EXO");
+    //         // console.log(this.userVP.userVisitedPlace);
+    //     }
     UserService.prototype.updateUser = function (User) {
         console.log("hajar");
         var headers = new http_1.Headers({ 'Content-Type': 'application/json',

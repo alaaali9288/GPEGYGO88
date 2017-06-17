@@ -30,11 +30,12 @@ import { Subscription } from 'rxjs/Subscription';
 
 })
 export class PlaceDetails {
-    place: any[];
+    place: any;
     tripsWithPlaces: any[];
     pID: any[];
     placeID: any;
     nor: any;
+    isVisited : boolean;
     private sub: Subscription;
 
     constructor(private _PlaceService: PlaceService, private _route: ActivatedRoute, private _router: Router
@@ -50,16 +51,21 @@ export class PlaceDetails {
                 this.placeID = id;
                 this.getPlaceById(id);
                 this.getTripByplaceID(id);
+                
             });
+         
     }
 
     getPlaceById(id: string) {
         this._PlaceService.getplaceById(id).subscribe(place => {
             this.place = place[0];
-            console.log(this.place);
-
+            console.log("zafer");
+           console.log( this.place.userVisitedPlace.includes(id));
+             console.log(this.place);
         });
     }
+
+
 
     getTripByplaceID(id: string) {
         this.pID = new Array();
@@ -78,13 +84,23 @@ export class PlaceDetails {
         })
     }
 
-    placesVisted() {
-        // alert("Chen");
-        var UID = localStorage.getItem("UserId");
-        console.log(UID);
-        this._UserService.updateVisitedPlaces(UID);
-    }
+    // placesVisted() {
+    //     // alert("Chen");
+    //     var UID = localStorage.getItem("UserId");
+    //     console.log(UID);
+    //     this._UserService.updateVisitedPlaces(UID);
+    // }
 
+updateUsrloVe(){
+      var UID = localStorage.getItem("UserId");
+        var user = this._UserService.getById(UID).subscribe(res => {
+            this.nor = res[0];
+            this.nor.userFavPlace.push(this.placeID);
+            this._UserService.updateUser(this.nor);
+            console.log(this.placeID)
+            console.log("dne")
+        });
+}
     updateUsrV() {
         var UID = localStorage.getItem("UserId");
         var user = this._UserService.getById(UID).subscribe(res => {

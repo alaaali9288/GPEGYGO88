@@ -36,6 +36,8 @@ var PlaceDetails = (function () {
         var _this = this;
         this._PlaceService.getplaceById(id).subscribe(function (place) {
             _this.place = place[0];
+            console.log("zafer");
+            console.log(_this.place.userVisitedPlace.includes(id));
             console.log(_this.place);
         });
     };
@@ -54,11 +56,22 @@ var PlaceDetails = (function () {
             console.log("exo");
         });
     };
-    PlaceDetails.prototype.placesVisted = function () {
-        // alert("Chen");
+    // placesVisted() {
+    //     // alert("Chen");
+    //     var UID = localStorage.getItem("UserId");
+    //     console.log(UID);
+    //     this._UserService.updateVisitedPlaces(UID);
+    // }
+    PlaceDetails.prototype.updateUsrloVe = function () {
+        var _this = this;
         var UID = localStorage.getItem("UserId");
-        console.log(UID);
-        this._UserService.updateVisitedPlaces(UID);
+        var user = this._UserService.getById(UID).subscribe(function (res) {
+            _this.nor = res[0];
+            _this.nor.userFavPlace.push(_this.placeID);
+            _this._UserService.updateUser(_this.nor);
+            console.log(_this.placeID);
+            console.log("dne");
+        });
     };
     PlaceDetails.prototype.updateUsrV = function () {
         var _this = this;
