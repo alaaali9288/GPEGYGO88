@@ -11,7 +11,7 @@
 		<div *ngIf='_localStorge.length > 0' class="top-header-left">
 			<ul>
 
-				<li><a [routerLink]='["/loginAndReg"]' (click)="logoOut()"><span> </span> LogOut</a></li>
+				<li><a [routerLink]='["/loginAndReg"]' (click)='logoOut()'><span> </span> LogOut</a></li>
 				<li><a class="reg" [routerLink]='[profilePath]'>Profile</a></li>
 				<div class="clear"> </div>
 			</ul>
@@ -69,16 +69,19 @@
 				<li><a [routerLink]='["/places"]'>Places</a></li>
 				<li><a [routerLink]='["/contactUS"]'>Contact</a></li>
 				<li><a [routerLink]='["/aboutus"]'>About</a></li>
-				<li>
-
-					<a (click)="myFunction()" class="dropbtn">Filter</a>
-					<div id="myDropdown" class="dropdown-content">
-						<a [routerLink]='["/filter"]'>Search Place</a>
-						<a [routerLink]='["/Tripfilter"]'>Search Trip</a>
-
-					</div>
-
+					<li>
+					<a>
+						<div class="dropdown">
+							<span>filter</span>
+							<div class="dropdown-content">
+						 	<a  href='http://localhost:3000/filter'><p>by Place</p> </a>
+						     <a herf='http://localhost:3000/Tripfilter'><p>by Trip</p> </a>
+							</div>
+						</div>
+					</a>
 				</li>
+
+				
 			</ul>
 
 

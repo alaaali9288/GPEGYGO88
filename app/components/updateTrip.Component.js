@@ -12,17 +12,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var trip_service_1 = require("../service/trip.service");
 var tripType_service_1 = require("../service/tripType.service");
+var place_service_1 = require("../service/place.service");
 var router_1 = require("@angular/router");
 var updateTrip = (function () {
-    function updateTrip(_placeService, _tripTypeService, _router, _route) {
+    function updateTrip(_placeService, _tripTypeService, _router, _placeServices, _route) {
         this._placeService = _placeService;
         this._tripTypeService = _tripTypeService;
         this._router = _router;
+        this._placeServices = _placeServices;
         this._route = _route;
         this.tags = [];
         this.activities = [];
         this.activ = [];
         this.holidayType = [];
+        this.selectedPlaces = [];
     } //private fb: FormBuilder
     updateTrip.prototype.ngOnInit = function () {
         var _this = this;
@@ -31,11 +34,13 @@ var updateTrip = (function () {
             _this.getById(id);
         });
         this._tripTypeService.getTripType().subscribe(function (triptypes) { return _this.TripTypes = triptypes; });
+        this._placeServices.getAllPlaces().subscribe(function (triptypes) { return _this.tripPlaces = triptypes; });
     };
     updateTrip.prototype.getById = function (id) {
         var _this = this;
         this._placeService.getTripById(id).subscribe(function (trip) {
             _this.trp = trip[0];
+            console.log(trip);
             _this.title = trip[0].title;
             _this.price = trip[0].price;
             _this.description = trip[0].description;
@@ -91,6 +96,37 @@ var updateTrip = (function () {
         this.tags.push(this.tagtxt);
     };
     //select multiple
+    updateTrip.prototype.selectIngredientPlace = function (select) {
+        var _this = this;
+        var option = select.target.options.selectedIndex; //selected index
+        var ul = document.getElementById("ulAppendPlace");
+        var li = document.createElement('li');
+        var input = document.createElement('input');
+        var a = document.createElement('a');
+        var text = document.createTextNode(select.target.options[option].value); // selected text
+        input.type = 'hidden';
+        input.name = 'activities[]';
+        input.value = select.target.options[option].value;
+        a.setAttribute('onclick', 'this.parentNode.remove(this);'); //
+        a.setAttribute('style', 'font-size:20px; text-decoration:none; margin-right:5px; padding: 0 3px; background-color:#F8CA4D;'); //        
+        a.innerHTML = '&times;'; //
+        li.appendChild(input);
+        li.appendChild(a);
+        li.appendChild(text);
+        li.setAttribute('style', 'display:inline; padding:8px;');
+        ul.appendChild(li);
+        //  this.selectedPlaces.push(input.value);
+        this.typeName = input.value;
+        this._placeServices.getPlaceId(this.typeName)
+            .subscribe(function (triptypeId) {
+            for (var t = 0; t < triptypeId.length; t++) {
+                _this.PlaceId = triptypeId[t]._id;
+                _this.selectedPlaces.push(_this.PlaceId);
+            }
+            console.log(_this.selectedPlaces);
+        });
+    };
+    //select multiple
     updateTrip.prototype.selectIngredientPlaces = function (select) {
         var _this = this;
         var option = select.target.options.selectedIndex; //selected index
@@ -138,7 +174,8 @@ var updateTrip = (function () {
             lastEdit: new Date(),
             locFrom: this.busLeaveLoc,
             locTo: this.busBackLoc,
-            holidayType: this.holidayType
+            holidayType: this.holidayType,
+            places: this.selectedPlaces
         };
         this._placeService.createTrip(trip)
             .subscribe(function (data) { return JSON.stringify(data); }, function () { return _this._router.navigate(["/tripContent/" + _this.id]); });
@@ -158,9 +195,9 @@ updateTrip = __decorate([
             //  './css/dropzone.css',
             //  './css/fwslider.css'
         ],
-        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService]
+        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService, place_service_1.PlaceService]
     }),
-    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router, router_1.ActivatedRoute])
+    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router, place_service_1.PlaceService, router_1.ActivatedRoute])
 ], updateTrip);
 exports.updateTrip = updateTrip;
 //# sourceMappingURL=updateTrip.component.js.map

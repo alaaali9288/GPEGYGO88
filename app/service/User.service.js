@@ -73,6 +73,24 @@ var UserService = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { console.log("zaft => ", data); });
     };
+    ////////////////////////////
+    UserService.prototype.updateUserTrips = function (user) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        // let options = new RequestOptions({ headers: headers });
+        var body = JSON.stringify(user);
+        return this._http.post("http://localhost:5000/user/updatetrips", body, { headers: headers })
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) { data; });
+    };
+    UserService.prototype.updateUserPlace = function (place) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' });
+        //    let options = new RequestOptions({ headers: headers });
+        var body = JSON.stringify(place);
+        return this._http.post("http://localhost:5000/user/updateplaces", body, { headers: headers })
+            .map(function (res) { return res.json(); }).subscribe(function (data) { data; });
+    };
     return UserService;
 }());
 UserService = __decorate([

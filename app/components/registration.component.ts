@@ -29,10 +29,15 @@ confPass:string;
  userEmail:string;
 valid:boolean;
 userV:boolean;
+ TempUser :any;
     constructor(private UserService: UserService,private _route: ActivatedRoute,
                 private _router: Router
                // private localStorageService: LocalStorageService
                 ) { }
+
+ submitForm(form: any): void{
+    console.log('Form Data: ');
+    console.log(form);}
 
     ngOnInit() {
         console.log("Ayman");
@@ -73,9 +78,21 @@ Validate(){
 //            {
 // this.userV=false;
            
-           this.UserService.createUser(dummy).subscribe(data=>JSON.stringify(data),()=>this._router.navigate(["/"]));
+           //()=>this._router.navigate(["/"])
+         
+           this.UserService.createUser(dummy).subscribe(data=>JSON.stringify(data));
+          
+           this.UserService.getuserByName(dummy.userName).subscribe(user => {
+                   this.TempUser = user[0];
+                   console.log(this.TempUser);
+                   console.log(this.TempUser._id);
+           })
+           // localStorage.setItem("currenrtUser",this.TempUser) ;
+            //localStorage.setItem("UserId",this.TempUser.user._id);
+             console.log("EXO");
+         window.location.href = 'http://localhost:3000/loginAndReg';
           // }
-              
+         
  
        }}
 

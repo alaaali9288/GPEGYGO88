@@ -22,6 +22,8 @@ var ProfileComponent = (function () {
         this._UserService = _UserService;
         this._TripService = _TripService;
         this._PlaceService = _PlaceService;
+        this.userplaces = [];
+        this.userTrips = [];
         this.Path = './app/components/';
     }
     ProfileComponent.prototype.ngOnInit = function () {
@@ -29,6 +31,38 @@ var ProfileComponent = (function () {
         this.sub = this._route.params.subscribe(function (params) {
             var id = params['id'];
             _this.getByID(id);
+        });
+        this.getUserTrips();
+        this.getUserPlaces();
+    };
+    ProfileComponent.prototype.getUserTrips = function () {
+        var _this = this;
+        this._TripService.getAllTrips().subscribe(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].userID == localStorage.getItem("UserId")) {
+                    _this.userplaces.push(data[i]._id);
+                }
+                var usrtrip = {
+                    id: localStorage.getItem("UserId"),
+                    userCreatedTrips: _this.userplaces
+                };
+                _this._UserService.updateUserTrips(usrtrip);
+            }
+        });
+    };
+    ProfileComponent.prototype.getUserPlaces = function () {
+        var _this = this;
+        this._PlaceService.getAllPlaces().subscribe(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].userID == localStorage.getItem("UserId")) {
+                    _this.userTrips.push(data[i]._id);
+                }
+                var usrtrip = {
+                    id: localStorage.getItem("UserId"),
+                    userCreatedPlace: _this.userTrips
+                };
+                _this._UserService.updateUserPlace(usrtrip);
+            }
         });
     };
     ProfileComponent.prototype.getByID = function (Uid) {

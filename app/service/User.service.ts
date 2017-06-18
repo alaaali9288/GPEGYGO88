@@ -84,5 +84,26 @@ export class UserService {
                .subscribe(data => { console.log("zaft => ",data)});
                
       }
+      ////////////////////////////
+
+      updateUserTrips(user:any){
+  let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+          // let options = new RequestOptions({ headers: headers });
+           let body = JSON.stringify(user);
+           return this._http.post("http://localhost:5000/user/updatetrips",body,{headers:headers})
+               .map(res => res.json())
+               .subscribe(data => {data});
+      }
+       updateUserPlace(place:any){
+              let headers = new Headers({ 'Content-Type': 'application/json' ,
+         'Access-Control-Allow-Origin': '*'});
+        //    let options = new RequestOptions({ headers: headers });
+           let body = JSON.stringify(place) ;
+            
+     return this._http.post("http://localhost:5000/user/updateplaces",body,{headers:headers})
+               .map((res:Response) => res.json()).subscribe(data=>{data});
+      }
+
 
 }

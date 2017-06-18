@@ -52,6 +52,10 @@ var PlaceService = (function () {
         return this._http.post("http://localhost:5000/place/update", body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    PlaceService.prototype.getPlaceId = function (name) {
+        return this._http.get("http://localhost:5000/place/n/" + name)
+            .map(function (res) { return res.json(); });
+    };
     return PlaceService;
 }());
 PlaceService = __decorate([

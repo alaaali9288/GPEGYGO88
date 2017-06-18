@@ -22,6 +22,10 @@ var RegistrationComponent = (function () {
         this._route = _route;
         this._router = _router;
     }
+    RegistrationComponent.prototype.submitForm = function (form) {
+        console.log('Form Data: ');
+        console.log(form);
+    };
     RegistrationComponent.prototype.ngOnInit = function () {
         console.log("Ayman");
         // this.UserService.getAllUsers().subscribe(user => this.users = user);
@@ -57,7 +61,17 @@ var RegistrationComponent = (function () {
             //            }else
             //            {
             // this.userV=false;
-            this.UserService.createUser(dummy).subscribe(function (data) { return JSON.stringify(data); }, function () { return _this._router.navigate(["/"]); });
+            //()=>this._router.navigate(["/"])
+            this.UserService.createUser(dummy).subscribe(function (data) { return JSON.stringify(data); });
+            this.UserService.getuserByName(dummy.userName).subscribe(function (user) {
+                _this.TempUser = user[0];
+                console.log(_this.TempUser);
+                console.log(_this.TempUser._id);
+            });
+            // localStorage.setItem("currenrtUser",this.TempUser) ;
+            //localStorage.setItem("UserId",this.TempUser.user._id);
+            console.log("EXO");
+            window.location.href = 'http://localhost:3000/loginAndReg';
             // }
         }
     };

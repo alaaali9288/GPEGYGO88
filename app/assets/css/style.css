@@ -2702,8 +2702,8 @@ span.mail a:hover{
 	}
 		.imgPlace{
 	
-width:100px;
-height:100px
+      width:100px;
+      height:100px
 
 	}
 	.dest-place-pic main_box user_style4{
@@ -2719,3 +2719,33 @@ height:100px
 	}
 	
 
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+	
+}
+
+.dropdown-content {
+	font-family: 'Open Sans', sans-serif;
+    display: none;
+    position: absolute;
+    background-color:  #2F3440;
+	color: #F5E5C0;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 3;
+	border-radius: 10px;
+}
+.dropdown-content p{
+	color:#F5E5C0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
+.dropdown-content p:hover{
+	color:#EA6045;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

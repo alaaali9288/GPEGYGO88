@@ -12,22 +12,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var trip_service_1 = require("../service/trip.service");
 var user_service_1 = require("../service/user.service");
+var place_service_1 = require("../service/place.service");
 var tripType_service_1 = require("../service/tripType.service");
 var router_1 = require("@angular/router");
 var addTrip = (function () {
-    function addTrip(_placeService, _tripTypeService, _router, _UserService) {
+    function addTrip(_placeService, _tripTypeService, _router, _UserService, _placeServices) {
         this._placeService = _placeService;
         this._tripTypeService = _tripTypeService;
         this._router = _router;
         this._UserService = _UserService;
+        this._placeServices = _placeServices;
         this.tags = [];
         this.activities = [];
         this.activ = [];
         this.holidayType = [];
+        this.selectedPlaces = [];
     } //private fb: FormBuilder
     addTrip.prototype.ngOnInit = function () {
         var _this = this;
         this._tripTypeService.getTripType().subscribe(function (triptypes) { return _this.TripTypes = triptypes; });
+        this._placeServices.getAllPlaces().subscribe(function (triptypes) { return _this.tripPlaces = triptypes; });
         var Uid = localStorage.getItem("UserId");
         var uuser = this._UserService.getById(Uid);
         //  this.User = uuser[0].firstName;
@@ -123,14 +127,15 @@ var addTrip = (function () {
         li.appendChild(text);
         li.setAttribute('style', 'display:inline; padding:8px;');
         ul.appendChild(li);
-        this.activ.push(input.value);
+        //  this.selectedPlaces.push(input.value);
         this.typeName = input.value;
-        this._tripTypeService.getTripTypeId(this.typeName)
+        this._placeServices.getPlaceId(this.typeName)
             .subscribe(function (triptypeId) {
             for (var t = 0; t < triptypeId.length; t++) {
-                _this.TripTypeId = triptypeId[t]._id;
-                _this.holidayType.push(_this.TripTypeId);
+                _this.PlaceId = triptypeId[t]._id;
+                _this.selectedPlaces.push(_this.PlaceId);
             }
+            console.log(_this.selectedPlaces);
         });
     };
     // addPlaceForm: FormGroup ;
@@ -151,7 +156,8 @@ var addTrip = (function () {
             lastEdit: new Date(),
             locFrom: this.busLeaveLoc,
             locTo: this.busBackLoc,
-            holidayType: this.holidayType
+            holidayType: this.holidayType,
+            places: this.selectedPlaces
         };
         this._placeService.createTrip(trip)
             .subscribe(function (data) { return JSON.stringify(data); }, function () { return _this._router.navigate(["/trips"]); });
@@ -167,9 +173,9 @@ addTrip = __decorate([
             './css/style.css',
             './css/bootstrap.min.css',
         ],
-        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService, user_service_1.UserService]
+        providers: [trip_service_1.TripService, tripType_service_1.TripTypeService, user_service_1.UserService, place_service_1.PlaceService]
     }),
-    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router, user_service_1.UserService])
+    __metadata("design:paramtypes", [trip_service_1.TripService, tripType_service_1.TripTypeService, router_1.Router, user_service_1.UserService, place_service_1.PlaceService])
 ], addTrip);
 exports.addTrip = addTrip;
 //# sourceMappingURL=addTrip.component.js.map

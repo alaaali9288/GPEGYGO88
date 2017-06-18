@@ -31,7 +31,7 @@
                 <div class="col-lg-10">
                     <ul id="ulAppendPlaces"></ul>
                     <select id="places" (change)="selectIngredientPlaces($event)" class="list" required> 
-                         <option *ngFor="let types of TripTypes">{{types.type}}</option>
+                         <option *ngFor="let place of tripPlaces">{{place.placeName}}</option>
                    
                 </select>
                 </div>

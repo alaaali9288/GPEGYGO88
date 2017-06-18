@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AboutComponent = (function () {
     function AboutComponent() {
+        this.imgPath = './app/components/images/';
     }
     return AboutComponent;
 }());
@@ -17,7 +18,7 @@ AboutComponent = __decorate([
         selector: 'about-us',
         moduleId: module.id,
         templateUrl: 'aboutUs.html',
-        styleUrls: ['../../assets/css/about-style.css']
+        styleUrls: ['about-style.css']
     })
 ], AboutComponent);
 exports.AboutComponent = AboutComponent;

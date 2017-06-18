@@ -14,18 +14,17 @@ import { Subscription } from 'rxjs/Subscription';
         @import "https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css";
         @import "https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css";
     `],
-    styleUrls: ["../../assets/css/style.css",
-        "../../assets/css/bootstrap.min.css",
-        "../../assets/css/jquery.bxslider.css",
-        "../../assets/css/jquery-ui.css",
-        "../../assets/font-awesome-4.7.0/css/font-awesome.min.css",
-        "../../assets/css/jquery.bxslider.min.css",
-        "../../assets/css/place_style.css",
-
-        "../../assets/css/fwslider.css",
-        "../../assets/css/animate.min.css", "../../assets/css/lightbox.min.css",
-
-    ], providers: [PlaceService, TripService, UserService]
+    styleUrls:["../../assets/css/style.css",
+"../../assets/css/bootstrap.min.css",
+"../../assets/css/jquery-ui.css",
+"../../assets/font-awesome-4.7.0/css/font-awesome.min.css",
+"../../assets/css/place_style.css",
+"../../assets/css/animate.min.css","../../assets/css/placeCSS.css",
+"../../assets/css/checkboxStyle.css",
+"../../assets/css/rangeStyle.css",
+"../../assets/css/StartStyle.css",
+"../../assets/css/popUpStyle.css",]
+    , providers: [PlaceService, TripService, UserService]
 
 
 })
@@ -35,9 +34,14 @@ export class PlaceDetails {
     pID: any[];
     placeID: any;
     nor: any;
+    UserVisit:any;
+    UserLoved:any;
     isVisited : boolean;
+    isLoved : boolean;
     private sub: Subscription;
-
+    UID : string =localStorage.getItem("UserId");
+comment:any;
+rate:number
     constructor(private _PlaceService: PlaceService, private _route: ActivatedRoute, private _router: Router
         , private _TripService: TripService, private _UserService: UserService) {
 
@@ -59,8 +63,9 @@ export class PlaceDetails {
     getPlaceById(id: string) {
         this._PlaceService.getplaceById(id).subscribe(place => {
             this.place = place[0];
-            console.log("zafer");
-           console.log( this.place.userVisitedPlace.includes(id));
+          this.checkVistedPlaces(id);
+          this.checkifLovedPlace(id);
+            //.userVisitedPlace.includes(id)
              console.log(this.place);
         });
     }
@@ -91,6 +96,57 @@ export class PlaceDetails {
     //     this._UserService.updateVisitedPlaces(UID);
     // }
 
+checkVistedPlaces(id:string){
+   // var UID = localStorage.getItem("UserId");
+    var visted = this._UserService.getById(this.UID).subscribe(u=>{
+        this.UserVisit=u[0].userVisitedPlace;
+       this.isVisited =this.UserVisit.indexOf(id)>-1;
+       console.log(this.isVisited);
+    })
+}
+
+checkifLovedPlace(id:string){
+  //   var UID = localStorage.getItem("UserId");
+    var visted = this._UserService.getById(this.UID).subscribe(u=>{
+        this.UserLoved=u[0].userFavPlace;
+       this.isLoved =this.UserLoved.indexOf(id)>-1;
+       console.log(this.isLoved);
+       console.log("loved");
+    })
+}
+
+removeUsrV(){
+var UID = localStorage.getItem("UserId");
+    var visted = this._UserService.getById(UID).subscribe(u=>{
+        this.UserVisit=u[0].userVisitedPlace;
+       var index =this.UserVisit.indexOf(this.placeID);
+          console.log(this.UserVisit);
+       if (index > -1) {
+       this.UserVisit.splice(index, 1);
+};
+   u[0].userVisitedPlace= this.UserVisit;
+     this._UserService.updateUser(u[0]);
+       console.log(u[0].userVisitedPlace);
+
+       console.log(this.UserVisit);
+    })
+}
+
+removeUserFav(){
+    var UID = localStorage.getItem("UserId");
+    var visted = this._UserService.getById(UID).subscribe(u=>{
+        this.UserLoved=u[0].userFavPlace;
+       var index =this.UserLoved.indexOf(this.placeID);
+          console.log(this.UserLoved);
+       if (index > -1) {
+       this.UserLoved.splice(index, 1);
+};
+u[0].userFavPlace= this.UserLoved;
+     this._UserService.updateUser(u[0]);
+       console.log(u[0].userFavPlace);
+    })
+}
+
 updateUsrloVe(){
       var UID = localStorage.getItem("UserId");
         var user = this._UserService.getById(UID).subscribe(res => {
@@ -111,4 +167,27 @@ updateUsrloVe(){
             console.log("dne")
         });
     }
+    addReview(){
+ var Rev={
+     
+  
+        content:this.comment,
+
+        DateTime:new Date(),
+        isDelete:false,
+    rate:this.rate,
+        UserID:localStorage.getItem("UserId")
+    
+ };
+ 
+     this.place.reviews.push(Rev)
+        this._PlaceService.updatePlace(this.place).subscribe(data=>JSON.stringify(data))
+console.log(this.place.reviews)
+}
+
+update(value:number) {
+    this.rate = value;
+    console.log(this.rate)
+  }
+
 }

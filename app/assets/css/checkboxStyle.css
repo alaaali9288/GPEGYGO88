@@ -1,0 +1,65 @@
+/**
+   Coded by /u/j0be in scss.
+   See scss source here -> http://codepen.io/j0be/pen/MKRVyN
+*/
+/* $activeColor: #c0392b; //red */
+/* $background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13460/dark_wall.png'); */
+/* .slideOne */
+
+/* end .slideThree */
+/* .roundedOne */
+
+.roundedOne {
+    width: 20px;
+    height: 20px;
+
+    display: table-cell;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+
+
+    position: relative;
+    margin:3px auto;
+    background: #fcfff4;
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    
+}
+.roundedOne label {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedOne label:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #EA6045;
+    background: linear-gradient(to bottom, #EA6045 0%, #EA6045 100%);
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedOne label:hover::after {
+    opacity: 0.3;
+}
+.roundedOne input[type=checkbox] {
+    visibility: hidden;
+}
+.roundedOne input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+/* end .roundedOne */
+/* .roundedTwo */

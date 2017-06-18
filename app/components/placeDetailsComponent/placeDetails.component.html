@@ -1,222 +1,295 @@
-
-
-<!---//calender-style---->
-
-<!----start-wrap----> 
-<!----start-wrap----> 
-
 <!----start-images-slider---->
-<div *ngIf ="place">
+<div *ngIf="place">
+  <div class="container">
+    <div class="row">
+      <div class=" col-md-9 col-xs-12">
 
-<div class="container">
-  <div class="row">
-    <div class="images-slider col-md-9 col-xs-12"> 
-      <!-- start slider -->
-      <div id="fwslider">
-        <div class="slideer_container">
-          <div class="slidee"> 
-            <!-- Slide image --> 
-            
-            <img [src]="'./app/assets/images/'+place.placePicsUrl[0]" alt="{{place.placeName}}"/> 
-            <!-- /Slide image --> 
-            <!-- Texts container -->
-            <div class="slide_content">
-              <div class="slide_content_wrap"> 
-                <!-- Text title -->
-                <div id="ico">
-                  <button (click)="updateUsrloVe()" class="btn love"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></button>
-                  <button (click)="updateUsrV()" class="btn go"><i class="fa fa-check fa-2x" aria-hidden="true"></i></button>
-                </div>
-                <h4 class="title">{{place.placeName}}</h4>
-                <!--start activity section-->
-                <div class="activities" >
-                  <ul>
-                    <li *ngFor="let activity of place.activities">{{activity}} </li>
-                  
-                  </ul>
-                </div>
-                
-                <!--end activity section--> 
-              </div>
-              <!-- /Texts container --> 
-            </div>
-            
-            <!--/slide --> 
+        <!-- start slider -->
+        <section class="slideshow">
+          <div class="slideshow-container slide">
+            <img [src]="'./app/assets/images/'+place.placePicsUrl[0]" alt="{{place.placeName}}" />
           </div>
+        </section>
+        <div id="ico">
+          <i *ngIf="!isLoved" (click)="updateUsrloVe()" class=" btn love fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+          <i *ngIf="isLoved" (click)="removeUserFav()" class=" btn love fa fa-thumbs-down fa-2x" aria-hidden="true"></i>
+          <i *ngIf='!isVisited' (click)="updateUsrV()" class=" btn go fa fa-check fa-2x" aria-hidden="true"></i>
+          <i *ngIf='isVisited' (click)="removeUsrV()" class=" btn go fa fa-ban fa-2x" aria-hidden="true"></i>
         </div>
       </div>
-      <!--/slider --> 
-      
-    </div>
-    <div class="col-md-3 hidden-xs placeImg">
-      <div class="image" > <img src="./app/assets/images/1462353277_cm.jpg" style="position:relative"/> <a id="photograph" href="./app/components/placeSliderComponent/photographimgs.component.html" target="_blank"> <span style="position:absolute; width:100%;top:28%;background-color:rgba(44, 62, 80, .5);color:#F5E5C0; padding:2%;">Photographers Photos</span></a> 
-        
-       
+      <h4 class="title">{{place.placeName}}</h4>
+      <!--start activity section-->
+      <div class="activities">
+        <ul>
+          <li *ngFor="let activity of place.activities">{{activity}} </li>
+        </ul>
       </div>
-      <!--End photography--> 
-      <!--start photography-->
-      <div class="image"> <img src="./app/assets/images/1462353277_cm.jpg" style="position:relative"/> <a ><span style="position:absolute; top:65%;background-color:rgba(44, 62, 80, .5);width:100%;color:#F5E5C0; padding:2%;">Visitors Photos</span></a> </div>
-      <!--End Visitors-->
-      <div class=" map">
-        <div id="maps" style="position:relative ;width:275px;height:110px; margin-top:3%;"></div>
-        
-        <span style="position:absolute; top:93%;background-color:rgba(44, 62, 80, .5);width:100%;color:#F5E5C0; padding:2%;">Map</span> </div>
+
     </div>
-  </div>
-  <div id="rateTags" class="row">
-    <div class="rate">
-       <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span> 
-        <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-         <span><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></span>
-           </div>
-    <div class="tags">
-      <button class="btn">safary</button>
-      <button class="btn">natural</button>
-      <button class="btn">natural</button>
-      <button class="btn">relax</button>
+    <div class="row">
+      <div id="rateTags" class="row">
+        <div class="rate">
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+        </div>
+        <div class="tags">
+          <button class="btn btn-danger"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp; safary</button>
+          <button class="btn btn-danger"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp; natural</button>
+          <button class="btn btn-danger"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp; natural</button>
+          <button class="btn btn-danger"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp; relax</button>
+          <a style="z-index: 1555; margin-left: 80%;" class="btn btn-danger" id="update" [routerLink]='["/updatePlace/"+place._id]'>"Update Place"</a>
+        </div>
+
+      </div>
     </div>
-  </div>
-</div>
 
+    <div class="placeDetail container">
 
-	<div class="placeDetail container">
-<a style="z-index: 1555; margin-left: 80%;" class="btn btn-danger" [routerLink]='["/updatePlace/"+place._id]'>"Update Place"</a>
-        <h2>{{place.placeName}}</h2>
-        
-<p>{{place.description}}</p>        
-        <div class="container">
+      <h2> 6 October City{{place.placeName}}</h2>
+
+      <p>{{place.description}}</p>
+      <div class="container">
         <div class="row">
-        <div class="col-sm-5">
-        <div class="row">
-        <div class="rating">
-        <h2>Rates</h2>
-        <table class="table table-responsive">
-  <tbody>
-    <tr>
-      
-      <td id="service">Services</td>
-      <td><div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-</div></td>
+          <div class="col-sm-10 rate">
+            <div class="rating">
+              <h2>Rates</h2>
+              <table class="table table-responsive">
+                <tbody>
+                  <tr>
 
-<td id="service">Food</td>
-       <td><div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div></td>
-      
-    </tr>
-   
-    <tr>
-      
-      <td id="service">Cleanliness</td>
-       <td><div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-</div></td>
+                    <td id="service">Services</td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                    <td id="service">Value</td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
 
- <td id="service">Toilets</td>
-       <td><div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-</div></td>
-    </tr>
-    
-    <tr>
-      
-      <td id="service">Value</td>
-       <td><div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-</div></td>
-    </tr>
-  </tbody>
-</table>
-        </div>
-        </div>
-       <!--start review section-->
-       
-      <div class="row">
-       
-       <h2>Reviews</h2>
-       <!--reviewsss-->
-       <div class="review ">
-         
-    <div class="container">
-        <div class="row">
-            <div class=" col-sm-7 " id="tst">
-                <div id="testimonial-slider" class="owl-carousel">
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <div class="pic ">
-                                <img src="./app/assets/images/admin-pic3.jpg" alt="">
-                            </div>
-                            <h5 class="title">Williamson</h5>
-                            <span class="post">Web Developer</span>
-                        </div>
-                        <p class="description">
-                                      
-        <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i></span><br>
-     
-        
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse lorem ex, congue at elit id, tincidunt tempor orci. Nullam nec augue ac tellus rhoncus tincidunt nec ut ligula. Praesent.
-                        </p>
-           
-                    </div>
- 
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <div class="pic ">
-                                <img src="./app/assets/images/admin-pic1.jpg" alt="">
-                            </div>
-                            <h5 class="title">kristiana</h5>
-                            <span class="post">Level 1</span>
-                        </div>
-                        <p class="description">
-                         <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-star fa-2x" aria-hidden="true"></i></span><br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse lorem ex, congue at elit id, tincidunt tempor orci. Nullam nec augue ac tellus rhoncus tincidunt nec ut ligula. Praesent.
-                        </p>
-                    </div>
-                </div>
+                    <td id="service">Food</td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td id="service">Cleanliness</td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+
+                    <td id="service">Toilets</td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+          <div class="col-sm-2"></div>
         </div>
-    </div>
+        <div class="row">
+          <div class="pics">
+            <h2>Related Trips</h2>
+            <div class="pic col-sm-3" *ngFor="let trip of tripsWithPlaces" id="trip" [routerLink]='["/tripContent/"+trip._id]'>
+              <div align="center" class="fond">
+                 <img class="img-responsive carreaux_presentation_light" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{trip.title}}"/>
+                  <div class="shadow_swhow_mini">
+                    <div class="deroul_titre">{{trip.title}}</div>
+                    <div class="deroul_soustitre">{{trip.price}}</div>
+                  </div>
+               
 
-       </div>
-       </div>
-       <!--reviewsss-->
-       <!--End review section-->
-     </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="row">
+          <!--start review section-->
+          <h2>Reviews</h2>
+          <div id="slider">
+            <ul>
+              <li>
+                <div class="slider-container">
+                  <div class="col-md-2  col-xs-3">
+                    <div>
+                      <img class="rpic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                    </div>
+                    <h5 class="title">Williamson</h5>
+
+                  </div>
+                  <p class="description">
+
+                    <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor
+                    id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse
+                    lorem ex.
+                  </p>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="slider-container">
+                  <div class="col-md-2  col-xs-3">
+                    <div>
+                      <img class="rpic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                    </div>
+                    <h5 class="title">Williamson</h5>
+
+                  </div>
+                  <p class="description">
+
+                    <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor
+                    id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse
+                    lorem ex.
+                  </p>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="slider-container">
+                  <div class="col-md-2  col-xs-3">
+                    <div>
+                      <img class="rpic" src="../../app/assets/images/admin-pic1.jpg" alt="">
+                    </div>
+                    <h5 class="title">Williamson</h5>
+
+                  </div>
+
+                  <p class="description">
+
+                    <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-2x" aria-hidden="true">
+
+                                        </i>
+                                         <i class="fa fa-star fa-2x" aria-hidden="true">
+            
+                                         </i>
+                                </span>
+                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur ut tortor
+                    id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel volutpat nulla. Suspendisse
+                    lorem ex.
+
+                  </p>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--end review section-->
+          <input type="button" data-toggle="modal"  class="btn btn-danger sub" data-target="#myModal" value="Add Review" />
+        </div>
+      </div>
+
+
+
+
+
+      <!--end big row-->
+
+    </div>
+  </div>
+</div>
+<!--End reviews section-->
+
+
+  <!--end review section-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <p>Add Review</p>
+                     <div class="container-fluid">
+                            <!--Comment Area-->
+                            <div class="row">
+                                <div class="addReview">
+                                    <div class="form">
+                                        <label for="comment">Comment:</label>
+                                        <textarea class="form-control" rows="5" cols="5" id="comment" [(ngModel)]="comment" [ngModelOptions]="{standalone: true}"></textarea>
+                                      
+                                        <!--<form action="/file-upload" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>-->
  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Comment -->
 
-<div class="col-sm-3"></div>
-<div class="col-sm-4 col-sm-12 toptrip">
-<h3>Related Trips</h3>
-<div *ngFor="let trip of tripsWithPlaces" id="trip" [routerLink]='["/tripContent/"+trip._id]'>
-               <img class="img-responsive" [src]="'./app/components/images/'+trip.tripPicsUrl[0]" onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt="{{trip.title}}">
-<!--<img src="./app/assets/images/blog-pic.jpg"/>-->
-<h5>{{trip.title}}</h5>
-</div>
-<!--<div id="trip">
-<img src="./app/assets/images/blog-pic.jpg"/>
-<h5>Luxor & Aswan</h5>
-</div>
-<div id="trip">
-<img src="./app/assets/images/d5.jpg"/>
-<h5>Luxor & Aswan</h5>
-</div>
-<div id="trip">
-<img src="./app/assets/images/d5.jpg"/>
-<h5>Luxor & Aswan</h5>
-</div>-->
 
-</div>
-</div>
-     <!--end big row-->
-     </div>
-     </div>
-     <!--End reviews section-->
-     
+                        <div class="container-fluid">
+                            <!--star Area-->
+                            <div class="row">
+                                <label>Over All Rate: </label>>
+                            </div>
+                            <div class="row">
+
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" (click)="update(5)"/><label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" (click)="update(4)" /><label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" (click)="update(3)"/><label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2"(click)="update(2)" /><label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1"(click)="update(1)" /><label for="star1" title="text">1 star</label>
+                                </div>
+   
+  `
+                                
+                            </div>
+                        </div>
+                        <!-- END star Area-->
+
+                    </div>
+                    <!--End Modal Body-->
+                      <!--Footer-->
+                    <div class="modal-footer">
+                    
+   <input  type="submit" data-dismiss="modal" class="btn btn-danger sub" value="Save" (click)="addReview()"/>
+   <input  type="submit" data-dismiss="modal" class="btn btn-danger sub" value="cancel" />
+                    
+
+                    </div>
+                    <!-- End Footer-->
     </div>
+</div>

@@ -72,8 +72,8 @@
                     <h4><i class="fa fa-university" aria-hidden="true"></i> &nbsp;Trip Places</h4>
 
                     <ul>
-                        <li>Place1</li>
-                        <li>Place2</li>
+                        <li *ngFor='let place of places'><a [routerLink]='["//placeDetails/"+place._id]'>{{place.placeName}}</a></li>
+                       
                     </ul>
 
                 </blockquote>
@@ -95,14 +95,15 @@
                         <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; 5654342</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp;&nbsp;EgyGo@gmail.com</p>
+                        <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp; from {{trip.locFrom}} to {{trip.locTo}}</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp; 80 Eldoki Egiza</p>
+                        <p><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp; Departure Time {{trip.dateTo}}</p>
                     </li>
-                    <li>
-                        <p><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="www.egygo.com">www.egygo.com</a></p>
+                     <li>
+                        <p><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp; Arrival Time {{trip.dateTo}}</p>
                     </li>
+                    
                 </ul>
 
             </div>
@@ -120,7 +121,7 @@
 
             <div id="slider">
                 <ul>
-                    <li>
+                    <li *ngFor ="let review of reviews">
                         <div class="slider-container">
                             <div class="col-md-2  col-xs-3">
                                 <div>
@@ -131,76 +132,17 @@
                             </div>
                             <p class="description">
 
-                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-2x" aria-hidden="true">
-
-                                        </i>
-                                         <i class="fa fa-star fa-2x" aria-hidden="true">
-            
-                                         </i>
+                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true">{{review.rate}} / 5</i>
+                                 
                                 </span>
-                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
-                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
-                                volutpat nulla. Suspendisse lorem ex.
+                                <br> {{review.content}}
                             </p>
 
                         </div>
                     </li>
 
-                    <li>
-                        <div class="slider-container">
-                            <div class="col-md-2  col-xs-3">
-                                <div>
-                                    <img class="pic" src="../../app/assets/images/admin-pic1.jpg" alt="">
-                                </div>
-                                <h5 class="title">Williamson</h5>
+                   
 
-                            </div>
-                            <p class="description">
-
-                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-2x" aria-hidden="true">
-
-                                        </i>
-                                         <i class="fa fa-star fa-2x" aria-hidden="true">
-            
-                                         </i>
-                                </span>
-                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
-                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
-                                volutpat nulla. Suspendisse lorem ex.
-                            </p>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="slider-container">
-                            <div class="col-md-2  col-xs-3">
-                                <div>
-                                    <img class="pic" src="../../app/assets/images/admin-pic1.jpg" alt="">
-                                </div>
-                                <h5 class="title">Williamson</h5>
-
-                            </div>
-                            <p class="description">
-
-                                <span class="urate"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-2x" aria-hidden="true">
-
-                                        </i>
-                                         <i class="fa fa-star fa-2x" aria-hidden="true">
-            
-                                         </i>
-                                </span>
-                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor tellus, efficitur
-                                ut tortor id, molestie egestas nibh. In blandit ex at erat vehicula molestie. Mauris vel
-                                volutpat nulla. Suspendisse lorem ex.
-
-                            </p>
-
-                        </div>
-                    </li>
                 </ul>
             </div>
 
@@ -208,7 +150,68 @@
 
         </div>
         <!--end review section-->
-        <input type="button" class="btn btn-danger sub" value="Add Review" />
+        <!--end review section-->
+        <input  type="button" data-toggle="modal"  class="btn btn-danger sub" data-target="#myModal" value="Add Review" />
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <p>Add Review</p>
+                     <div class="container-fluid">
+                            <!--Comment Area-->
+                            <div class="row">
+                                <div class="addReview">
+                                    <div class="form">
+                                        <label for="comment">Comment:</label>
+                                        <textarea class="form-control" rows="5" cols="5" id="comment" [(ngModel)]="comment" [ngModelOptions]="{standalone: true}"></textarea>
+                                      
+                                        <!--<form action="/file-upload" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>-->
+ 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Comment -->
+
+
+                        <div class="container-fluid">
+                            <!--star Area-->
+                            <div class="row">
+                                <label>Over All Rate: </label>>
+                            </div>
+                            <div class="row">
+
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" (click)="update(5)"/><label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" (click)="update(4)" /><label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" (click)="update(3)"/><label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2"(click)="update(2)" /><label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1"(click)="update(1)" /><label for="star1" title="text">1 star</label>
+                                </div>
+   
+  `
+                                
+                            </div>
+                        </div>
+                        <!-- END star Area-->
+
+                    </div>
+                    <!--End Modal Body-->
+                      <!--Footer-->
+                    <div class="modal-footer">
+                    
+   <input  type="submit" data-dismiss="modal" class="btn btn-danger sub" value="Save" (click)="addReview()"/>
+   <input  type="submit" data-dismiss="modal" class="btn btn-danger sub" value="cancel" />
+                    
+
+                    </div>
+                    <!-- End Footer-->
     </div>
 </div>

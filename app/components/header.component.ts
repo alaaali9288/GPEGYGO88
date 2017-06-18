@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     selector:'EGYGO-Header',
    // template:'<h1>HEWDER</h1>'
     templateUrl:'html/HeaderComponent.html',
-     styleUrls:['css/style.css','css/dropDown.css'
+     styleUrls:['css/style.css'
     ]
      
      

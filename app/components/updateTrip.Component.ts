@@ -3,6 +3,8 @@ import { Http, Response, Request, RequestMethod } from '@angular/http';
 import { TripService } from '../service/trip.service';
 import { FormBuilder, FormGroup, FormControl, FormControlName, Validator } from '@angular/forms'
 import { TripTypeService } from '../service/tripType.service';
+import { PlaceService } from '../service/place.service';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -18,11 +20,11 @@ import { Subscription } from 'rxjs/Subscription';
         //  './css/dropzone.css',
         //  './css/fwslider.css'
     ],
-    providers: [TripService, TripTypeService]
+    providers: [TripService, TripTypeService,PlaceService]
 })
 
 export class updateTrip  {
-    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router,private _route: ActivatedRoute) { } //private fb: FormBuilder
+    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router,private _placeServices:PlaceService,private _route: ActivatedRoute) { } //private fb: FormBuilder
 
     title: string;
     price: number;
@@ -46,7 +48,11 @@ export class updateTrip  {
     tagtxt: string;
     activity: string;
     id:string
-    trp:any[]
+    trp:any[];
+    tripPlaces:any;
+    PlaceId:any;
+    selectedPlaces:string[]=[];
+    
      private sub: Subscription;
     ngOnInit() {
             this.sub = this._route.params.subscribe(
@@ -55,10 +61,13 @@ export class updateTrip  {
                 this.getById(id);
             });
         this._tripTypeService.getTripType().subscribe(triptypes => this.TripTypes = triptypes)
+                this._placeServices.getAllPlaces().subscribe(triptypes => this.tripPlaces = triptypes);
+
     }
       getById(id:string){
         this._placeService.getTripById(id).subscribe(trip => {
-           this.trp=trip[0]
+           this.trp=trip[0];
+           console.log(trip);
             this.title=trip[0].title;
            this.price=trip[0].price;
 this.description=trip[0].description;
@@ -128,7 +137,45 @@ this.id=trip[0]._id;
         this.tags.push(this.tagtxt);
     
     }
+  //select multiple
+    selectIngredientPlace(select: any): void {
+        var option = select.target.options.selectedIndex;     //selected index
+        var ul = document.getElementById("ulAppendPlace");
 
+        var li = document.createElement('li');
+        var input = document.createElement('input');
+        var a = document.createElement('a');
+        var text = document.createTextNode(select.target.options[option].value);  // selected text
+
+        input.type = 'hidden';
+        input.name = 'activities[]';
+        input.value = select.target.options[option].value;
+
+        a.setAttribute('onclick', 'this.parentNode.remove(this);');//
+        a.setAttribute('style', 'font-size:20px; text-decoration:none; margin-right:5px; padding: 0 3px; background-color:#F8CA4D;');//        
+        a.innerHTML = '&times;';//
+
+        li.appendChild(input);
+        li.appendChild(a);
+        li.appendChild(text);
+        li.setAttribute('style', 'display:inline; padding:8px;');
+
+        ul.appendChild(li);
+      //  this.selectedPlaces.push(input.value);
+
+        this.typeName = input.value;
+        this._placeServices.getPlaceId(this.typeName)
+            .subscribe(triptypeId => {
+
+                for (let t = 0; t < triptypeId.length; t++) {
+
+                    this.PlaceId = triptypeId[t]._id;
+                    this.selectedPlaces.push(this.PlaceId);
+                }
+                console.log(this.selectedPlaces)
+            }
+            )
+    }
 
     //select multiple
     selectIngredientPlaces(select: any): void {
@@ -188,7 +235,8 @@ this.id=trip[0]._id;
             lastEdit: new Date(),
             locFrom: this.busLeaveLoc,
             locTo: this.busBackLoc,
-            holidayType: this.holidayType
+            holidayType: this.holidayType,
+            places:this.selectedPlaces
 
         }
 

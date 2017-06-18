@@ -56,4 +56,17 @@ getAllPlacesLeader(){
      return this._http.post("http://localhost:5000/place/update",body,{headers:headers})
                .map((res:Response) => res.json());
       }
+getPlaceId(name:string)  {      
+      return this._http.get(`http://localhost:5000/place/n/${name}`)
+      .map(res => res.json());
+  }
+
+
+
+
+
+
+
+      
+      
 }

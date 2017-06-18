@@ -2,219 +2,42 @@
 <!----start-offers---->
 <div class="offers">
 	<div class="offers-head">
-		<h3>Special Offers</h3>
-		<p>Best 2014 packages where people love to stay!</p>
+		<h3>Special Places</h3>
+		<p>Best 2017 packages where people love to stay!</p>
 	</div>
 	<!--start content_slider -->
 	<div class="row">
 		<div class="pics">
-			<div class="pic" onclick="location.href='#';">
+			<div *ngFor =" let place of fivePlaces" class="pic">
 				<div align="center" class="fond">
 
 
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w1.jpg);">
+					 <a class="thumbnail" [routerLink]='["/placeDetails/"+place._id]'>
+                    <img style="height:200px;" class="img-responsive" [src]="'./app/components/images/'+place.placePicsUrl[0]"  onError="this.src='./app/components/images/defaultthumbnail.jpg';" alt={{place.placeName}}>
+                
 						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
+							<div class="deroul_titre">{{place.placeName}}</div>
+							<div class="deroul_soustitre">{{place.price}}</div>
 						</div>
-					</div>
-
-				</div>
+				
+					 </a>
+				
 				<!----//place-caption-info---->
 			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
 
 
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w2.png);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
+		
 
-
-
-
-
-				</div>
-			</div>
-			<!----//place-caption-info---->
-
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w3.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w4.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w5.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w6.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w7.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w10.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w8.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w11.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w9.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
-			<div class="pic" onclick="location.href='#';">
-				<div align="center" class="fond">
-
-
-					<div class="carreaux_presentation_light" style="background-image:url(./app/assets/images/w1.jpg);">
-						<div class="shadow_swhow_mini">
-							<div class="deroul_titre">PURE CSS :HOVER</div>
-							<div class="deroul_soustitre">www.wifeo.com/code</div>
-						</div>
-					</div>
-
-
-
-
-				</div>
-				<!----//place-caption-info---->
-			</div>
+		
+			
+		
+		
+		
 		</div>
 
 	</div>
 	<!-- //End content_slider -->
 </div>
 <!----//End-offers---->
+			</div>
+			

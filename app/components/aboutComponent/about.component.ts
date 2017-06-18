@@ -3,8 +3,8 @@ import {Component} from '@angular/core';
     selector:'about-us',
     moduleId:module.id,
     templateUrl:'aboutUs.html',
-    styleUrls:['../../assets/css/about-style.css']
+    styleUrls:['about-style.css']
 })
 export class AboutComponent{
-
+   imgPath:string = './app/components/images/';
 }

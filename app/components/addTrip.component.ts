@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Request, RequestMethod } from '@angular/http';
 import { TripService } from '../service/trip.service';
 import { UserService } from '../service/user.service';
+import { PlaceService } from '../service/place.service';
+
 import { FormBuilder, FormGroup, FormControl, FormControlName, Validator } from '@angular/forms'
 import { TripTypeService } from '../service/tripType.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -17,12 +19,12 @@ import { Router, ActivatedRoute } from '@angular/router';
         //  './css/dropzone.css',
         //  './css/fwslider.css'
     ],
-    providers: [TripService, TripTypeService,UserService]
+    providers: [TripService, TripTypeService,UserService,PlaceService]
 })
 
 export class addTrip implements OnInit {
       
-    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router , private _UserService:UserService) { } //private fb: FormBuilder
+    constructor(private _placeService: TripService, private _tripTypeService: TripTypeService, private _router: Router , private _UserService:UserService,private _placeServices:PlaceService) { } //private fb: FormBuilder
 
 
     title: string;
@@ -47,10 +49,14 @@ export class addTrip implements OnInit {
     tagtxt: string;
     activity: string;
    User:any;
-
+   tripPlaces:any;
+   selectedPlaces:string[]=[];
+PlaceId:any;
 
     ngOnInit() {
         this._tripTypeService.getTripType().subscribe(triptypes => this.TripTypes = triptypes);
+        this._placeServices.getAllPlaces().subscribe(triptypes => this.tripPlaces = triptypes);
+
          var Uid = localStorage.getItem("UserId");
          var uuser =  this._UserService.getById(Uid);
        //  this.User = uuser[0].firstName;
@@ -173,18 +179,20 @@ export class addTrip implements OnInit {
         li.setAttribute('style', 'display:inline; padding:8px;');
 
         ul.appendChild(li);
-        this.activ.push(input.value);
+      //  this.selectedPlaces.push(input.value);
 
         this.typeName = input.value;
-        this._tripTypeService.getTripTypeId(this.typeName)
+        this._placeServices.getPlaceId(this.typeName)
             .subscribe(triptypeId => {
 
                 for (let t = 0; t < triptypeId.length; t++) {
 
-                    this.TripTypeId = triptypeId[t]._id;
-                    this.holidayType.push(this.TripTypeId);
+                    this.PlaceId = triptypeId[t]._id;
+                    this.selectedPlaces.push(this.PlaceId);
                 }
-            })
+                console.log(this.selectedPlaces)
+            }
+            )
     }
 
 
@@ -207,7 +215,8 @@ export class addTrip implements OnInit {
             lastEdit: new Date(),
             locFrom: this.busLeaveLoc,
             locTo: this.busBackLoc,
-            holidayType: this.holidayType
+            holidayType: this.holidayType,
+            places:this.selectedPlaces
 
         }
 

@@ -5,7 +5,6 @@ body{
 	background-color:#F5E5C0}
 .title{
 	
-	margin-top:34%;
 	margin-left:0;
 	background-color:rgba(63,86,102,0.6)}
 	
@@ -54,20 +53,21 @@ body{
 	                   #update:hover{
                        color:#2F3440;
 	 }
-						
-						.placeDetail h1{color:#F8CA4D}
+				
+					.placeDetail h1{color:#F8CA4D}
 					.placeDetail h2{
 						color:#EA6045;
 						font-size:27px;
 						font-weight:bold
 						}
 						
-						.pict img{
-							width:100%;
-							height:100%;
+					.rpic{
+							width:80px;
+							height:80px;
+							border-radius: 25px;
+							margin-left:-5%;
 							}
-						.pic{
-							margin-left:-5%;}
+				
 														
 
 	
@@ -86,6 +86,7 @@ body{
 						background-color: #2F3440;
 					}
 					#ico{
+						position: absolute;
 						width:60px;
 						z-index: 4000;
 						margin-left:100%;
@@ -116,28 +117,21 @@ display: inline;
 												}
 
 @media only screen and (max-width: 767px){
-    .testimonial .testimonial-content{
-        float: none;
-        width: 70%;
-        margin: 0 0 20px 0;
+   
+     .description{
+        width: 800px;
     }
-    .testimonial .description{
-        width: 100%;
-    }
-    .testimonial .description:before{
-        border: 10px solid transparent;
-        border-bottom: 10px solid rgba(255,255,255,0.15);
-        position: absolute;
-        top: -20px;
-        left: 47.5%;
-    }
+
 	
 }
 .row{
 	margin-left: 0;
 }
-#tst{margin-left:0;
-padding-left:0}
+#tst{
+	margin-left:0;
+    padding-left:0;
+	width:800px;
+	margin-top: -700px;}
 #rateTags{
 	background-color:#3F5666;
 	width:100%;
@@ -275,16 +269,14 @@ padding-left:0}
 		}
 		.modal-content .table{
 			margin-left:0}
-	.relatedTrips img{
-		width:50%;
-		height:50%;}
+
 		
 			.table{margin-left:0;}
 
 			.toptrip{
-			margin-left:145%;
+			margin-left:170%;
 			margin-top:-27%;
-			width: 290px;
+			width: 320px;
 			border-left:1px solid #F5E5C0;
             overflow-x: hidden!important;
 			height:800px;
@@ -294,7 +286,7 @@ padding-left:0}
 			color:#F8CA4D;
 			}
 			#trip{
-				width:210px;
+				width:280px;
 				height:180px;
 				border-bottom:1px solid #F5E5C0;
 				margin-left:5%;
@@ -302,18 +294,19 @@ padding-left:0}
 
 .slideshow {
 	z-index: -2;
-	background-color: #2F3440;
   width: 800px;
+  height: 300px;
   margin: 0 140px;
   overflow: hidden;
   border: solid 1px white;
 }
 
 .slideshow-container {
-  width: 2500px;
+  width: 5000px;
   font-size: 0;
   transition: 1s ease;
   height: 300px;
+  overflow: hidden;
 }
 
 .slideshow-container:hover {

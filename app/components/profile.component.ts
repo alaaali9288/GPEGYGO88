@@ -32,6 +32,11 @@ export class ProfileComponent implements OnInit, OnDestroy {
     userPlacesToVisit: any[];
     userVisitedPlace:any[];
     userFavPlace:any[];
+
+    
+    userplaces:string[]=[];
+userTrips:string[]=[];
+   
     constructor(private _route: ActivatedRoute, private _router: Router, private _UserService: UserService
         , private _TripService: TripService, private _PlaceService: PlaceService) { }
 
@@ -41,8 +46,40 @@ export class ProfileComponent implements OnInit, OnDestroy {
                 let id = params['id'];
                 this.getByID(id);
             });
+            this.getUserTrips();
+this.getUserPlaces();
+            
     }
+getUserTrips(){
+    this._TripService.getAllTrips().subscribe((data)=>{
+        for(var i=0;i<data.length;i++){
+            if(data[i].userID==localStorage.getItem("UserId")){
 
+                    this.userplaces.push(data[i]._id);
+            }
+            var usrtrip={
+                id:localStorage.getItem("UserId"),
+                userCreatedTrips:this.userplaces
+            }
+            this._UserService.updateUserTrips(usrtrip)
+        }
+      })
+  
+}
+getUserPlaces(){
+    this._PlaceService.getAllPlaces().subscribe((data)=>{
+        for(var i=0;i<data.length;i++){
+            if(data[i].userID==localStorage.getItem("UserId")){
+
+                    this.userTrips.push(data[i]._id);
+            }
+            var usrtrip={
+                id:localStorage.getItem("UserId"),
+                userCreatedPlace:this.userTrips
+            }
+            this._UserService.updateUserPlace(usrtrip)
+        }
+      })}
     getByID(Uid: string) {
         this._UserService.getById(Uid).subscribe((user) => {
         this.user = user[0]; this.TripsofUserIDs = user[0].userCreatedTrips;
