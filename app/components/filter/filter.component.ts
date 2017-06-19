@@ -9,7 +9,7 @@ import { PlaceService } from "../../service/place.Service";
     moduleId: module.id,
     selector: 'filter',
     templateUrl: './filter.html',
-    styleUrls: ['./bootstrap.min.css','./filter.css',],
+    styleUrls: ['./bootstrap.min.css', './filter.css',],
     providers: [TripTypeService, PlaceService]
 })
 
@@ -39,9 +39,10 @@ export class filter {
     chooseTag(event: any) {
         if (this.keyword === "" && event.target.checked) {
             var tagId = event.target.attributes["value"].value;
-
-            this.places = this.places.filter((item: any) => item.holidayType.findIndex((tag: any) => tag._id === tagId) !== -1
-                && item.price <= this.priceFilter);
+            this.places = this.places.filter((item: any) =>
+                item.holidayType.findIndex((tag: any) => tag._id === tagId) !== -1
+                && item.price <= this.priceFilter
+            );
             this.filtersId.push(event.target.attributes["value"].value);
         }
         else if (this.keyword !== "" && event.target.checked) {

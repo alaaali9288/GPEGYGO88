@@ -34,8 +34,10 @@ var filter = (function () {
         var _this = this;
         if (this.keyword === "" && event.target.checked) {
             var tagId = event.target.attributes["value"].value;
-            this.places = this.places.filter(function (item) { return item.holidayType.findIndex(function (tag) { return tag._id === tagId; }) !== -1
-                && item.price <= _this.priceFilter; });
+            this.places = this.places.filter(function (item) {
+                return item.holidayType.findIndex(function (tag) { return tag._id === tagId; }) !== -1
+                    && item.price <= _this.priceFilter;
+            });
             this.filtersId.push(event.target.attributes["value"].value);
         }
         else if (this.keyword !== "" && event.target.checked) {
